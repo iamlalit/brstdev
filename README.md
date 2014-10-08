@@ -1,4 +1,21 @@
 epageo-website
 ==============
 
-## Demo Heading
+### Set up of the project in your system
+
+<b>First clone the project by the command given below:</b>
+
+<code>
+    git clone https://github.com/iamlalit/epageo-website.git
+</code>
+
+<b>After cloning</b>
+
+- Open the folder where you just have cloned the repo
+- Right click and open the <b>GIT BASH</b>
+(if git bash is not installed please download it from <b><a href="http://git-scm.com/download/win">HERE</a></b> and install before proceeding.)
+
+<code>
+    git clone https://github.com/iamlalit/epageo-website.git
+</code>
+
