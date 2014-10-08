@@ -16,6 +16,13 @@ epageo-website
 (if git bash is not installed please download it from <b><a href="http://git-scm.com/download/win">HERE</a></b> and install before proceeding.)
 
 <code>
-    git clone https://github.com/iamlalit/epageo-website.git
+    npm install
 </code>
 
+This will install the NPM dependencies in the project. After this process completes in the bash window. Fire this command as well:
+
+<code>
+    bower install
+</code>
+
+This command will install all the front-end libs which we are using in the dev process.
