@@ -101,11 +101,8 @@ module.exports = function (grunt) {
                     livereload: true
                 }
             },
-            gruntfile: {
-                files: ['Gruntfile.js']
-            },
             sass: {
-                files: ['<%= config.app %>/**/*.{scss,sass}'],
+                files: ['<%= config.app %>/scss/{,*/}*.{scss,sass}'],
                 tasks: ['sass:compile', 'autoprefixer']
             },
             livereload: {
@@ -161,7 +158,8 @@ module.exports = function (grunt) {
               loadPath: ['<%= config.app %>/sass']
             },
             files: {
-              '.tmp/styles/main.css': '<%= config.app %>/scss/bootstrap.scss'
+              '.tmp/styles/main.css': '<%= config.app %>/scss/bootstrap.scss',
+              '.tmp/styles/app.css': '<%= config.app %>/scss/demo.scss'
             }
           }
         },
