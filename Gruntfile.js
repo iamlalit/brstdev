@@ -239,8 +239,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'concurrent',
-        'autoprefixer',
-        'modernizr',
+        'autoprefixer'
     ]);
 
     grunt.registerTask('default', [
