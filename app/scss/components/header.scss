@@ -2,10 +2,7 @@ header.container{
 	width: $width-base;
 	margin: 0 auto;
 	position: relative;
-	padding-top: 50px;
-}
-body {
-    background-image: url('../img/bg-1.png');
+	padding-top: $base-padding * 4;
 }
 .navbar.navbar-default {
 	background-color: inherit;
@@ -13,4 +10,9 @@ body {
 }
 .navbar-brand {
 	padding: 0;
+	margin-right: $base-padding * 6;
+}
+.navbar-default .navbar-nav > li > a{
+	color: $brand-green;
+	font-size: rem(20);
 }
