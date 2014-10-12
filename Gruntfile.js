@@ -80,8 +80,8 @@ module.exports = function (grunt) {
               loadPath: ['<%= config.app %>/sass']
             },
             files: {
-              '.tmp/styles/main.css': '<%= config.app %>/scss/_bootstrap.scss',
-              '.tmp/styles/app.css': '<%= config.app %>/scss/demo.scss'
+              '.tmp/styles/main.css': '<%= config.app %>/scss/bootstrap.scss',
+              '.tmp/styles/app.css': '<%= config.app %>/scss/app.scss'
             }
           }
         },
