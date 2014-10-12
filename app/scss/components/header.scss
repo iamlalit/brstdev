@@ -12,8 +12,8 @@ header.container{
 		margin-right: $base-padding * 5;
 	}
 	ul.navbar-nav{
+		border-bottom: 3px solid $brand-green;
 		li{
-			border-bottom: 3px solid $brand-green;
 			a{
 				font-size: 24px;
 				color: $brand-green;
