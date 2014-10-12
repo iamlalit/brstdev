@@ -7,12 +7,29 @@ header.container{
 .navbar.navbar-default {
 	background-color: inherit;
 	border: 0;
-}
-.navbar-brand {
-	padding: 0;
-	margin-right: $base-padding * 6;
-}
-.navbar-default .navbar-nav > li > a{
-	color: $brand-green;
-	font-size: rem(20);
+	.navbar-brand {
+		padding: 0;
+		margin-right: $base-padding * 5;
+	}
+	ul.navbar-nav{
+		li{
+			border-bottom: 3px solid $brand-green;
+			a{
+				font-size: 24px;
+				color: $brand-green;
+				padding: 21px 25px 7px 25px;
+			}
+			&.active{
+				a{
+					background: inherit;
+					color: $brand-green-hover;
+				}
+			}
+			&:hover{
+				a{
+					color: $brand-green-hover;
+				}
+			}
+		}
+	}
 }
