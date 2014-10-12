@@ -1,3 +1,4 @@
+@import 'base';
 @import 'bootstrap-compass';
 @import 'bootstrap-mincer';
 @import 'bootstrap-sprockets';
@@ -9,6 +10,7 @@
 
 //base
 @import 'base/base';
+@import 'base/icons';
 @import 'base/helpers';
 @import 'base/states';
 
