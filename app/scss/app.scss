@@ -7,6 +7,11 @@
 @import 'theme/_palette';
 @import 'theme/_typography';
 
+//base
+@import 'base/base';
+@import 'base/helpers';
+@import 'base/states';
+
 @import 'components/footer';
 @import 'components/header';
 
