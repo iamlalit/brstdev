@@ -1,5 +1,7 @@
 'use strict';
 var EpageoApp = angular.module('EpageoApp', [])
 
-.controller('Controller', ['$scope', function($scope) {    
-}]);
+    .controller('Controller', ['$scope', function($scope) {
+    }]
+
+);
