@@ -108,7 +108,7 @@ module.exports = function (grunt) {
             bowerJS: {
               src: [
               'lib/jquery/dist/jquery.js',
-            //'lib/angular/angular.js',
+              'lib/angularjs/angular.js',
               'lib/bootstrap-sass-official/assets/javascripts/bootstrap.js',
               'lib/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js',
               'lib/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js',
