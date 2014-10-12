@@ -2,6 +2,11 @@
 @import 'bootstrap-mincer';
 @import 'bootstrap-sprockets';
 
+//theme
+@import 'theme/_layout';
+@import 'theme/_palette';
+@import 'theme/_typography';
+
 @import 'components/footer';
 @import 'components/header';
 

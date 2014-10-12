@@ -1,10 +1,16 @@
 header.container{
-	width: 980px;
+	width: $width-base;
 	margin: 0 auto;
-
 	position: relative;
 	padding-top: 50px;
 }
 body {
     background-image: url('../img/bg-1.png');
+}
+.navbar.navbar-default {
+	background-color: inherit;
+	border: 0;
+}
+.navbar-brand {
+	padding: 0;
 }
