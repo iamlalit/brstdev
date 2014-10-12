@@ -129,7 +129,8 @@ module.exports = function (grunt) {
             appJS: {
               src: [
               '<%= config.app %>/scripts/app.js',
-              '<%= config.app %>/scripts/main.js'
+              '<%= config.app %>/scripts/main.js',
+              '<%= config.app %>/scripts/footer.js'
               
                     ],
               dest: '.tmp/scripts/core.js',
