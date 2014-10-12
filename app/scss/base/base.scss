@@ -1,0 +1,80 @@
+body {
+	font-size: $font-size-base;
+	font-family: $font-family-base;
+	background-image: url('../img/bg-1.png');
+}
+
+// Links
+a {
+	color: $brand-tundora;
+	text-decoration: none;
+	outline: none;
+	&:hover {
+		text-decoration: underline;
+	}
+	&.no-decoration:hover {
+	  text-decoration: none;
+	}
+	.hover-underline:hover {
+	  text-decoration: underline;
+	}
+}
+.link {
+	font-size: rem(12);
+	cursor: pointer;
+	color: $brand-blue;
+	font-weight: $font-weight-bold;
+}
+// List
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Heading
+h1 {
+	font-size: rem(26);
+	font-weight: normal;
+}
+
+h2 {
+	font-size: rem(20);
+}
+
+h3 {
+	font-size: rem(15);
+}
+
+h4 {
+	font-size: rem(13);
+}
+
+h2, h3, h4 {
+	font-weight: $font-weight-bold;
+}
+
+h1, h2, h3, h4 {
+	margin: 0;
+	padding: 0;
+}
+
+// Paragraph
+p {
+	font-size: rem(13);
+	line-height: 1.7;
+	word-wrap: break-word;
+	margin: 0;
+	//padding: modular-scale($base-padding, 0, $golden) 0 0 0;
+	& + p {
+		//padding-top:modular-scale($base-padding, 1, $golden);
+	}
+	&.no-space {
+		padding: 0;
+	}
+}
+
+// Images
+img {
+  max-width: 100%;
+}
