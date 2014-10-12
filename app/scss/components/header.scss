@@ -5,7 +5,8 @@ header.container{
 	padding-top: $base-padding * 4;
 }
 .navbar.navbar-default {
-	background-color: inherit;
+    font-family: $font-family-headings;
+    background-color: inherit;
 	border: 0;
 	.navbar-brand {
 		padding: 0;
@@ -15,7 +16,7 @@ header.container{
 		border-bottom: 3px solid $brand-green;
 		li{
 			a{
-				font-size: 24px;
+				font-size: 3.5rem;
 				color: $brand-green;
 				padding: 21px 25px 7px 25px;
 			}

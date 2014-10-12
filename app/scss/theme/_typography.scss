@@ -1,4 +1,16 @@
+@font-face {
+  font-family: 'HeaderFont';
+  src: url('../../fonts/helveticaltstd-extracomp.eot');
+  src: url('../../fonts/helveticaltstd-extracomp.eot') format('embedded-opentype'),
+  url('../../fonts/helveticaltstd-extracomp.woff2') format('woff2'),
+  url('../../fonts/helveticaltstd-extracomp.woff') format('woff'),
+  url('../../fonts/helveticaltstd-extracomp.ttf') format('truetype'),
+  url('../../fonts/helveticaltstd-extracomp.svg#HeaderFont') format('svg');
+}
+
+
 $font-size-base: 16px;
 $font-family-base: Arial, Sans-Serif;
+$font-family-headings: 'HeaderFont', 'helvetica', Arial, sans-serif;
 $font-weight-bold: 700;
 $font-weight-normal: 400;
