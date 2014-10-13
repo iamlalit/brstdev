@@ -1,6 +1,7 @@
 body {
 	font-size: $font-size-base;
-	font-family: $font-family-base;
+	font-family: $font-family-body;
+    font-weight: 500;
 	background-image: url('../img/bg-1.png');
 }
 
@@ -81,7 +82,21 @@ img {
 
 .headFont{
   font-family: $font-family-headings;
-  font-size: 14rem;
   text-align: center;
   text-decoration: underline;
 }
+
+.mainHeading{
+  margin-top: 10rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 14rem;
+}
+
+.contentCentered{
+  text-align: justify;
+  padding: 0 28rem;
+  font-size: 2rem;
+  line-height: 1.4;
+}
+

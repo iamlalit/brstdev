@@ -8,9 +8,21 @@
   url('../../fonts/helveticaltstd-extracomp.svg#HeaderFont') format('svg');
 }
 
+@font-face {
+  font-family: 'Gotham';
+  src: url('../../fonts/gothamnarrow-book.eot');
+  src: url('../../fonts/gothamnarrow-book.eot') format('embedded-opentype'),
+  url('../../fonts/gothamnarrow-book.woff2') format('woff2'),
+  url('../../fonts/gothamnarrow-book.woff') format('woff'),
+  url('../../fonts/gothamnarrow-book.ttf') format('truetype'),
+  url('../../fonts/gothamnarrow-book.svg#Gotham') format('svg');
+}
+
+
 
 $font-size-base: 16px;
-$font-family-base: Arial, Sans-Serif;
+//$font-family-base: Arial, Sans-Serif;
 $font-family-headings: 'HeaderFont', 'helvetica', Arial, sans-serif;
+$font-family-body: 'Gotham', 'helvetica', Arial, sans-serif;
 $font-weight-bold: 700;
 $font-weight-normal: 400;
