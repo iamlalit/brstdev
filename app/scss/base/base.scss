@@ -20,10 +20,10 @@ a {
 	}
 }
 .link {
-	font-size: rem(12);
-	cursor: pointer;
-	color: $brand-blue;
-	font-weight: $font-weight-bold;
+  font-size: rem(12);
+  cursor: pointer;
+  color: $brand-blue;
+  font-weight: $font-weight-bold;
 }
 // List
 ul {
@@ -77,4 +77,11 @@ p {
 // Images
 img {
   max-width: 100%;
+}
+
+.headFont{
+  font-family: $font-family-headings;
+  font-size: 14rem;
+  text-align: center;
+  text-decoration: underline;
 }
