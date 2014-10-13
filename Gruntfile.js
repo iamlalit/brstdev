@@ -34,7 +34,7 @@ module.exports = function (grunt) {
                 files: [
                     '<%= config.app %>/{,*/}*.html',
                     '.tmp/styles/app.css',
-                    '<%= config.app %>/images/{,*/}*'
+                    '<%= config.app %>/img/{,*/}*'
                 ]
             }
         },
@@ -80,8 +80,8 @@ module.exports = function (grunt) {
               loadPath: ['<%= config.app %>/sass']
             },
             files: {
-              '.tmp/styles/main.css': '<%= config.app %>/scss/bootstrap.scss',
-              '.tmp/styles/app.css': '<%= config.app %>/scss/app.scss'
+              '<%= config.app %>/.tmp/styles/main.css': '<%= config.app %>/scss/bootstrap.scss',
+              '<%= config.app %>/.tmp/styles/app.css': '<%= config.app %>/scss/app.scss'
             }
           }
         },
@@ -93,9 +93,22 @@ module.exports = function (grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: '.tmp/styles/',
+                    cwd: '<%= config.app %>/.tmp/styles/',
                     src: 'main.css',
-                    dest: '.tmp/styles/'
+                    dest: '<%= config.app %>/.tmp/styles/'
+                }]
+            }
+        },
+
+        imagemin: {
+            server: {
+                files: [
+                {
+                    expand: true,
+                    flatten: true,
+                    cwd: '<%= config.app %>',
+                    src: '**/*.{gif,jpeg,jpg,png}',
+                    dest: '<%= config.app %>/.tmp/img'
                 }]
             }
         },
@@ -123,7 +136,7 @@ module.exports = function (grunt) {
               'lib/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js',
               'lib/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js',
                    ],
-              dest: '.tmp/scripts/bower.js',
+              dest: '<%= config.app %>/.tmp/scripts/bower.js',
             },
             //for scripts written by us
             appJS: {
@@ -133,7 +146,7 @@ module.exports = function (grunt) {
               '<%= config.app %>/scripts/footer.js'
               
                     ],
-              dest: '.tmp/scripts/core.js',
+              dest: '<%= config.app %>/.tmp/scripts/core.js',
             }
         },
 
@@ -143,7 +156,8 @@ module.exports = function (grunt) {
             server: [
                 'sass:compile',
                 'concat:bowerJS',
-                'concat:appJS'
+                'concat:appJS',
+                'imagemin:server'
             ]
         }
     });
