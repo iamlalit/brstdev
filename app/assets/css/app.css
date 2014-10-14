@@ -1,0 +1,161 @@
+body {
+  background: url("../img/bg-1.jpg"); }
+
+@font-face {
+  font-family: 'HeaderFont';
+  src: url("../../fonts/helveticaltstd-extracomp.eot");
+  src: url("../../fonts/helveticaltstd-extracomp.eot") format("embedded-opentype"), url("../../fonts/helveticaltstd-extracomp.woff2") format("woff2"), url("../../fonts/helveticaltstd-extracomp.woff") format("woff"), url("../../fonts/helveticaltstd-extracomp.ttf") format("truetype"), url("../../fonts/helveticaltstd-extracomp.svg#HeaderFont") format("svg"); }
+@font-face {
+  font-family: 'Gotham';
+  src: url("../../fonts/gothamnarrow-book.eot");
+  src: url("../../fonts/gothamnarrow-book.eot") format("embedded-opentype"), url("../../fonts/gothamnarrow-book.woff2") format("woff2"), url("../../fonts/gothamnarrow-book.woff") format("woff"), url("../../fonts/gothamnarrow-book.ttf") format("truetype"), url("../../fonts/gothamnarrow-book.svg#Gotham") format("svg"); }
+body {
+  font-size: 16px;
+  font-family: "Gotham", "helvetica", Arial, sans-serif;
+  font-weight: 500;
+  background-image: url("../../img/bg-1.png"); }
+
+a {
+  color: #444444;
+  text-decoration: none;
+  outline: none; }
+  a:hover {
+    text-decoration: underline; }
+  a.no-decoration:hover {
+    text-decoration: none; }
+  a .hover-underline:hover {
+    text-decoration: underline; }
+
+.link {
+  font-size: rem(12);
+  cursor: pointer;
+  color: #336699;
+  font-weight: 700; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+h1 {
+  font-size: rem(26);
+  font-weight: normal; }
+
+h2 {
+  font-size: rem(20); }
+
+h3 {
+  font-size: rem(15); }
+
+h4 {
+  font-size: rem(13); }
+
+h2, h3, h4 {
+  font-weight: 700; }
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0; }
+
+p {
+  font-size: rem(13);
+  line-height: 1.7;
+  word-wrap: break-word;
+  margin: 0; }
+  p.no-space {
+    padding: 0; }
+
+img {
+  max-width: 100%; }
+
+.headFont {
+  font-family: "HeaderFont", "helvetica", Arial, sans-serif;
+  text-align: center;
+  text-decoration: underline; }
+
+.mainHeading {
+  margin-top: 10rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 14rem; }
+
+.contentCentered {
+  text-align: justify;
+  padding: 0 28rem;
+  font-size: 2rem;
+  line-height: 1.4; }
+
+@font-face {
+  font-family: 'epagioIcons';
+  src: url("../../icons/icomatic.eot");
+  src: url("../../icons/icomatic.eot?#iefix") format("embedded-opentype"), url("../../icons/icomatic.woff") format("woff"), url("../../icons/icomatic.ttf") format("truetype"), url("../../icons/icomatic.svg#icomatic") format("svg"); }
+.icomatic {
+  font-family: 'epagioIcons','sans-serif';
+  line-height: 1;
+  text-rendering: auto;
+  -webkit-font-feature-settings: "liga", "dlig";
+  -ms-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+  -webkit-font-smoothing: antialiased; }
+
+.icomatic-alt {
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden; }
+
+.hide {
+  display: none; }
+
+.invisible {
+  visibility: hidden; }
+
+footer.container {
+  width: 980px;
+  margin: 0 auto; }
+  footer.container .top {
+    text-align: center; }
+    footer.container .top a {
+      background: #595959;
+      width: 110px;
+      display: inline-block;
+      border-radius: 90px 90px 0 0;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 22px;
+      padding-top: 0px; }
+    footer.container .top:hover a {
+      text-decoration: none; }
+
+header.container {
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 60px; }
+
+.navbar.navbar-default {
+  font-family: "HeaderFont", "helvetica", Arial, sans-serif;
+  background-color: inherit;
+  border: 0; }
+  .navbar.navbar-default .navbar-brand {
+    padding: 0;
+    margin-right: 75px; }
+  .navbar.navbar-default ul.navbar-nav {
+    border-bottom: 3px solid #0e97a3; }
+    .navbar.navbar-default ul.navbar-nav li a {
+      font-size: 3.5rem;
+      color: #0e97a3;
+      padding: 21px 25px 7px 25px; }
+    .navbar.navbar-default ul.navbar-nav li.active a {
+      background: inherit;
+      color: #086f78; }
+    .navbar.navbar-default ul.navbar-nav li:hover a {
+      color: #086f78; }
+
+/*# sourceMappingURL=app.css.map */

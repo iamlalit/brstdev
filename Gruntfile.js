@@ -33,7 +33,7 @@ module.exports = function (grunt) {
                 },
                 files: [
                     '<%= config.app %>/{,*/}*.html',
-                    '.tmp/styles/app.css',
+                    'app/assets/css/app.css',
                     '<%= config.app %>/images/{,*/}*'
                 ]
             }
@@ -51,7 +51,7 @@ module.exports = function (grunt) {
                 options: {
                     open: 'http://localhost:9001/index.html',
                     base: [
-                        '.tmp',
+                        //['app/assets/css','app/assets/scripts'],
                         '<%= config.app %>'
                     ]
                 }
@@ -64,26 +64,26 @@ module.exports = function (grunt) {
                 files: [{
                     dot: true,
                     src: [
-                        '.tmp',
+                        ['app/assets/css', 'app/assets/scripts'],
                         '<%= config.dist %>/*',
                         '!<%= config.dist %>/.git*'
                     ]
                 }]
             },
-            server: '.tmp'
+            server: ['app/assets/css','app/assets/scripts']
         },
         //SASS
         sass: {
-          compile: {
-            options: {
-              sourcemap: true,
-              loadPath: ['<%= config.app %>/sass']
-            },
-            files: {
-              '.tmp/styles/main.css': '<%= config.app %>/scss/bootstrap.scss',
-              '.tmp/styles/app.css': '<%= config.app %>/scss/app.scss'
+            compile: {
+                options: {
+                    sourcemap: true,
+                    loadPath: ['<%= config.app %>/sass']
+                },
+                files: {
+                    'app/assets/css/main.css': '<%= config.app %>/scss/bootstrap.scss',
+                    'app/assets/css/app.css': '<%= config.app %>/scss/app.scss'
+                }
             }
-          }
         },
         // Add vendor prefixed styles
         autoprefixer: {
@@ -93,47 +93,46 @@ module.exports = function (grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: '.tmp/styles/',
+                    cwd: 'app/assets/css',
                     src: 'main.css',
-                    dest: '.tmp/styles/'
+                    dest: 'app/assets/css'
                 }]
             }
         },
 
         concat: {
             options: {
-              separator: ';',
+                separator: ';',
             },
             //for external libraries
             bowerJS: {
-              src: [
-              'lib/jquery/dist/jquery.js',
-              'lib/angularjs/angular.js',
-              'lib/bootstrap-sass-official/assets/javascripts/bootstrap.js',
-              'lib/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js',
-              'lib/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js',
-              'lib/bootstrap-sass-official/assets/javascripts/bootstrap/button.js',
-              'lib/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js',
-              'lib/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js',
-              'lib/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js',
-              'lib/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
-              'lib/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
-              'lib/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js',
-              'lib/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js',
-              'lib/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js',
-              'lib/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js',
-                   ],
-              dest: '.tmp/scripts/bower.js',
+                src: [
+                    'lib/jquery/dist/jquery.js',
+                    'lib/angularjs/angular.js',
+                    'lib/bootstrap-sass-official/assets/javascripts/bootstrap.js',
+                    'lib/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js',
+                    'lib/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js',
+                    'lib/bootstrap-sass-official/assets/javascripts/bootstrap/button.js',
+                    'lib/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js',
+                    'lib/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js',
+                    'lib/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js',
+                    'lib/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
+                    'lib/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
+                    'lib/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js',
+                    'lib/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js',
+                    'lib/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js',
+                    'lib/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js',
+                ],
+                dest: 'app/assets/scripts/bower.js',
             },
             //for scripts written by us
             appJS: {
-              src: [
-              '<%= config.app %>/scripts/app.js',
-              '<%= config.app %>/scripts/main.js',
-              '<%= config.app %>/scripts/footer.js'
-              
-                    ],
-              dest: '.tmp/scripts/core.js',
+                src: [
+                    '<%= config.app %>/scripts/app.js',
+                    '<%= config.app %>/scripts/main.js',
+                    '<%= config.app %>/scripts/footer.js'
+                ],
+                dest: 'app/assets/scripts/core.js',
             }
         },
 
@@ -150,7 +149,7 @@ module.exports = function (grunt) {
 
 
     grunt.registerTask('serve', function (target) {
-    
+
         grunt.task.run([
             'clean:server',
             'concurrent',
