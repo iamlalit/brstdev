@@ -39,11 +39,22 @@
 	    	line-height: 1.25;
 	    }
 	    span.continue{
+	    	padding-top: 20px;
+	    	color: $brand-light-green;
 	    	a{
-	    		color: #b8d735;
+		    	color: $brand-light-green;
 		    	font-size: 4rem;
 		    	font-family: $font-family-headings;	
 		    	text-transform: uppercase;
+		    	line-height: 1;
+		    	&:hover{
+		    		text-decoration: none;
+		    		cursor: pointer;
+		    	}
+	    	}
+	    	span.icomatic{
+	    		display: block;
+	    		font-size: 3.5rem;
 	    	}
 	    }
 	}

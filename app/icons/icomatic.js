@@ -1,6 +1,6 @@
 var IcomaticUtils = (function() {
 return {
-fallbacks: [{ from: 'location', 'to': '\ue001' },{ from: 'arrowup', 'to': '\ue000' }],
+fallbacks: [{ from: 'location2', 'to': '\ue001' },{ from: 'location', 'to': '\ue002' },{ from: 'arrowup', 'to': '\ue000' }],
 substitute: function(el) {
     var curr = el.firstChild;
     var next, alt;
