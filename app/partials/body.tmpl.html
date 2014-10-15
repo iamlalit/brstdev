@@ -19,19 +19,21 @@
     		<p>
     			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus lacus sit amet magna vulputate, ornare elementum tellus rutrum. Pellentesque sit amet metus ex. Duis tortor justo, facilisis suscipit sollicitudin sit amet, elementum sed purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus lacus sit amet magna vulputate, ornare elementum tellus rutrum. Pellentesque sit amet metus ex. 
     		</p>
-    		<span class="continue"><span class="small-circle"></span><br><span class="icomatic">location</span><a>continue</a></span>
+    		<span class="continue"><span class="small-circle"></span><br><span class="icomatic">location</span><a href="#gotoTwo">continue</a></span>
     	</div>
     </div>
-    <div class="outer-circle">
+    <div class="row padding-top-25" id="gotoTwo"></div>
+    <div class="outer-circle" >
         <div class="inner-circle">
             <span class="number">2</span>
             <h3>STRATEGY</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus lacus sit amet magna vulputate, ornare elementum tellus rutrum. Pellentesque sit amet metus ex. Duis tortor justo, facilisis suscipit sollicitudin sit amet, elementum sed purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus lacus sit amet magna vulputate, ornare elementum tellus rutrum. Pellentesque sit amet metus ex. 
             </p>
-            <span class="continue"><span class="small-circle"></span><br><span class="icomatic">location</span><a>continue</a></span>
+            <span class="continue"><span class="small-circle"></span><br><span class="icomatic">location</span><a href="#gotoThree">continue</a></span>
         </div>
     </div>
+    <div class="row padding-top-25" id="gotoThree"></div>
     <div class="outer-circle">
         <div class="inner-circle">
             <span class="number">3</span>
@@ -39,9 +41,10 @@
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus lacus sit amet magna vulputate, ornare elementum tellus rutrum. Pellentesque sit amet metus ex. Duis tortor justo, facilisis suscipit sollicitudin sit amet, elementum sed purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus lacus sit amet magna vulputate, ornare elementum tellus rutrum. Pellentesque sit amet metus ex. 
             </p>
-            <span class="continue"><span class="small-circle"></span><br><span class="icomatic">location</span><a>continue</a></span>
+            <span class="continue"><span class="small-circle"></span><br><span class="icomatic">location</span><a href="#gotoFour">continue</a></span>
         </div>
     </div>
+    <div class="row padding-top-25" id="gotoFour"></div>
     <div class="outer-circle">
         <div class="inner-circle">
             <span class="number">4</span>
@@ -49,9 +52,10 @@
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus lacus sit amet magna vulputate, ornare elementum tellus rutrum. Pellentesque sit amet metus ex. Duis tortor justo, facilisis suscipit sollicitudin sit amet, elementum sed purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus lacus sit amet magna vulputate, ornare elementum tellus rutrum. Pellentesque sit amet metus ex. 
             </p>
-            <span class="continue"><span class="small-circle"></span><br><span class="icomatic">location</span><a>continue</a></span>
+            <span class="continue"><span class="small-circle"></span><br><span class="icomatic">location</span><a href="#gotoFive">continue</a></span>
         </div>
     </div>
+    <div class="row padding-top-25" id="gotoFive"></div>
     <div class="outer-circle">
         <div class="inner-circle">
             <span class="number">5</span>
@@ -59,9 +63,10 @@
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus lacus sit amet magna vulputate, ornare elementum tellus rutrum. Pellentesque sit amet metus ex. Duis tortor justo, facilisis suscipit sollicitudin sit amet, elementum sed purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus lacus sit amet magna vulputate, ornare elementum tellus rutrum. Pellentesque sit amet metus ex. 
             </p>
-            <span class="continue"><span class="small-circle"></span><br><span class="icomatic">location</span><a>continue</a></span>
+            <span class="continue"><span class="small-circle"></span><br><span class="icomatic">location</span><a href="#gotoSix">continue</a></span>
         </div>
     </div>
+    <div class="row padding-top-25" id="gotoSix"></div>
     <div class="outer-circle">
         <div class="inner-circle">
             <span class="number">6</span>
@@ -73,3 +78,19 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>

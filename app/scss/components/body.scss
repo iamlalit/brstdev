@@ -58,15 +58,17 @@
 
 	    	}
 	    	.small-circle{
-	    			width: 14px;
-					height: 14px;
+	    			width: 15px;
+					height: 15px;
 					background: $white;
 					display: inline-block;
 					border-radius: 100%;
 					position: relative;
-					top:22px;
-					left: 1px;
+					top:23px;
 	    		}
 	    }
 	}
+}
+.padding-top-25{
+	padding-top: 25px;
 }
