@@ -74,11 +74,24 @@
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus lacus sit amet magna vulputate, ornare elementum tellus rutrum. Pellentesque sit amet metus ex. Duis tortor justo, facilisis suscipit sollicitudin sit amet, elementum sed purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus lacus sit amet magna vulputate, ornare elementum tellus rutrum. Pellentesque sit amet metus ex. 
             </p>
-            <span class="continue"><span class="small-circle"></span><br><span class="icomatic">location</span><a>continue</a></span>
+            <span class="continue"><span class="small-circle"></span><br><span class="icomatic">location</span><a href="#gotoSeven">continue</a></span>
+        </div>
+    </div>
+    <div class="row padding-top-25" id="gotoSeven"></div>
+    <div class="outer-circle">
+        <div class="inner-circle">
+            <span class="number">7</span>
+            <h3>Evolve</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus lacus sit amet magna vulputate, ornare elementum tellus rutrum. Pellentesque sit amet metus ex. Duis tortor justo, facilisis suscipit sollicitudin sit amet, elementum sed purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus lacus sit amet magna vulputate, ornare elementum tellus rutrum. Pellentesque sit amet metus ex. 
+            </p>
+            <span class="continue"><span class="small-circle"></span><br><span class="icomatic">location</span></span>
         </div>
     </div>
 </div>
 <script type="text/javascript">
+'use strict';
+
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -92,5 +105,12 @@ $(function() {
       }
     }
   });
+});
+
+$(document).ready(function() {
+    $("a").click(function(e) {
+        window.location.hash = $(this).attr("id");
+        e.preventDefault();
+    });
 });
 </script>
