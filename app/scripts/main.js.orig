@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+/**
+ * Created by gaurav.mehra on 10/14/2014.
+ */
+=======
 'use strict';
 
 $(document).ready(function () {
@@ -5,3 +10,4 @@ $(document).ready(function () {
 		$(this).css('text-decoration', 'none');
 	});
 });
+>>>>>>> 6cbde9513ab2317d2ba94b873e1c3eca8e2e2d53

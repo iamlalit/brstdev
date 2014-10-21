@@ -13,7 +13,9 @@ footer.container{
 		    font-size: 22px;
 		    padding-top: 0px;
 		}
-		&:hover{
+		&:hover,
+		&:focus,
+		&:visited{
 			a{
 				text-decoration: none;
 			}

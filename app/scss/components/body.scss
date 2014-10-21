@@ -1,0 +1,74 @@
+.tap{
+	text-align: center;
+	padding-top: 50px;
+}
+.outer-circle{
+	width: 500px;
+	height:500px;
+	background: $brand-green;
+	border-radius: 100%;
+	margin: 65px auto;
+	position: relative;
+	.inner-circle{
+		position: absolute;
+	    background: $brand-green;
+	    border-radius: 100%;
+	    border: 5px solid $white;
+	    height:450px;
+	    width:450px;
+	    top:50%;
+	    left:50%;    
+	    margin: -225px 0px 0px -225px;
+	    text-align:center;
+	    color: $white;
+	    .number{
+	    	display: inherit;
+			margin-top: 20px;
+			line-height: 1;
+			font-size: 7rem;
+			font-family: $font-family-headings;
+	    }
+	    h3{
+	    	font-size: 7rem;
+	    	font-family: $font-family-headings;	
+	    	text-transform: uppercase;
+	    	letter-spacing: 2px;
+	    }
+	    p{
+	    	padding: 0 28px;
+	    	line-height: 1.25;
+	    }
+	    span.continue{
+	    	padding-top: 20px;
+	    	color: $brand-light-green;
+	    	a{
+		    	color: $brand-light-green;
+		    	font-size: 4rem;
+		    	font-family: $font-family-headings;	
+		    	text-transform: uppercase;
+		    	line-height: 1;
+		    	&:hover{
+		    		text-decoration: none;
+		    		cursor: pointer;
+		    	}
+	    	}
+	    	span.icomatic{
+	    		display: block;
+	    		font-size: 3.5rem;
+
+	    	}
+	    	.small-circle{
+	    			width: 15px;
+					height: 15px;
+					background: $white;
+					display: inline-block;
+					border-radius: 100%;
+					position: relative;
+					top:23px;
+	    		}
+	    }
+	}
+}
+.padding-top-25{
+	padding-top: 25px;
+}

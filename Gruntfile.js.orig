@@ -51,7 +51,7 @@ module.exports = function (grunt) {
                 options: {
                     open: 'http://localhost:9001/index.html',
                     base: [
-                        '.tmp',
+                        //['app/assets/css','app/assets/scripts'],
                         '<%= config.app %>'
                     ]
                 }
@@ -64,13 +64,13 @@ module.exports = function (grunt) {
                 files: [{
                     dot: true,
                     src: [
-                        '.tmp',
+                        ['app/assets/css', 'app/assets/scripts'],
                         '<%= config.dist %>/*',
                         '!<%= config.dist %>/.git*'
                     ]
                 }]
             },
-            server: '.tmp'
+            server: ['app/assets/css','app/assets/scripts']
         },
         //SASS
         sass: {
@@ -83,7 +83,6 @@ module.exports = function (grunt) {
               '<%= config.app %>/.tmp/styles/main.css': '<%= config.app %>/scss/bootstrap.scss',
               '<%= config.app %>/.tmp/styles/app.css': '<%= config.app %>/scss/app.scss'
             }
-          }
         },
         // Add vendor prefixed styles
         autoprefixer: {
@@ -115,7 +114,7 @@ module.exports = function (grunt) {
 
         concat: {
             options: {
-              separator: ';',
+                separator: ';',
             },
             //for external libraries
             bowerJS: {
@@ -163,7 +162,7 @@ module.exports = function (grunt) {
 
 
     grunt.registerTask('serve', function (target) {
-    
+
         grunt.task.run([
             'clean:server',
             'concurrent',
