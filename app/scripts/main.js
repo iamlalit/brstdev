@@ -46,14 +46,18 @@ $(document).ready(function() {
         
         return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));  
     };
-    //$( kids[0] ).animate({'display': 'none' ,'left': '-1000px', 'top': '-1000px'});
-    $(kids[0]).css({'left': '0'})
     //to call the function each time whenever a user scrolls the window
     $(window).scroll(function() {
       if($('.continue.one').isOnScreen()){
-        console.log('in');
+        $(kids[0]).addClass('orange-animation0 table-cell').removeClass('hide');
+        $(kids[1]).addClass('purple-animation1 table-cell').removeClass('hide');
+        $(kids[2]).addClass('blue-animation2 table-cell').removeClass('hide');
+        $(kids[3]).addClass('pink-animation3 table-cell').removeClass('hide');
       }else{
-        console.log('out');
+        $(kids[0]).removeClass('orange-animation0 table-cell').addClass('hide');
+        $(kids[1]).removeClass('purple-animation1 table-cell').addClass('hide');
+        $(kids[2]).removeClass('blue-animation2 table-cell').addClass('hide');
+        $(kids[3]).removeClass('pink-animation3 table-cell').addClass('hide');
       }
     });
 });

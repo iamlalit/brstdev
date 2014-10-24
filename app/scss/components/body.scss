@@ -122,3 +122,130 @@ $color-pink: #fc85b5;
 		top: -200px;	
 	}
 }
+.orange-animation0{
+	-webkit-animation: moveX0 0.55s linear 0s  alternate, moveY0 .5s linear 0s alternate;
+	-moz-animation: moveX0 0.55s linear 0s alternate, moveY0 .5s linear 0s alternate;
+	-o-animation: moveX0 0.55s linear 0s alternate, moveY0 .5s linear 0s alternate;
+	animation: moveX0 0.55s linear 0s alternate, moveY0 .5s linear 0s alternate;
+}
+.purple-animation1{
+	-webkit-animation: moveX1 .5s linear 0s  alternate, moveY1 .5s linear 0s alternate;
+	-moz-animation: moveX1 .5s linear 0s alternate, moveY1 .5s linear 0s alternate;
+	-o-animation: moveX1 .5s linear 0s alternate, moveY1 .5s linear 0s alternate;
+	animation: moveX1 .5s linear 0s alternate, moveY1 .5s linear 0s alternate;
+}
+.blue-animation2{
+	-webkit-animation: moveX2 0.55s linear 0s  alternate, moveY2 .5s linear 0s alternate;
+	-moz-animation: moveX2 0.55s linear 0s alternate, moveY2 .5s linear 0s alternate;
+	-o-animation: moveX2 0.55s linear 0s alternate, moveY2 .5s linear 0s alternate;
+	animation: moveX2 0.55s linear 0s alternate, moveY2 .5s linear 0s alternate;
+}
+.pink-animation3{
+	-webkit-animation: moveX3 0.55s linear 0s  alternate, moveY3 .5s linear 0s alternate;
+	-moz-animation: moveX3 0.55s linear 0s alternate, moveY3 .5s linear 0s alternate;
+	-o-animation: moveX3 0.55s linear 0s alternate, moveY3 .5s linear 0s alternate;
+	animation: moveX3 0.55s linear 0s alternate, moveY3 .5s linear 0s alternate;
+}
+//for first ball
+@-webkit-keyframes moveX0 {
+  from { left: -480px; } to { left: 0px; }
+}
+@-moz-keyframes moveX0 {
+  from { left: -480px; } to { left: 0px; }
+}
+@-o-keyframes moveX0 {
+  from { left: -480px; } to { left: 0px; }
+}
+@keyframes moveX0 {
+  from { left: -480px; } to { left: 0px; }
+}
+@-webkit-keyframes moveY0 {
+  from { top: 0px; } to { top: 0px; }
+}
+@-moz-keyframes moveY0 {
+  from { top: 150px; } to { top: 150px; }
+}
+@-o-keyframes moveY0 {
+  from { top: 0px; } to { top: 150px; }
+}
+@keyframes moveY0 {
+  from { top: 150px; } to { top: 150px; }
+}
+
+
+//for second ball
+@-webkit-keyframes moveX1 {
+  from { left: -480px; } to { left: -90px; }
+}
+@-moz-keyframes moveX1 {
+  from { left: -480px; } to { left: -90px; }
+}
+@-o-keyframes moveX1 {
+  from { left: -480px; } to { left: -90px; }
+}
+@keyframes moveX1 {
+  from { left: -480px; } to { left: -90px; }
+}
+@-webkit-keyframes moveY1 {
+  from { top: 150px; } to { top: 150px; }
+}
+@-moz-keyframes moveY1 {
+  from { top: 150px; } to { top: 150px; }
+}
+@-o-keyframes moveY1 {
+  from { top: 150px; } to { top: 150px; }
+}
+@keyframes moveY1 {
+  from { top: 150px; } to { top: 150px; }
+}
+//for third ball
+@-webkit-keyframes moveX2 {
+  from { left: 1000px; } to { left: 345px; }
+}
+@-moz-keyframes moveX2 {
+  from { left: -480px; } to { left: -90px; }
+}
+@-o-keyframes moveX2 {
+  from { left: -480px; } to { left: -90px; }
+}
+@keyframes moveX2 {
+  from { left: -480px; } to { left: -90px; }
+}
+@-webkit-keyframes moveY2 {
+  from { top: 150px; } to { top: 150px; }
+}
+@-moz-keyframes moveY2 {
+  from { top: 150px; } to { top: 150px; }
+}
+@-o-keyframes moveY2 {
+  from { top: 150px; } to { top: 150px; }
+}
+@keyframes moveY2 {
+  from { top: 150px; } to { top: 150px; }
+}
+
+//for fourth ball
+@-webkit-keyframes moveX3 {
+  from { left: 1000px; } to { left: 462px; }
+}
+@-moz-keyframes moveX3 {
+  from { left: 1000px; } to { left: 462px; }
+}
+@-o-keyframes moveX3 {
+  from { left: 1000px; } to { left: 462px; }
+}
+@keyframes moveX3 {
+  from { left: 1000px; } to { left: 462px; }
+}
+@-webkit-keyframes moveY3 {
+  from { top: -200px; } to { top: -200px; }
+}
+@-moz-keyframes moveY3 {
+  from { top: -200px; } to { top: -200px; }
+}
+@-o-keyframes moveY3 {
+  from { top: -200px; } to { top: -200px; }
+}
+@keyframes moveY3 {
+  from { top: -200px; } to { top: -200px; }
+}
