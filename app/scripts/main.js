@@ -23,7 +23,7 @@ $(document).ready(function() {
     });
 
     //for Discovery
-    var kids = $( '.outer-circle' ).children( '.info-circle' );
+    var kids0 = $( '.outer-circle' ).children( '.info-circle' );
 
     var viewportWidth = $(window).width();
     var viewportHeight = $(window).height();
@@ -49,15 +49,15 @@ $(document).ready(function() {
     //to call the function each time whenever a user scrolls the window
     $(window).scroll(function() {
       if($('.continue.one').isOnScreen()){
-        $(kids[0]).addClass('orange-animation0 table-cell').removeClass('hide');
-        $(kids[1]).addClass('purple-animation1 table-cell').removeClass('hide');
-        $(kids[2]).addClass('blue-animation2 table-cell').removeClass('hide');
-        $(kids[3]).addClass('pink-animation3 table-cell').removeClass('hide');
+        $(kids0[0]).addClass('orange-animation0 table-cell').removeClass('hide');
+        $(kids0[1]).addClass('purple-animation1 table-cell').removeClass('hide');
+        $(kids0[2]).addClass('blue-animation2 table-cell').removeClass('hide');
+        $(kids0[3]).addClass('pink-animation3 table-cell').removeClass('hide');
       }else{
-        $(kids[0]).removeClass('orange-animation0 orange-animation1 table-cell').addClass('hide');
-        $(kids[1]).removeClass('purple-animation1 table-cell').addClass('hide');
-        $(kids[2]).removeClass('blue-animation2 table-cell').addClass('hide');
-        $(kids[3]).removeClass('pink-animation3 table-cell').addClass('hide');
+        $(kids0[0]).removeClass('orange-animation0 orange-animation1 table-cell').addClass('hide');
+        $(kids0[1]).removeClass('purple-animation1 table-cell').addClass('hide');
+        $(kids0[2]).removeClass('blue-animation2 table-cell').addClass('hide');
+        $(kids0[3]).removeClass('pink-animation3 table-cell').addClass('hide');
       }
     });
 });

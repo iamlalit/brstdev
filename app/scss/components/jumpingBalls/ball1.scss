@@ -3,6 +3,8 @@ div{
 		width: $width-circle1;
 		height: $width-circle1;
 		background: $color-orange;
+		left: 2px;
+		top: 0px;
 		&.orange-animation0{
 			-webkit-animation: moveX0 0.5s linear 0s  alternate, moveY0 .5s linear 0s alternate;
 			-moz-animation: moveX0 0.5s linear 0s alternate, moveY0 .5s linear 0s alternate;
@@ -55,9 +57,9 @@ div{
 @include keyframes(moveX0) {
   	0%   {left: -480px;}
     25%  {left: -200px;}
-    50%  {left: 0px;}
+    50%  {left: 2px;}
     75%  {left: -100px;}
-    100% {left: 0px;}
+    100% {left: 2px;}
 }
 @include keyframes(moveY0) {
   	0%   {top: -350px;}
