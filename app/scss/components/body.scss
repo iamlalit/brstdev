@@ -71,14 +71,54 @@
 .padding-top-25{
 	padding-top: 25px;
 }
-
+$width-circle1: 120px;
+$width-circle2: 140px;
+$width-circle3: 130px;
+$color-orange: #e5451a;
+$color-purple: #6904b6;
+$color-blue: #0362fe;
+$color-pink: #fc85b5;
 .info-circle{
-	width: 120px;
-	height: 120px;
-	background: pink;
-	display: inline-block;
+	display: table;
 	z-index: 100;
 	border-radius: 100%;
 	position: relative;
 	left: 10px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	font-size: 22px;
+	padding: 20px;
+	span{
+		display: table-cell;
+		vertical-align: middle;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+	&.orange{
+		width: $width-circle1;
+		height: $width-circle1;
+		background: $color-orange;
+	}
+	&.purple{
+		width: $width-circle2;
+		height: $width-circle2;
+		background: $color-purple;
+		left: -90px;
+		top: 150px;
+	}
+	&.blue{
+		width: $width-circle1;
+		height: $width-circle1;
+		background: $color-blue;
+		left: 345px;
+		top: 150px;
+	}
+	&.pink{
+		width: $width-circle3;
+		height: $width-circle3;
+		background: $color-pink;
+		left: 462px;
+		top: -200px;	
+	}
 }

@@ -16,7 +16,7 @@ $(function() {
   });
 });
 
-
+//to jump bubbles
 $(document).ready(function() {
     $('a').click(function(e) {
         window.location.hash = $(this).attr('id');
@@ -24,6 +24,7 @@ $(document).ready(function() {
 
     //for Discovery
     var kids = $( '.outer-circle' ).children( '.info-circle' );
+
     var viewportWidth = $(window).width();
     var viewportHeight = $(window).height();
 
@@ -45,4 +46,14 @@ $(document).ready(function() {
         
         return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));  
     };
+    //$( kids[0] ).animate({'display': 'none' ,'left': '-1000px', 'top': '-1000px'});
+    $(kids[0]).css({'left': '0'})
+    //to call the function each time whenever a user scrolls the window
+    $(window).scroll(function() {
+      if($('.continue.one').isOnScreen()){
+        console.log('in');
+      }else{
+        console.log('out');
+      }
+    });
 });
