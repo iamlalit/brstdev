@@ -55,7 +55,6 @@
 	    	span.icomatic{
 	    		display: block;
 	    		font-size: 3.5rem;
-
 	    	}
 	    	.small-circle{
 	    			width: 15px;
@@ -71,4 +70,15 @@
 }
 .padding-top-25{
 	padding-top: 25px;
+}
+
+.info-circle{
+	width: 120px;
+	height: 120px;
+	background: pink;
+	display: inline-block;
+	z-index: 100;
+	border-radius: 100%;
+	position: relative;
+	left: 10px;
 }
