@@ -54,7 +54,7 @@ $(document).ready(function() {
         $(kids[2]).addClass('blue-animation2 table-cell').removeClass('hide');
         $(kids[3]).addClass('pink-animation3 table-cell').removeClass('hide');
       }else{
-        $(kids[0]).removeClass('orange-animation0 table-cell').addClass('hide');
+        $(kids[0]).removeClass('orange-animation0 orange-animation1 table-cell').addClass('hide');
         $(kids[1]).removeClass('purple-animation1 table-cell').addClass('hide');
         $(kids[2]).removeClass('blue-animation2 table-cell').addClass('hide');
         $(kids[3]).removeClass('pink-animation3 table-cell').addClass('hide');
