@@ -1,9 +1,9 @@
-div#four{	
+div#five{	
 	div{
 		&.orange{
 			width: $width-circle2;
 			height: $width-circle2;
-			background: $color-orange;
+			background: $color-blue;
 			left: -34px;
 			top: 0px;
 			&.orange-animation0{
@@ -13,31 +13,21 @@ div#four{
 		&.purple{
 			width: $width-circle1;
 			height: $width-circle1;
-			background: $color-green;
+			background: $color-pink;
 			left: -77px;
 			top: 9px;
 			&.purple-animation1{
 				@include animation(moveX7 .7s linear 0s  alternate, moveY7 .7s linear 0s alternate);
 			}
 		}
-		&.grey{
+		&.blue{
 			width: $width-circle1;
 			height: $width-circle1;
-			background: $color-pink;
+			background: $color-green;
 			left: 345px;
 			top: 150px;
 			&.blue-animation2{
 				@include animation(moveX2 0.7s linear 0s  alternate, moveY2 .7s linear 0s alternate);
-			}
-		}
-		&.green{
-			width: $width-circle3;
-			height: $width-circle3;
-			background: $color-blue;
-			left: 462px;
-			top: -200px;	
-			&.pink-animation3{
-				@include animation(moveX3 0.7s linear 0s  alternate, moveY3 .7s linear 0s alternate);
 			}
 		}
 	}

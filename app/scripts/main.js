@@ -28,6 +28,8 @@ $(document).ready(function() {
     var kids2 = $( '#two' ).children( '.info-circle' );
     var kids3 = $( '#three' ).children( '.info-circle' );
     var kids4 = $( '#four' ).children( '.info-circle' );
+    var kids5 = $( '#five' ).children( '.info-circle' );
+    var kids6 = $( '#six' ).children( '.info-circle' );
 
     var viewportWidth = $(window).width();
     var viewportHeight = $(window).height();
@@ -120,6 +122,34 @@ $(document).ready(function() {
         $(kids4[1]).removeClass('purple-animation1 table-cell').addClass('hide');
         $(kids4[2]).removeClass('blue-animation2 table-cell').addClass('hide');
         $(kids4[3]).removeClass('pink-animation3 table-cell').addClass('hide');
+      }
+
+      if($('#showCircle50').isOnScreen() && $('#showCircle51').isOnScreen()){
+        $(kids5[0]).addClass('orange-animation0 table-cell').removeClass('hide');
+        $(kids5[1]).addClass('purple-animation1 table-cell').removeClass('hide');
+        $(kids5[2]).addClass('blue-animation2 table-cell').removeClass('hide');
+        $(kids5[3]).addClass('blue-animation2 table-cell').removeClass('hide');
+        $(kids5[4]).addClass('pink-animation3 table-cell').removeClass('hide');
+      }else{
+        $(kids5[0]).removeClass('orange-animation0 table-cell').addClass('hide');
+        $(kids5[1]).removeClass('purple-animation1 table-cell').addClass('hide');
+        $(kids5[2]).removeClass('blue-animation2 table-cell').addClass('hide');
+        $(kids5[3]).removeClass('blue-animation2 table-cell').addClass('hide');
+        $(kids5[4]).removeClass('pink-animation3 table-cell').addClass('hide');
+      }
+
+      if($('#showCircle60').isOnScreen() && $('#showCircle61').isOnScreen()){
+        $(kids6[0]).addClass('orange-animation0 table-cell').removeClass('hide');
+        $(kids6[1]).addClass('purple-animation1 table-cell').removeClass('hide');
+        $(kids6[2]).addClass('blue-animation2 table-cell').removeClass('hide');
+        $(kids6[3]).addClass('pink-animation3 table-cell').removeClass('hide');
+        $(kids6[4]).addClass('grey-animation4 table-cell').removeClass('hide');
+      }else{
+        $(kids6[0]).removeClass('orange-animation0 table-cell').addClass('hide');
+        $(kids6[1]).removeClass('purple-animation1 table-cell').addClass('hide');
+        $(kids6[2]).removeClass('blue-animation2 table-cell').addClass('hide');
+        $(kids6[3]).removeClass('pink-animation3 table-cell').addClass('hide');
+        $(kids6[4]).removeClass('grey-animation4 table-cell').addClass('hide');
       }
     });
 });
