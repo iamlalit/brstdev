@@ -1,32 +1,32 @@
 div#five{	
 	div{
-		&.orange{
+		&.color1{
 			width: $width-circle2;
 			height: $width-circle2;
 			background: $color-blue;
 			left: -34px;
 			top: 0px;
-			&.orange-animation0{
+			&.animation0{
 				@include animation(moveX6 0.7s linear 0s  alternate, moveY6 .7s linear 0s alternate);
 			}
 		}
-		&.purple{
+		&.color2{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-pink;
 			left: -77px;
 			top: 9px;
-			&.purple-animation1{
+			&.animation1{
 				@include animation(moveX7 .7s linear 0s  alternate, moveY7 .7s linear 0s alternate);
 			}
 		}
-		&.blue{
+		&.color3{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-green;
 			left: 345px;
 			top: 150px;
-			&.blue-animation2{
+			&.animation2{
 				@include animation(moveX2 0.7s linear 0s  alternate, moveY2 .7s linear 0s alternate);
 			}
 		}

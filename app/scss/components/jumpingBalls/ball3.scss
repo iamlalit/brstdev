@@ -1,62 +1,62 @@
 div#two{	
 	div{
-		&.orange{
+		&.color1{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-blue;
 			left: 2px;
 			top: 0px;
-			&.orange-animation0{
+			&.animation0{
 				@include animation(moveX0 0.7s linear 0s  alternate, moveY0 .7s linear 0s alternate);
 			}
 		}
-		&.purple{
+		&.color2{
 			width: $width-circle2;
 			height: $width-circle2;
 			background: $color-pink;
 			left: -90px;
 			top: 150px;
-			&.purple-animation1{
+			&.animation1{
 				@include animation(moveX1 .7s linear 0s  alternate, moveY1 .7s linear 0s alternate);
 			}
 		}
-		&.blue{
+		&.color3{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-orange;
 			left: 345px;
 			top: 150px;
-			&.blue-animation2{
+			&.animation2{
 				@include animation(moveX2 0.7s linear 0s  alternate, moveY2 .7s linear 0s alternate);
 			}
 		}
-		&.pink{
+		&.color4{
 			width: $width-circle3;
 			height: $width-circle3;
 			background: $color-purple;
 			left: 462px;
 			top: -200px;	
-			&.pink-animation3{
+			&.animation3{
 				@include animation(moveX3 0.7s linear 0s  alternate, moveY3 .7s linear 0s alternate);
 			}
 		}
-		&.grey{
+		&.color5{
 			width: $width-circle3;
 			height: $width-circle3;
 			background: $color-green;
 			left: 91px;
 			top: -65px;	
-			&.grey-animation4{
+			&.animation4{
 				@include animation(moveX4 0.7s linear 0s  alternate, moveY4 .7s linear 0s alternate);
 			}
 		}
-		&.green{
+		&.color6{
 			width: $width-circle4;
 			height: $width-circle4;
 			background: $color-grey;
 			left: 424px;
 			top: -570px;	
-			&.green-animation5{
+			&.animation5{
 				@include animation(moveX5 0.7s linear 0s  alternate, moveY5 .7s linear 0s alternate);
 			}
 		}
