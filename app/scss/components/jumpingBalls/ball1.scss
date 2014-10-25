@@ -6,10 +6,7 @@ div{
 		left: 2px;
 		top: 0px;
 		&.orange-animation0{
-			-webkit-animation: moveX0 0.5s linear 0s  alternate, moveY0 .5s linear 0s alternate;
-			-moz-animation: moveX0 0.5s linear 0s alternate, moveY0 .5s linear 0s alternate;
-			-o-animation: moveX0 0.5s linear 0s alternate, moveY0 .5s linear 0s alternate;
-			animation: moveX0 0.5s linear 0s alternate, moveY0 .5s linear 0s alternate;
+			@include animation(moveX0 0.5s linear 0s  alternate, moveY0 .5s linear 0s alternate);
 		}
 	}
 	&.purple{
@@ -19,10 +16,7 @@ div{
 		left: -90px;
 		top: 150px;
 		&.purple-animation1{
-			-webkit-animation: moveX1 .5s linear 0s  alternate, moveY1 .5s linear 0s alternate;
-			-moz-animation: moveX1 .5s linear 0s alternate, moveY1 .5s linear 0s alternate;
-			-o-animation: moveX1 .5s linear 0s alternate, moveY1 .5s linear 0s alternate;
-			animation: moveX1 .5s linear 0s alternate, moveY1 .5s linear 0s alternate;
+			@include animation(moveX1 .5s linear 0s  alternate, moveY1 .5s linear 0s alternate);
 		}
 	}
 	&.blue{
@@ -32,10 +26,7 @@ div{
 		left: 345px;
 		top: 150px;
 		&.blue-animation2{
-			-webkit-animation: moveX2 0.5s linear 0s  alternate, moveY2 .5s linear 0s alternate;
-			-moz-animation: moveX2 0.5s linear 0s alternate, moveY2 .5s linear 0s alternate;
-			-o-animation: moveX2 0.5s linear 0s alternate, moveY2 .5s linear 0s alternate;
-			animation: moveX2 0.5s linear 0s alternate, moveY2 .5s linear 0s alternate;
+			@include animation(moveX2 0.5s linear 0s  alternate, moveY2 .5s linear 0s alternate);
 		}
 	}
 	&.pink{
@@ -45,10 +36,7 @@ div{
 		left: 462px;
 		top: -200px;	
 		&.pink-animation3{
-			-webkit-animation: moveX3 0.5s linear 0s  alternate, moveY3 .5s linear 0s alternate;
-			-moz-animation: moveX3 0.5s linear 0s alternate, moveY3 .5s linear 0s alternate;
-			-o-animation: moveX3 0.5s linear 0s alternate, moveY3 .5s linear 0s alternate;
-			animation: moveX3 0.5s linear 0s alternate, moveY3 .5s linear 0s alternate;
+			@include animation(moveX3 0.5s linear 0s  alternate, moveY3 .5s linear 0s alternate);
 		}
 	}
 }
