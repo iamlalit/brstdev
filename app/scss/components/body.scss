@@ -71,15 +71,18 @@
 .padding-top-25{
 	padding-top: 25px;
 }
-
 //for jumping balls
 $width-circle1: 120px;
 $width-circle2: 140px;
 $width-circle3: 130px;
+$width-circle4: 110px;
+
 $color-orange: #e5451a;
 $color-purple: #6904b6;
 $color-blue: #0362fe;
 $color-pink: #fc85b5;
+$color-grey: #536076;
+$color-green: #187702;
 .info-circle{
 	display: table;
 	z-index: 100;

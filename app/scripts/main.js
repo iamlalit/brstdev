@@ -23,7 +23,11 @@ $(document).ready(function() {
     });
 
     //for Discovery
-    var kids0 = $( '.outer-circle' ).children( '.info-circle' );
+    var kids0 = $( '#zero' ).children( '.info-circle' );
+    var kids1 = $( '#one' ).children( '.info-circle' );
+    var kids2 = $( '#two' ).children( '.info-circle' );
+    var kids3 = $( '#three' ).children( '.info-circle' );
+    var kids4 = $( '#four' ).children( '.info-circle' );
 
     var viewportWidth = $(window).width();
     var viewportHeight = $(window).height();
@@ -48,16 +52,74 @@ $(document).ready(function() {
     };
     //to call the function each time whenever a user scrolls the window
     $(window).scroll(function() {
-      if($('.continue.one').isOnScreen()){
+      if($('#showCircle01').isOnScreen() && $('#showCircle00').isOnScreen()){
         $(kids0[0]).addClass('orange-animation0 table-cell').removeClass('hide');
         $(kids0[1]).addClass('purple-animation1 table-cell').removeClass('hide');
         $(kids0[2]).addClass('blue-animation2 table-cell').removeClass('hide');
         $(kids0[3]).addClass('pink-animation3 table-cell').removeClass('hide');
       }else{
-        $(kids0[0]).removeClass('orange-animation0 orange-animation1 table-cell').addClass('hide');
+        $(kids0[0]).removeClass('orange-animation0 table-cell').addClass('hide');
         $(kids0[1]).removeClass('purple-animation1 table-cell').addClass('hide');
         $(kids0[2]).removeClass('blue-animation2 table-cell').addClass('hide');
         $(kids0[3]).removeClass('pink-animation3 table-cell').addClass('hide');
+      }
+
+      if($('#showCircle10').isOnScreen() && $('#showCircle11').isOnScreen()){
+        $(kids1[0]).addClass('orange-animation0 table-cell').removeClass('hide');
+        $(kids1[1]).addClass('purple-animation1 table-cell').removeClass('hide');
+        $(kids1[2]).addClass('blue-animation2 table-cell').removeClass('hide');
+        $(kids1[3]).addClass('pink-animation3 table-cell').removeClass('hide');
+        $(kids1[4]).addClass('grey-animation4 table-cell').removeClass('hide');
+      }else{
+        $(kids1[0]).removeClass('orange-animation0 table-cell').addClass('hide');
+        $(kids1[1]).removeClass('purple-animation1 table-cell').addClass('hide');
+        $(kids1[2]).removeClass('blue-animation2 table-cell').addClass('hide');
+        $(kids1[3]).removeClass('pink-animation3 table-cell').addClass('hide');
+        $(kids1[4]).removeClass('grey-animation4 table-cell').addClass('hide');
+      }
+
+      if($('#showCircle20').isOnScreen() && $('#showCircle21').isOnScreen()){
+        $(kids2[0]).addClass('orange-animation0 table-cell').removeClass('hide');
+        $(kids2[1]).addClass('purple-animation1 table-cell').removeClass('hide');
+        $(kids2[2]).addClass('blue-animation2 table-cell').removeClass('hide');
+        $(kids2[3]).addClass('pink-animation3 table-cell').removeClass('hide');
+        $(kids2[4]).addClass('grey-animation4 table-cell').removeClass('hide');
+        $(kids2[5]).addClass('green-animation5 table-cell').removeClass('hide');
+      }else{
+        $(kids2[0]).removeClass('orange-animation0 table-cell').addClass('hide');
+        $(kids2[1]).removeClass('purple-animation1 table-cell').addClass('hide');
+        $(kids2[2]).removeClass('blue-animation2 table-cell').addClass('hide');
+        $(kids2[3]).removeClass('pink-animation3 table-cell').addClass('hide');
+        $(kids2[4]).removeClass('grey-animation4 table-cell').addClass('hide');
+        $(kids2[5]).removeClass('green-animation5 table-cell').addClass('hide');
+      }
+
+      if($('#showCircle30').isOnScreen() && $('#showCircle31').isOnScreen()){
+        $(kids3[0]).addClass('orange-animation0 table-cell').removeClass('hide');
+        $(kids3[1]).addClass('purple-animation1 table-cell').removeClass('hide');
+        $(kids3[2]).addClass('blue-animation2 table-cell').removeClass('hide');
+        $(kids3[3]).addClass('pink-animation3 table-cell').removeClass('hide');
+        $(kids3[4]).addClass('grey-animation4 table-cell').removeClass('hide');
+        $(kids3[5]).addClass('green-animation5 table-cell').removeClass('hide');
+      }else{
+        $(kids3[0]).removeClass('orange-animation0 table-cell').addClass('hide');
+        $(kids3[1]).removeClass('purple-animation1 table-cell').addClass('hide');
+        $(kids3[2]).removeClass('blue-animation2 table-cell').addClass('hide');
+        $(kids3[3]).removeClass('pink-animation3 table-cell').addClass('hide');
+        $(kids3[4]).removeClass('grey-animation4 table-cell').addClass('hide');
+        $(kids3[5]).removeClass('green-animation5 table-cell').addClass('hide');
+      }
+
+      if($('#showCircle40').isOnScreen() && $('#showCircle41').isOnScreen()){
+        $(kids4[0]).addClass('orange-animation0 table-cell').removeClass('hide');
+        $(kids4[1]).addClass('purple-animation1 table-cell').removeClass('hide');
+        $(kids4[2]).addClass('blue-animation2 table-cell').removeClass('hide');
+        $(kids4[3]).addClass('pink-animation3 table-cell').removeClass('hide');
+      }else{
+        $(kids4[0]).removeClass('orange-animation0 table-cell').addClass('hide');
+        $(kids4[1]).removeClass('purple-animation1 table-cell').addClass('hide');
+        $(kids4[2]).removeClass('blue-animation2 table-cell').addClass('hide');
+        $(kids4[3]).removeClass('pink-animation3 table-cell').addClass('hide');
       }
     });
 });

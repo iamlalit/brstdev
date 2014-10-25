@@ -1,99 +1,184 @@
-div{
-	&.orange{
-		width: $width-circle1;
-		height: $width-circle1;
-		background: $color-orange;
-		left: 2px;
-		top: 0px;
-		&.orange-animation0{
-			@include animation(moveX0 0.5s linear 0s  alternate, moveY0 .5s linear 0s alternate);
+div#zero{	
+	div{
+		&.orange{
+			width: $width-circle1;
+			height: $width-circle1;
+			background: $color-orange;
+			left: 2px;
+			top: 0px;
+			&.orange-animation0{
+				@include animation(moveX0 0.7s linear 0s  alternate, moveY0 .7s linear 0s alternate);
+			}
 		}
-	}
-	&.purple{
-		width: $width-circle2;
-		height: $width-circle2;
-		background: $color-purple;
-		left: -90px;
-		top: 150px;
-		&.purple-animation1{
-			@include animation(moveX1 .5s linear 0s  alternate, moveY1 .5s linear 0s alternate);
+		&.purple{
+			width: $width-circle2;
+			height: $width-circle2;
+			background: $color-purple;
+			left: -90px;
+			top: 150px;
+			&.purple-animation1{
+				@include animation(moveX1 .7s linear 0s  alternate, moveY1 .7s linear 0s alternate);
+			}
 		}
-	}
-	&.blue{
-		width: $width-circle1;
-		height: $width-circle1;
-		background: $color-blue;
-		left: 345px;
-		top: 150px;
-		&.blue-animation2{
-			@include animation(moveX2 0.5s linear 0s  alternate, moveY2 .5s linear 0s alternate);
+		&.blue{
+			width: $width-circle1;
+			height: $width-circle1;
+			background: $color-blue;
+			left: 345px;
+			top: 150px;
+			&.blue-animation2{
+				@include animation(moveX2 0.7s linear 0s  alternate, moveY2 .7s linear 0s alternate);
+			}
 		}
-	}
-	&.pink{
-		width: $width-circle3;
-		height: $width-circle3;
-		background: $color-pink;
-		left: 462px;
-		top: -200px;	
-		&.pink-animation3{
-			@include animation(moveX3 0.5s linear 0s  alternate, moveY3 .5s linear 0s alternate);
+		&.pink{
+			width: $width-circle3;
+			height: $width-circle3;
+			background: $color-pink;
+			left: 462px;
+			top: -200px;	
+			&.pink-animation3{
+				@include animation(moveX3 0.7s linear 0s  alternate, moveY3 .7s linear 0s alternate);
+			}
 		}
 	}
 }
-
 //for first ball
 @include keyframes(moveX0) {
   	0%   {left: -480px;}
-    25%  {left: -200px;}
-    50%  {left: 2px;}
-    75%  {left: -100px;}
+  	15%  {left: -280px;}
+    25%  {left: 2px;}
+    35%  {left: -250px;}
+    50%  {left: -50px;}
+    65%  {left: 2px;}
+    75%  {left: -50px;}
     100% {left: 2px;}
 }
 @include keyframes(moveY0) {
-  	0%   {top: -350px;}
-    25%  {top: -150px;}
-    50%  {top: 0px;}
-    75%  {top: -100px;}
-    100% {top: 0px;}
+    0%   {top: -350px;}
+  	15%  {top: -150px;}
+    25%  {top: 0px;}
+    35%  {top: -170px;}
+    50%  {top: -50px;}
+    65%  {top: 0px;}
+    75%  {top: -50px;}
+    100% {top: 2px;}
 }
 //for second ball
 @include keyframes(moveX1) {
-  	0%   {left: -480px;}
-    25%  {left: -290px;}
-    50%  {left: -90px;}
+    0%   {left: -480px;}
+  	15%  {left: -290px;}
+    25%  {left: -90px;}
+    35%  {left: -250px;}
+    50%  {left: -150px;}
+    65%  {left: -90px;}
     75%  {left: -190px;}
     100% {left: -90px;}
 }
 @include keyframes(moveY1) {
-  	0%   {top: 550px;}
-    25%  {top: 350px;}
-    50%  {top: 150px;}
+    0%   {top: 550px;}
+  	15%  {top: 350px;}
+    25%  {top: 150px;}
+    35%  {top: 350px;}
+    50%  {top: 250px;}
+    65%  {top: 150px;}
     75%  {top: 250px;}
     100% {top: 150px;}
 }
 //for third ball
 @include keyframes(moveX2) {
-  	0%   {left: 1000px;}
-    25%  {left: 500px;}
-    50%  {left: 345px;}
+    0%   {left: 1000px;}
+  	15%  {left: 500px;}
+    25%  {left: 345px;}
+    35%  {left: 600px;}
+    50%  {left: 450px;}
+    65%  {left: 345px;}
     75%  {left: 445px;}
     100% {left: 345px;}
 }
 @include keyframes(moveY2) {
-  	0%   {top: 550px;}
-    25%  {top: 350px;}
-    50%  {top: 150px;}
+    0%   {top: 550px;}
+  	15%  {top: 350px;}
+    25%  {top: 150px;}
+    35%  {top: 350px;}
+    50%  {top: 250px;}
+    65%  {top: 150px;}
     75%  {top: 250px;}
     100% {top: 150px;}
 }
 //for fourth ball
 @include keyframes(moveX3) {
-  	0%   {left: 900px;}
-    25%  {left: 600px;}
-    50%  {left: 462px;}
+    0%   {left: 900px;}
+  	15%  {left: 600px;}
+    25%  {left: 462px;}
+    35%  {left: 600px;}
+    50%  {left: 562px;}
+    65%  {left: 462px;}
     75%  {left: 562px;}
     100% {left: 462px;}
 }
 @include keyframes(moveY3) {
 	from { top: -200px; } to { top: -200px; }
+}
+//for fifth ball
+@include keyframes(moveX4) {
+    0%   {left: -491px;}
+  	15%  {left: -291px;}
+    25%  {left: 91px;}
+    35%  {left: -191px;}
+    50%  {left: -91px;}
+    65%  {left: 91px;}
+    75%  {left: -91px;}
+    100% {left: 91px;}
+}
+@include keyframes(moveY4) {
+    0%   {top: 550px;}
+  	15%  {top: 265px;}
+    25%  {top: -65px;}
+    35%  {top: 350px;}
+    50%  {top: 165px;}
+    65%  {top: -65px;}
+    75%  {top: 165px;}
+    100% {top: -65px;}
+}
+//for fifth ball
+@include keyframes(moveX5) {
+    0%   {left: 824px;}
+  	15%  {left: 624px;}
+    25%  {left: 424px;}
+    35%  {left: 624px;}
+    50%  {left: 524px;}
+    65%  {left: 424px;}
+    75%  {left: 524px;}
+    100% {left: 424px;}
+}
+@include keyframes(moveY5) {
+    0%   {top: -970px;}
+  	15%  {top: -770px;}
+    25%  {top: -570px;}
+    35%  {top: -770px;}
+    50%  {top: -670px;}
+    65%  {top: -570px;}
+    75%  {top: -670px;}
+    100% {top: -570px;}
+}
+//for sixth ball
+@include keyframes(moveX6) {
+    0%   {left: -480px;}
+    15%  {left: -200px;}
+    25%  {left: -34px;}
+    35%  {left: -200px;}
+    50%  {left: -50px;}
+    65%  {left: -34px;}
+    75%  {left: -80px;}
+    100% {left: -34px;}
+}
+@include keyframes(moveY6) {
+    0%   {top: -350px;}
+    15%  {top: -150px;}
+    25%  {top: 0px;}
+    35%  {top: -170px;}
+    50%  {top: -80px;}
+    65%  {top: 0px;}
+    75%  {top: -80px;}
+    100% {top: 0px;}
 }
