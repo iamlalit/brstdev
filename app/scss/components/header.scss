@@ -1,3 +1,4 @@
+
 header.container{
 	width: $width-base;
 	margin: 0 auto;
@@ -9,8 +10,13 @@ header.container{
     background-color: inherit;
 	border: 0;
 	.navbar-brand {
-		padding: 0;
-		margin-right: $base-padding * 5;
+		//padding: 25px 0 0 0;
+		margin-right: $base-padding * 1;
+		width: 265px;
+		text-align: center;
+		height: 120px;
+		background: #72b9bf;
+		position: relative;
 	}
 	ul.navbar-nav{
 		border-bottom: 3px solid $brand-green;
