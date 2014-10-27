@@ -1,7 +1,36 @@
 .tap{
 	text-align: center;
 	padding-top: 50px;
+    position: relative;
 }
+.droplets {
+  transition: font-size 1s cubic-bezier(.46,.11,.46,.53);
+  font-size: 30px;
+  color: #0E97A3;
+  position: absolute;
+  background: -webkit-linear-gradient(#0E97A3, #005781);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /*bottom:150px;*/
+  -webkit-animation: fall 4.66s ease-in infinite;
+  -moz-animation: fall 4.66s ease-in infinite;
+  z-index: 10000;
+}
+
+.rain{
+  font-family: Icomatic;
+  position: absolute;
+}
+
+/* animate the drops*/
+@-webkit-keyframes fall {
+  to {margin-top:4800px;}
+}
+@-moz-keyframes fall {
+  to {margin-top:4800px;}
+}
+
 .outer-circle{
 	width: 500px;
 	height:500px;
