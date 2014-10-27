@@ -1,0 +1,205 @@
+div#zero{	
+	div{
+		&.color1{
+			width: $width-circle1;
+			height: $width-circle1;
+			background: $color-orange;
+			left: 2px;
+			top: 0px;
+			&.animation0{
+				@include animation(moveX0 0.7s linear 0s  alternate, moveY0 .7s linear 0s alternate);
+			}
+		}
+		&.color2{
+			width: $width-circle2;
+			height: $width-circle2;
+			background: $color-purple;
+			left: -90px;
+			top: 150px;
+			&.animation1{
+				@include animation(moveX1 .7s linear 0s  alternate, moveY1 .7s linear 0s alternate);
+			}
+		}
+		&.color3{
+			width: $width-circle1;
+			height: $width-circle1;
+			background: $color-blue;
+			left: 345px;
+			top: 150px;
+			&.animation2{
+				@include animation(moveX2 0.7s linear 0s  alternate, moveY2 .7s linear 0s alternate);
+			}
+		}
+		&.color4{
+			width: $width-circle3;
+			height: $width-circle3;
+			background: $color-pink;
+			left: 462px;
+			top: -200px;	
+			&.animation3{
+				@include animation(moveX3 0.7s linear 0s  alternate, moveY3 .7s linear 0s alternate);
+			}
+		}
+	}
+}
+//for first ball
+@include keyframes(moveX0) {
+  	0%   {left: -480px;}
+  	15%  {left: -280px;}
+    25%  {left: 2px;}//actual position
+    35%  {left: -250px;}
+    50%  {left: -50px;}
+    65%  {left: 2px;}//actual position
+    75%  {left: -50px;}
+    100% {left: 2px;}//actual position
+}
+@include keyframes(moveY0) {
+    0%   {top: -350px;}
+  	15%  {top: -150px;}//actual position
+    25%  {top: 0px;}
+    35%  {top: -170px;}//actual position
+    50%  {top: -50px;}
+    65%  {top: 0px;}//actual position
+    75%  {top: -50px;}
+    100% {top: 0px;}//actual position
+}
+//for second ball
+@include keyframes(moveX1) {
+    0%   {left: -480px;}
+  	15%  {left: -290px;}
+    25%  {left: -90px;}//actual position
+    35%  {left: -250px;}
+    50%  {left: -150px;}
+    65%  {left: -90px;}//actual position
+    75%  {left: -190px;}
+    100% {left: -90px;}//actual position
+}
+@include keyframes(moveY1) {
+    0%   {top: 550px;}
+  	15%  {top: 350px;}
+    25%  {top: 150px;}//actual position
+    35%  {top: 350px;}
+    50%  {top: 250px;}
+    65%  {top: 150px;}//actual position
+    75%  {top: 250px;}
+    100% {top: 150px;}//actual position
+}
+//for third ball
+@include keyframes(moveX2) {
+    0%   {left: 1000px;}
+  	15%  {left: 500px;}
+    25%  {left: 345px;}//actual position
+    35%  {left: 600px;}
+    50%  {left: 450px;}
+    65%  {left: 345px;}//actual position
+    75%  {left: 445px;}
+    100% {left: 345px;}//actual position
+}
+@include keyframes(moveY2) {
+    0%   {top: 550px;}
+  	15%  {top: 350px;}
+    25%  {top: 150px;}//actual position
+    35%  {top: 350px;}
+    50%  {top: 250px;}
+    65%  {top: 150px;}//actual position
+    75%  {top: 250px;}
+    100% {top: 150px;}//actual position
+}
+//for fourth type of ball
+@include keyframes(moveX3) {
+    0%   {left: 900px;}
+  	15%  {left: 600px;}
+    25%  {left: 462px;}//actual position
+    35%  {left: 600px;}
+    50%  {left: 562px;}
+    65%  {left: 462px;}//actual position
+    75%  {left: 562px;}
+    100% {left: 462px;}//actual position
+}
+@include keyframes(moveY3) {
+	from { top: -200px; } to { top: -200px; }
+}
+//for fifth type of ball
+@include keyframes(moveX4) {
+    0%   {left: -491px;}
+  	15%  {left: -291px;}
+    25%  {left: 91px;}//actual position
+    35%  {left: -191px;}
+    50%  {left: -91px;}
+    65%  {left: 91px;}//actual position
+    75%  {left: -91px;}
+    100% {left: 91px;}//actual position
+}
+@include keyframes(moveY4) {
+    0%   {top: 550px;}
+  	15%  {top: 265px;}
+    25%  {top: -65px;}//actual position
+    35%  {top: 350px;}
+    50%  {top: 165px;}
+    65%  {top: -65px;}//actual position
+    75%  {top: 165px;}
+    100% {top: -65px;}//actual position
+}
+//for fifth type of ball
+@include keyframes(moveX5) {
+    0%   {left: 824px;}
+  	15%  {left: 624px;}
+    25%  {left: 424px;}//actual position
+    35%  {left: 624px;}
+    50%  {left: 524px;}
+    65%  {left: 424px;}//actual position
+    75%  {left: 524px;}
+    100% {left: 424px;}//actual position
+}
+@include keyframes(moveY5) {
+    0%   {top: -970px;}
+  	15%  {top: -770px;}
+    25%  {top: -570px;}//actual position
+    35%  {top: -770px;}
+    50%  {top: -670px;}
+    65%  {top: -570px;}//actual position
+    75%  {top: -670px;}
+    100% {top: -570px;}//actual position
+}
+//for sixth type of ball
+@include keyframes(moveX6) {
+    0%   {left: -480px;}
+    15%  {left: -200px;}
+    25%  {left: -34px;}//actual position
+    35%  {left: -200px;}
+    50%  {left: -50px;}
+    65%  {left: -34px;}//actual position
+    75%  {left: -80px;}
+    100% {left: -34px;}//actual position
+}
+@include keyframes(moveY6) {
+    0%   {top: -350px;}
+    15%  {top: -150px;}
+    25%  {top: 0px;}//actual position
+    35%  {top: -170px;}
+    50%  {top: -80px;}
+    65%  {top: 0px;}//actual position
+    75%  {top: -80px;}
+    100% {top: 0px;}//actual position
+}
+//for seventh type of ball
+@include keyframes(moveX7) {
+    0%   {left: -577px;}
+    15%  {left: -277px;}
+    25%  {left: -77px;}//actual position
+    35%  {left: -277px;}
+    50%  {left: -100px;}
+    65%  {left: -77px;}//actual position
+    75%  {left: -137px;}
+    100% {left: -77px;}//actual position
+}
+@include keyframes(moveY7) {
+    0%   {top: -30px;}
+    15%  {top: -20px;}
+    25%  {top: 9px;}//actual position
+    35%  {top: -20px;}
+    50%  {top: -10px;}
+    65%  {top: 9px;}//actual position
+    75%  {top: -10px;}
+    100% {top: 9px;}//actual position
+}

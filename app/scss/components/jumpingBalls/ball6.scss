@@ -1,0 +1,34 @@
+div#five{	
+	div{
+		&.color1{
+			width: $width-circle2;
+			height: $width-circle2;
+			background: $color-blue;
+			left: -34px;
+			top: 0px;
+			&.animation0{
+				@include animation(moveX6 0.7s linear 0s  alternate, moveY6 .7s linear 0s alternate);
+			}
+		}
+		&.color2{
+			width: $width-circle1;
+			height: $width-circle1;
+			background: $color-pink;
+			left: -77px;
+			top: 9px;
+			&.animation1{
+				@include animation(moveX7 .7s linear 0s  alternate, moveY7 .7s linear 0s alternate);
+			}
+		}
+		&.color3{
+			width: $width-circle1;
+			height: $width-circle1;
+			background: $color-green;
+			left: 345px;
+			top: 150px;
+			&.animation2{
+				@include animation(moveX2 0.7s linear 0s  alternate, moveY2 .7s linear 0s alternate);
+			}
+		}
+	}
+}
