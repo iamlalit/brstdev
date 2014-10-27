@@ -16,6 +16,27 @@
   -webkit-animation: fall 4.66s ease-in infinite;
   -moz-animation: fall 4.66s ease-in infinite;
   z-index: 10000;
+
+  &.type2{
+    -webkit-animation: fall 6.0s ease-in infinite;
+    -moz-animation: fall 6.0s ease-in infinite;
+  }
+  &.type3{
+    -webkit-animation: fall 3.0s ease-in infinite;
+    -moz-animation: fall 3.0s ease-in infinite;
+  }
+  &.type4{
+    -webkit-animation: fall 5.0s ease-in infinite;
+    -moz-animation: fall 5.0s ease-in infinite;
+  }
+  &.type5{
+    -webkit-animation: fall 2.40s ease-in infinite;
+    -moz-animation: fall 2.40s ease-in infinite;
+  }
+  &.type6{
+    -webkit-animation: fall 3.60s ease-in infinite;
+    -moz-animation: fall 3.60s ease-in infinite;
+  }
 }
 
 .rain{
