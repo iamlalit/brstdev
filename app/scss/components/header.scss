@@ -10,13 +10,14 @@ header.container{
     background-color: inherit;
 	border: 0;
 	.navbar-brand {
-		//padding: 25px 0 0 0;
-		margin-right: $base-padding * 1;
-		width: 265px;
+		width: 280px;
 		text-align: center;
 		height: 120px;
-		background: #72b9bf;
+		//background-image: url("../img/animated2.gif");
 		position: relative;
+		top: -30px;
+		margin-right: 15px;
+		padding-top: 33px;		
 	}
 	ul.navbar-nav{
 		border-bottom: 3px solid $brand-green;
