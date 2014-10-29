@@ -2,16 +2,12 @@ EpageoApp.directive('hoverLogo', function() {
 	return {
 		restrict: 'A',
 		link: function (scope, elem, attrs, ctrl) {
-			var flag = 0;
-
+			var max = 4;
+			var min = 1;
 			elem.bind('mouseover', function() {
-			  if(flag == 0){
-			    $(this).parent("a.navbar-brand").css('background-image', 'url("img/animated2.gif")');  
-			    flag = 1;
-			  }else{
-			    $(this).parent("a.navbar-brand").css('background-image', 'url("img/animated-circle.gif")');  
-			    flag = 0;
-			  }				
+			  var flag = Math.floor(Math.random() * (max - min + 1)) + min;;
+			  console.log(flag);
+			  $(this).parent("a.navbar-brand").css('background-image', 'url("img/animated'+flag+'.gif")');  
 			});
 
 			elem.bind('mouseout', function(){
