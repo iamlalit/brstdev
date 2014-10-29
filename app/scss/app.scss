@@ -1,4 +1,5 @@
 @import 'base';
+@import 'bourbon';
 @import 'bootstrap-compass';
 @import 'bootstrap-mincer';
 @import 'bootstrap-sprockets';
@@ -19,7 +20,7 @@
 @import 'components/body';
 
 //jumping balls
-@import 'bourbon';
+
 @import 'components/jumpingBalls/ball1';
 @import 'components/jumpingBalls/ball2';
 @import 'components/jumpingBalls/ball3';

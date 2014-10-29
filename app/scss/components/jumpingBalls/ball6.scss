@@ -7,7 +7,7 @@ div#five{
 			left: -34px;
 			top: 0px;
 			&.animation0{
-				@include animation(moveX6 0.7s linear 0s  alternate, moveY6 .7s linear 0s alternate);
+				@include animation(moveX6 1.5s ease-out, moveY6 1.5s ease-out);
 			}
 		}
 		&.color2{
@@ -17,7 +17,7 @@ div#five{
 			left: -77px;
 			top: 9px;
 			&.animation1{
-				@include animation(moveX7 .7s linear 0s  alternate, moveY7 .7s linear 0s alternate);
+				@include animation(moveX7 .7s linear 0s  alternate, moveY7 1.5s ease-out);
 			}
 		}
 		&.color3{
@@ -27,7 +27,7 @@ div#five{
 			left: 345px;
 			top: 150px;
 			&.animation2{
-				@include animation(moveX2 0.7s linear 0s  alternate, moveY2 .7s linear 0s alternate);
+				@include animation(moveX2 1.5s ease-out, moveY2 1.5s ease-out);
 			}
 		}
 	}

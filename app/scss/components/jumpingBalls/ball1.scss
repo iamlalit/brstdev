@@ -4,10 +4,10 @@ div#zero{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-orange;
-			left: 2px;
-			top: 0px;
+			left: -12px;
+			top: -12px;
 			&.animation0{
-				@include animation(moveX0 0.7s linear 0s  alternate, moveY0 .7s linear 0s alternate);
+				@include animation(moveX0 .8s ease-out);
 			}
 		}
 		&.color2{
@@ -15,9 +15,9 @@ div#zero{
 			height: $width-circle2;
 			background: $color-purple;
 			left: -90px;
-			top: 150px;
+			top: 184px;
 			&.animation1{
-				@include animation(moveX1 .7s linear 0s  alternate, moveY1 .7s linear 0s alternate);
+				@include animation(moveX1 .7s $ease-out-circ);
 			}
 		}
 		&.color3{
@@ -27,23 +27,87 @@ div#zero{
 			left: 345px;
 			top: 150px;
 			&.animation2{
-				@include animation(moveX2 0.7s linear 0s  alternate, moveY2 .7s linear 0s alternate);
+				@include animation(moveX2 .75s ease-out);
 			}
 		}
 		&.color4{
 			width: $width-circle3;
 			height: $width-circle3;
 			background: $color-pink;
-			left: 462px;
-			top: -200px;	
+			left: 473px;
+			top: -239px;
 			&.animation3{
-				@include animation(moveX3 0.7s linear 0s  alternate, moveY3 .7s linear 0s alternate);
+				@include animation(moveX3 .7s ease-out);
 			}
 		}
 	}
 }
+
 //for first ball
 @include keyframes(moveX0) {
+  0%   {@include transform(translate(-500%, -500%));}
+  10%  {@include transform(translate(0, 0));}
+  20%  {@include transform(translate(-100%, -100%));}
+  30%  {@include transform(translate(0,0));}
+  40%  {@include transform(translate(-50%,-50%));}
+  50%  {@include transform(translate(0, 0));}
+  60%  {@include transform(translate(-25%,-25%));}
+  70%  {@include transform(translate(0, 0));}
+  80%  {@include transform(translate(-10%,-10%));}
+  90%  {@include transform(translate(0, 0));}
+  100% {@include transform(translate(0, 0));}
+}
+@include keyframes(moveX1) {
+  0%   {@include transform(translate(-500%, 500%));}
+  10%  {@include transform(translate(0, 0));}
+  20%  {@include transform(translate(-150%, 150%));}
+  30%  {@include transform(translate(0,0));}
+  40%  {@include transform(translate(-80%,80%));}
+  50%  {@include transform(translate(0, 0));}
+  60%  {@include transform(translate(-40%,40%));}
+  70%  {@include transform(translate(0, 0));}
+  80%  {@include transform(translate(-5%,5%));}
+  90%  {@include transform(translate(0, 0));}
+  100% {@include transform(translate(0, 0));}
+}
+@include keyframes(moveX2) {
+  0%   {@include transform(translate(500%, 500%));}
+  10%  {@include transform(translate(0, 0));}
+  15%  {@include transform(translate(80%,80%));}
+  25%  {@include transform(translate(0, 0));}
+  45%  {@include transform(translate(30%,30%));}
+  60%  {@include transform(translate(0, 0));}
+  80%  {@include transform(translate(15%,15%));}
+  90%  {@include transform(translate(0, 0));}
+  100% {@include transform(translate(0, 0));}
+}
+@include keyframes(moveX3) {
+  0%   {@include transform(translate(500%, -500%));}
+  10%  {@include transform(translate(0, 0));}
+  20%  {@include transform(translate(100%, -100%));}
+  30%  {@include transform(translate(0,0));}
+  40%  {@include transform(translate(50%, -50%));}
+  50%  {@include transform(translate(0, 0));}
+  60%  {@include transform(translate(25%, -25%));}
+  70%  {@include transform(translate(0, 0));}
+  80%  {@include transform(translate(10%, -10%));}
+  90%  {@include transform(translate(0, 0));}
+  100% {@include transform(translate(0, 0));}
+}
+@include keyframes(moveX4) {
+  0%   {@include transform(translate(-500%, 900%));}
+  15%  {@include transform(translate(0, 0));}
+  20%  {@include transform(translate(-100%, 180%));}
+  35%  {@include transform(translate(0, 0));}
+  40%  {@include transform(translate(-50%, 90%));}
+  55%  {@include transform(translate(0, 0));}
+  60%  {@include transform(translate(-25%, 45%));}
+  75%  {@include transform(translate(0, 0));}
+  80%  {@include transform(translate(-10%, 18%));}
+  90%  {@include transform(translate(0, 0));}
+  100% {@include transform(translate(0, 0));}
+}
+/*@include keyframes(moveX0) {
   	0%   {left: -480px;}
   	15%  {left: -280px;}
     25%  {left: 2px;}//actual position
@@ -202,4 +266,4 @@ div#zero{
     65%  {top: 9px;}//actual position
     75%  {top: -10px;}
     100% {top: 9px;}//actual position
-}
+}*/
