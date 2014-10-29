@@ -9,7 +9,7 @@ EpageoApp.directive('hoverLogo', function() {
 			    $(this).parent("a.navbar-brand").css('background-image', 'url("img/animated2.gif")');  
 			    flag = 1;
 			  }else{
-			    $(this).parent("a.navbar-brand").css('background-image', 'url("img/animated-square.gif")');  
+			    $(this).parent("a.navbar-brand").css('background-image', 'url("img/animated-circle.gif")');  
 			    flag = 0;
 			  }				
 			});
