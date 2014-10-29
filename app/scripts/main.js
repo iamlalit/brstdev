@@ -84,6 +84,15 @@ $(document).ready(function() {
     };
     //to call the function each time whenever a user scrolls the window
     $(window).scroll(function() {
+
+        // for Navigation comes after scroll
+        var secondaryNavigation = $('#secondary-navigation'), windows = $(this);
+        if(windows.scrollTop() > 110){
+            secondaryNavigation.addClass('translate-down').removeClass('translate-up');
+        } else {
+            secondaryNavigation.addClass('translate-up').removeClass('translate-down');
+        }
+        
       //for discovery
       if($('#showCircle00').isOnScreen() && $('#showCircle01').isOnScreen()){
         $(kids0[0]).addClass('animation0 table-cell').removeClass('hide');
