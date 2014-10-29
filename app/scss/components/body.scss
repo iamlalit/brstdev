@@ -5,6 +5,7 @@
 }
 .droplets {
   transition: font-size 1s cubic-bezier(.46,.11,.46,.53);
+  -ms-transition: font-size 1s cubic-bezier(.46,.11,.46,.53);
   font-size: 30px;
   color: #0E97A3;
   position: absolute;
@@ -15,28 +16,35 @@
   /*bottom:150px;*/
   -webkit-animation: fall 4.66s ease-in infinite;
   -moz-animation: fall 4.66s ease-in infinite;
+  animation: fall 4.66s ease-in infinite;
   transition-delay: .2s;
+  -ms-transition-delay: .2s;
   z-index: 10000;
 
   &.type2{
     -webkit-animation: fall 6.0s ease-in infinite;
     -moz-animation: fall 6.0s ease-in infinite;
+    -ms-animation: fall 6.0s ease-in infinite;
   }
   &.type3{
     -webkit-animation: fall 3.0s ease-in infinite;
     -moz-animation: fall 3.0s ease-in infinite;
+    -ms-animation: fall 3.0s ease-in infinite;
   }
   &.type4{
     -webkit-animation: fall 5.0s ease-in infinite;
     -moz-animation: fall 5.0s ease-in infinite;
+    -ms-animation: fall 5.0s ease-in infinite;
   }
   &.type5{
     -webkit-animation: fall 2.40s ease-in infinite;
     -moz-animation: fall 2.40s ease-in infinite;
+    -ms-animation: fall 2.40s ease-in infinite;
   }
   &.type6{
     -webkit-animation: fall 3.60s ease-in infinite;
     -moz-animation: fall 3.60s ease-in infinite;
+    -ms-animation: fall 3.60s ease-in infinite;
   }
 }
 
@@ -47,6 +55,9 @@
 
 /* animate the drops*/
 @-webkit-keyframes fall {
+  to {margin-top:4800px;}
+}
+@keyframes fall {
   to {margin-top:4800px;}
 }
 @-moz-keyframes fall {
