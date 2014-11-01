@@ -3,18 +3,20 @@ EpageoApp.directive('activeNav', function() {
 	 restrict: 'A',
 	 link: function (scope, element, attrs, ctrl) {
 	   scope.$watch('location.path()', function() {
-	     if(window.location.pathname.split('/')[2] === element[0].href.split('/')[4]) {
+	   	console.log(window.location.pathname.split('/pages/')[1].split('/')[0], element[0].href.split('/pages/')[1].split('/')[0])
+	     if(window.location.pathname.split('/pages/')[1].split('/')[0] === element[0].href.split('/pages/')[4]) {
 	       	element.closest('li').addClass('active');
-			$("#"+window.location.pathname.split('/')[2]).addClass('in');
+	       	var page = window.location.pathname.split('/pages/')[1].split('/')[0];
+			$("#"+page).addClass('in');
 
-			if(window.location.pathname.split('/')[2] === 'services'){
-				$("#"+window.location.pathname.split('/')[2]).closest('.container').css({'width': '450px'});
-			}else if(window.location.pathname.split('/')[2] === 'solutions'){
-				$("#"+window.location.pathname.split('/')[2]).closest('.container').css({'width': '660px', 'top': '-24px'});
-			}else if(window.location.pathname.split('/')[2] === 'company'){
-				$("#"+window.location.pathname.split('/')[2]).closest('.container').css({'width': '490px'});
-			}else if(window.location.pathname.split('/')[2] === 'contact'){
-				$("#"+window.location.pathname.split('/')[2]).closest('.container').css({'width': '415px'});
+			if(page === 'services'){
+				$("#"+page).closest('.container').css({'width': '450px'});
+			}else if(page === 'solutions'){
+				$("#"+page).closest('.container').css({'width': '660px', 'top': '-24px'});
+			}else if(page === 'company'){
+				$("#"+page).closest('.container').css({'width': '490px'});
+			}else if(page === 'contact'){
+				$("#"+page).closest('.container').css({'width': '415px'});
 			}
 	     } else {
 	        element.closest('li').removeClass('active');
