@@ -49,7 +49,7 @@ module.exports = function (grunt) {
             },
             livereload: {
                 options: {
-                    open: 'http://localhost:9001/index.html',
+                    open: 'http://localhost:9001/pages/home/index.html',
                     base: [
                         '.tmp',
                         '<%= config.app %>'
@@ -143,7 +143,8 @@ module.exports = function (grunt) {
               src: [
               '<%= config.app %>/scripts/app.js',
               '<%= config.app %>/scripts/main.js',
-              '<%= config.app %>/scripts/directive/hoverLogo.js'              
+              '<%= config.app %>/scripts/directive/hoverLogo.js',
+              '<%= config.app %>/scripts/directive/activeNav.js'              
                     ],
               dest: '<%= config.app %>/.tmp/scripts/core.js',
             }
