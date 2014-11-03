@@ -3,6 +3,11 @@ body {
 	font-family: $font-family-body;
     font-weight: 500;
 	background-image: url('../../.tmp/img/bg-1.png');
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+
 	&.index{
 		background-image: url('../../.tmp/img/stock-photo-amsterdam.jpg');
 	}
