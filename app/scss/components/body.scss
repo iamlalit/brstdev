@@ -168,3 +168,28 @@ $color-green: #187702;
 	}
 }
 
+.services{
+	width: 980px;
+	margin: 0 auto;
+	padding: 80px 20px;
+	li{
+		text-align: center;
+		.heading{
+			font-size: 2.7rem;
+			line-height:2;
+			font-family: $font-family-headings;	
+		}
+		p{  
+			font-size: 1.7rem;
+			line-height: 1.4;
+			padding-bottom:5px;
+		}
+		ul{
+			li{
+				font-size: 1.55rem;
+				line-height: 1.4;
+				font-weight: 400;
+			}
+		}
+	}
+}

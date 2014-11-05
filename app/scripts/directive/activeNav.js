@@ -4,7 +4,7 @@ EpageoApp.directive('activeNav', function() {
 	 link: function (scope, element, attrs, ctrl) {
 	   scope.$watch('location.path()', function() {
 	   	console.log(window.location.pathname.split('/pages/')[1].split('/')[0], element[0].href.split('/pages/')[1].split('/')[0])
-	     if(window.location.pathname.split('/pages/')[1].split('/')[0] === element[0].href.split('/pages/')[4]) {
+	     if(window.location.pathname.split('/pages/')[1].split('/')[0] === element[0].href.split('/pages/')[1].split('/')[0]) {
 	       	element.closest('li').addClass('active');
 	       	var page = window.location.pathname.split('/pages/')[1].split('/')[0];
 			$("#"+page).addClass('in');
