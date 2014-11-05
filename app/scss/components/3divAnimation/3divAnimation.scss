@@ -1,8 +1,8 @@
 
-.services{
+.divs3{
     width: 980px;
     margin: 0 auto;
-    padding: 80px 20px;
+    padding: 80px 20px 100px;
     li{
         text-align: center;
         .heading{
@@ -34,7 +34,7 @@
     #marketing{
         &.upwards0-strategy{
             @include animation(upward0 0.1s linear 0s  alternate);
-            top: 100px;
+            top: 150px;
         }
         &.upwards1-strategy{
             @include animation(upward1 0.2s linear 0s  alternate);

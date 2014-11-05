@@ -112,20 +112,27 @@ $(document).ready(function() {
                 }
             }
         }
-        if($('#marketing0').isOnScreen()){
-            $('#marketing').addClass('upwards0-strategy');
-            if($('#marketing1').isOnScreen()){
-                $('#marketing').addClass('upwards1-strategy').removeClass('upwards0-strategy');
-                if($('#marketing2').isOnScreen()){
-                    $('#marketing').addClass('upwards2-strategy').removeClass('upwards1-strategy');
-                    if($('#marketing3').isOnScreen()){
-                        console.log('3');
-                        $('#marketing').addClass('upwards3-strategy').removeClass('upwards2-strategy');
+        if($('.services').isOnScreen()){ 
+            if($('#marketing0').isOnScreen()){
+                $('#marketing').addClass('upwards0-strategy');
+                if($('#marketing1').isOnScreen()){
+                    $('#marketing').addClass('upwards1-strategy').removeClass('upwards0-strategy');
+                    if($('#marketing2').isOnScreen()){
+                        $('#marketing').addClass('upwards2-strategy').removeClass('upwards1-strategy');
+                        if($('#marketing3').isOnScreen()){
+                            console.log('3');
+                            $('#marketing').addClass('upwards3-strategy').removeClass('upwards2-strategy');
+                        }
                     }
                 }
             }
         }
        
+        if($('#ourApproach').isOnScreen()){
+            $('#marketing').addClass('upwards3-strategy');
+            $('#platform').addClass('upwards3-strategy');
+            $('#strategy').addClass('upwards3-strategy');
+        }
       //for discovery
       if($('#showCircle00').isOnScreen() && $('#showCircle01').isOnScreen()){
         $(kids0[0]).addClass('animation0 table-cell').removeClass('hide');
