@@ -86,58 +86,104 @@ $(document).ready(function() {
     var lastScrollTop = 0;
     $(window).scroll(function(event){
 
-        if($('#ourApproach').isOnScreen() || $('#zero').isOnScreen()){
-            $('#marketing').addClass('upwards3-strategy');
-            $('#platform').addClass('upwards3-strategy');
-            $('#strategy').addClass('upwards3-strategy');
-        }
-       var st = $(this).scrollTop();
-       if (st > lastScrollTop){
+        // if($('#ourApproach').isOnScreen() || $('#zero').isOnScreen()){
+        //     $('#marketing').addClass('upwards3-strategy');
+        //     $('#platform').addClass('upwards3-strategy');
+        //     $('#strategy').addClass('upwards3-strategy');
+        // }
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop){
            // downscroll code
-           //for three divs to animate upwards
-            if($('.services').isOnScreen()){  
-                $('#strategy').addClass('upwards3-strategy');
-                if($('#platform0').isOnScreen()){
-                    $('#platform').addClass('upwards0-strategy');
-                    if($('#platform1').isOnScreen()){
-                        $('#platform').addClass('upwards1-strategy').removeClass('upwards0-strategy');
-                        if($('#platform2').isOnScreen()){
-                            $('#platform').addClass('upwards2-strategy').removeClass('upwards1-strategy');
-                            if($('#platform3').isOnScreen()){
-                                console.log('3');
-                                $('#platform').addClass('upwards3-strategy').removeClass('upwards2-strategy');
-                            }
+           var height = $(window).scrollTop()
+           var heightOfWindow = $(window).height();
+           console.log(height, heightOfWindow);
+            if(height > 450){
+                $('#strategy').addClass('upwards0-strategy').removeClass('downwards0-strategy');   
+                if(height > 500){
+                    $('#strategy').addClass('upwards1-strategy').removeClass('upwards0-strategy downwards1-strategy');  
+                    if(height > 550){
+                        $('#strategy').addClass('upwards2-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
+                        if(height > 600){
+                            $('#strategy').addClass('upwards3-strategy').removeClass('upwards2-strategy downwards3-strategy');
                         }
                     }
                 }
             }
-            if($('.services').isOnScreen()){ 
-                if($('#marketing0').isOnScreen()){
-                    $('#marketing').addClass('upwards0-strategy');
-                    if($('#marketing1').isOnScreen()){
-                        $('#marketing').addClass('upwards1-strategy').removeClass('upwards0-strategy');
-                        if($('#marketing2').isOnScreen()){
-                            $('#marketing').addClass('upwards2-strategy').removeClass('upwards1-strategy');
-                            if($('#marketing3').isOnScreen()){
-                                console.log('3');
-                                $('#marketing').addClass('upwards3-strategy').removeClass('upwards2-strategy');
-                            }
+            if(height > 580){
+                $('#platform').addClass('upwards0-strategy').removeClass('downwards0-strategy');   
+                if(height > 630){
+                    $('#platform').addClass('upwards1-strategy').removeClass('upwards0-strategy downwards1-strategy');  
+                    if(height > 680){
+                        $('#platform').addClass('upwards2-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
+                        if(height > 730){
+                            $('#platform').addClass('upwards3-strategy').removeClass('upwards2-strategy downwards3-strategy');
                         }
                     }
                 }
             }
-       } else {
-            // upscroll code
-            
-       }
-       lastScrollTop = st;
+            if(height > 650){
+                $('#marketing').addClass('upwards0-strategy').removeClass('downwards0-strategy');   
+                if(height > 700){
+                    $('#marketing').addClass('upwards1-strategy').removeClass('upwards0-strategy downwards1-strategy');  
+                    if(height > 750){
+                        $('#marketing').addClass('upwards2-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
+                        if(height > 800){
+                            $('#marketing').addClass('upwards3-strategy').removeClass('upwards2-strategy downwards3-strategy');
+                        }
+                    }
+                }
+            }
+        } else {
+            //upward scroll
+            var height = $(window).scrollTop()
+            var heightOfWindow = $(window).height();
+            console.log(height, heightOfWindow);
+            if(height < 820){
+                $('#marketing').addClass('downwards3-strategy').removeClass('upwards3-strategy'); 
+                if(height < 770){
+                    $('#marketing').addClass('downwards2-strategy').removeClass('upwards2-strategy downwards3-strategy'); 
+                    if(height < 720){
+                        $('#marketing').addClass('downwards1-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
+                        if(height < 670){
+                            $('#marketing').addClass('downwards0-strategy').removeClass('upwards0-strategy downwards1-strategy'); 
+                        }
+                    }
+                }
+            }
+            if(height < 710){
+                $('#platform').addClass('downwards3-strategy').removeClass('upwards3-strategy'); 
+                if(height < 660){
+                    $('#platform').addClass('downwards2-strategy').removeClass('upwards2-strategy downwards3-strategy'); 
+                    if(height < 610){
+                        $('#platform').addClass('downwards1-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
+                        if(height < 560){
+                            $('#platform').addClass('downwards0-strategy').removeClass('upwards0-strategy downwards1-strategy'); 
+                        }
+                    }
+                }
+            }
+            if(height < 620){
+                $('#strategy').addClass('downwards3-strategy').removeClass('upwards3-strategy'); 
+                if(height < 580){
+                    $('#strategy').addClass('downwards2-strategy').removeClass('upwards2-strategy downwards3-strategy'); 
+                    if(height < 530){
+                        $('#strategy').addClass('downwards1-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
+                        if(height < 480){
+                            $('#strategy').addClass('downwards0-strategy').removeClass('upwards0-strategy downwards1-strategy'); 
+                        }
+                    }
+                }
+            }
+
+        }
+        lastScrollTop = st;
     });
     //to call the function each time whenever a user scrolls the window
     $(window).scroll(function() {
 
         // for Navigation comes after scroll
         var secondaryNavigation = $('#secondary-navigation'), windows = $(this);
-        if(windows.scrollTop() > 130){
+        if(windows.scrollTop() > 160){
             secondaryNavigation.addClass('translate-down').removeClass('translate-up');
         } else {
             secondaryNavigation.addClass('translate-up').removeClass('translate-down');
