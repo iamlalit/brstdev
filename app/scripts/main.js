@@ -84,6 +84,54 @@ $(document).ready(function() {
     };
 
     var lastScrollTop = 0;
+    $(window).scroll(function(event){
+
+        if($('#ourApproach').isOnScreen() || $('#zero').isOnScreen()){
+            $('#marketing').addClass('upwards3-strategy');
+            $('#platform').addClass('upwards3-strategy');
+            $('#strategy').addClass('upwards3-strategy');
+        }
+       var st = $(this).scrollTop();
+       if (st > lastScrollTop){
+           // downscroll code
+           //for three divs to animate upwards
+            if($('.services').isOnScreen()){  
+                $('#strategy').addClass('upwards3-strategy');
+                if($('#platform0').isOnScreen()){
+                    $('#platform').addClass('upwards0-strategy');
+                    if($('#platform1').isOnScreen()){
+                        $('#platform').addClass('upwards1-strategy').removeClass('upwards0-strategy');
+                        if($('#platform2').isOnScreen()){
+                            $('#platform').addClass('upwards2-strategy').removeClass('upwards1-strategy');
+                            if($('#platform3').isOnScreen()){
+                                console.log('3');
+                                $('#platform').addClass('upwards3-strategy').removeClass('upwards2-strategy');
+                            }
+                        }
+                    }
+                }
+            }
+            if($('.services').isOnScreen()){ 
+                if($('#marketing0').isOnScreen()){
+                    $('#marketing').addClass('upwards0-strategy');
+                    if($('#marketing1').isOnScreen()){
+                        $('#marketing').addClass('upwards1-strategy').removeClass('upwards0-strategy');
+                        if($('#marketing2').isOnScreen()){
+                            $('#marketing').addClass('upwards2-strategy').removeClass('upwards1-strategy');
+                            if($('#marketing3').isOnScreen()){
+                                console.log('3');
+                                $('#marketing').addClass('upwards3-strategy').removeClass('upwards2-strategy');
+                            }
+                        }
+                    }
+                }
+            }
+       } else {
+            // upscroll code
+            
+       }
+       lastScrollTop = st;
+    });
     //to call the function each time whenever a user scrolls the window
     $(window).scroll(function() {
 
@@ -95,44 +143,7 @@ $(document).ready(function() {
             secondaryNavigation.addClass('translate-up').removeClass('translate-down');
         }
 
-        //for three divs to animate upwards
-        if($('.services').isOnScreen()){  
-            $('#strategy').addClass('upwards3-strategy');
-            if($('#platform0').isOnScreen()){
-                $('#platform').addClass('upwards0-strategy');
-                if($('#platform1').isOnScreen()){
-                    $('#platform').addClass('upwards1-strategy').removeClass('upwards0-strategy');
-                    if($('#platform2').isOnScreen()){
-                        $('#platform').addClass('upwards2-strategy').removeClass('upwards1-strategy');
-                        if($('#platform3').isOnScreen()){
-                            console.log('3');
-                            $('#platform').addClass('upwards3-strategy').removeClass('upwards2-strategy');
-                        }
-                    }
-                }
-            }
-        }
-        if($('.services').isOnScreen()){ 
-            if($('#marketing0').isOnScreen()){
-                $('#marketing').addClass('upwards0-strategy');
-                if($('#marketing1').isOnScreen()){
-                    $('#marketing').addClass('upwards1-strategy').removeClass('upwards0-strategy');
-                    if($('#marketing2').isOnScreen()){
-                        $('#marketing').addClass('upwards2-strategy').removeClass('upwards1-strategy');
-                        if($('#marketing3').isOnScreen()){
-                            console.log('3');
-                            $('#marketing').addClass('upwards3-strategy').removeClass('upwards2-strategy');
-                        }
-                    }
-                }
-            }
-        }
-       
-        if($('#ourApproach').isOnScreen()){
-            $('#marketing').addClass('upwards3-strategy');
-            $('#platform').addClass('upwards3-strategy');
-            $('#strategy').addClass('upwards3-strategy');
-        }
+        
       //for discovery
       if($('#showCircle00').isOnScreen() && $('#showCircle01').isOnScreen()){
         $(kids0[0]).addClass('animation0 table-cell').removeClass('hide');

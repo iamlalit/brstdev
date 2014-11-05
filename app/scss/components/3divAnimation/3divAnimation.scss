@@ -49,21 +49,42 @@
             top: 0px;
         }
     }
+
+    #strategy,
+    #platform,
+    #marketing{
+        &.downwards0-strategy{
+            @include animation(upward0 0.1s linear 0s  alternate);
+            top: 150px;
+        }
+        &.downwards1-strategy{
+            @include animation(upward1 0.2s linear 0s  alternate);
+            top: 100px;
+        }
+        &.downwards2-strategy{
+            @include animation(upward2 0.2s linear 0s  alternate);
+            top: 50px;
+        }
+        &.downwards3-strategy{
+            @include animation(upward3 0.2s linear 0s  alternate);
+            top: 0px;
+        }
+    }
 }
 
-@include keyframes(upward0) {
-    0%{top:600px}
+@include keyframes(downward0) {
+    0%{top:150px}
+    100%{top:600px}
+}
+@include keyframes(downward1) {
+    0%{top:100px}
     100%{top:150px}
 }
-@include keyframes(upward1) {
-    0%{top:150px}
+@include keyframes(downward2) {
+    0%{top:50px}
     100%{top:100px}
 }
-@include keyframes(upward2) {
-    0%{top:100px}
+@include keyframes(downward3) {
+    0%{top:0px}
     100%{top:50px}
-}
-@include keyframes(upward3) {
-    0%{top:50px}
-    100%{top:0px}
 }
