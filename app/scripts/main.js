@@ -84,6 +84,15 @@ $(document).ready(function() {
     };
     //to call the function each time whenever a user scrolls the window
     $(window).scroll(function() {
+
+        // for Navigation comes after scroll
+        var secondaryNavigation = $('#secondary-navigation'), windows = $(this);
+        if(windows.scrollTop() > 110){
+            secondaryNavigation.addClass('translate-down').removeClass('translate-up');
+        } else {
+            secondaryNavigation.addClass('translate-up').removeClass('translate-down');
+        }
+        
       //for discovery
       if($('#showCircle00').isOnScreen() && $('#showCircle01').isOnScreen()){
         $(kids0[0]).addClass('animation0 table-cell').removeClass('hide');
@@ -184,3 +193,28 @@ $(document).ready(function() {
       }
     });
 });
+
+$(document).ready(function(){
+    $("#myAffix").affix({
+        offset: {
+            top: 1706
+        }
+    });
+});
+
+$(window).load(function () {
+    $(window).on("scroll resize", function () {
+        var pos = $('#myAffix').offset();
+        $('.postContent').each(function () {
+            if (pos.top >= $(this).offset().top && pos.top <= $(this).next().next().offset().top) {
+                $('#myAffix').html($(this).find('.inner-circle').html()); //or any other way you want to get the date
+                return; //break the loop
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $(window).trigger('scroll'); // init the value
+    });
+
+})

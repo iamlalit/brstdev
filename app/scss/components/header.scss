@@ -40,4 +40,78 @@ header.container{
 			}
 		}
 	}
+	.navbar-secondary{
+		//position translated upwards so that transition can be effected
+    	@include transform(translate(0, -31px)); 
+    	transition:1s all ease;    	
+		position:fixed;
+		top:0;
+		left:0;
+		height:31px;
+		width:100%;
+		z-index:9999;
+		&.translate-up{
+			@include transform(translate(0, -31px));
+		}
+		&.translate-down{
+			@include transform(translate(0, 0));
+		}
+		.navigation{
+			height:31px;
+			width:325px;
+			text-align:center;
+			margin:0 auto;
+			overflow:hidden;
+			padding:0;
+			li{
+				position:relative;
+				margin:0;
+				float:left;
+				height:31px;
+				width:auto;
+				border:0;
+				padding:0;
+				background:#fff;
+				a{
+					display:block;
+					height:31px;
+					line-height:31px;
+					background:#7ec15c;
+					color:#fff;
+					font-size:12px;
+					text-align:center;
+					text-decoration:none;
+					text-transform:uppercase;
+					border-right:1px solid #ccc;
+					padding:0 18px;
+					font-family:sans-serif;
+					font-weight:600;
+					transition:1s all ease;  
+				}
+				&:last-child a{
+					border-right:0;
+				}
+				&.active{
+					a{
+						background:#40a674;
+					}
+				}
+				&:hover{
+					a{
+						background:rgba(126, 193, 92, 0.7);
+					}
+				}
+				&:nth-child(1) {
+					a{
+						background:#595959;
+					}
+					&:hover{
+						a{
+							background:rgba(89, 89, 89, 1);
+						}						
+					}
+				}
+			}
+		}
+	}
 }

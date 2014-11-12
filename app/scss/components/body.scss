@@ -50,6 +50,12 @@
 	border-radius: 100%;
 	margin: 65px auto;
 	position: relative;
+    &.affix{
+      top: 50px;
+      position: fixed;
+      @include transform(translate3d(320px, -56px, 0));
+    }
+
 	.inner-circle{
 		position: absolute;
 	    background: $brand-green;
@@ -147,3 +153,7 @@ $color-green: #187702;
 	}
 }
 
+.postContent{
+  visibility: hidden;
+  color: transparent;
+}
