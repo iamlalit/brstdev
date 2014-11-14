@@ -292,7 +292,11 @@ $(document).ready(function() {
 });
 
 $(document).ready(function(){
-    $("#myAffix").affix();
+    $("#myAffix").affix({
+        offset: {
+            top: 1706
+        }
+    });
 });
 
 $(window).load(function () {

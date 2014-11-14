@@ -1,9 +1,9 @@
 <header class="container">
   <div class="navbar navbar-default navbar-md navbar-sm navbar-lg">
    <div class="navbar-header">
-    <a class="navbar-brand" href="#">
-      <img src="img/ePageo-Logo.png" hover-logo class="logo"/>
-    </a>
+    <span class="navbar-brand" >
+      <a href="../../pages/home/index.html"><img src="../../.tmp/img/ePageo-Logo.png" hover-logo class="logo"/></a>
+    </span>
         <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -12,21 +12,54 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Services</a></li>
-          <li><a href="#">Software</a></li>
-          <li><a href="#">Support</a></li>
-          <li><a href="#">Work</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="dropdown">
+            <a href="../../pages/services/services.html" active-nav data-target="#services">Services &amp; Process</a>
+          </li>
+          <li class="dropdown">
+            <a href="../../pages/solutions/solutions.html"active-nav data-target="#solutions">Solutions</a>
+          </li>
+          <li class="dropdown">
+            <a href="../../pages/company/company.html"active-nav data-target="#company">Company</a>
+          </li>
+          <li class="dropdown">
+            <a href="../../pages/contact/contact.html" active-nav data-target="#contact">Contact</a>
+          </li>
         </ul>
+        <!-- for sub menu -->
+        <div class="container">
+          <nav class="navbar navbar-default" role="navigation" id="submenu">
+            <ul class="nav navbar-nav collapse" id="services">
+              <li class="active"><a href="#">What we do</a></li>
+              <li><a href="#">How we do it</a></li>
+            </ul>
+            <ul class="nav navbar-nav collapse" id="solutions">
+              <li class="active"><a href="#">Page management</a></li>
+              <li><a href="#">Linking algorithm</a></li>
+              <li><a href="#">Banner management</a></li>
+              <li><a href="#">Content workflow</a></li>
+            </ul>
+             <ul class="nav navbar-nav collapse" id="company">
+              <li class="active"><a href="#">About us</a></li>
+              <li><a href="#">Vision</a></li>
+              <li><a href="#">Locations</a></li>
+            </ul>
+            <ul class="nav navbar-nav collapse" id="contact">
+              <li class="active"><a href="#">Offices</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
+      
       <!-- Menu to show when page scroll down Start -->
       <div class="navbar-secondary" id="secondary-navigation">
         <ul class="navigation">
-          <li><a href="#">Top</a></li>
-          <li class="active"><a href="#">WHAT WE DO</a></li>
-          <li><a href="#">OUR Approach</a></li>
+          <li><a href="#" name="document">Top</a></li>
+          <li class="active"><a href="#" name="whatWeDo">WHAT WE DO</a></li>
+          <li><a href="#" name="ourApproach">OUR Approach</a></li>
         </ul>
       </div>
       <!-- Menu to show when page scroll down End -->
   </div>
+  
 </header>

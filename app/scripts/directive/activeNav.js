@@ -1,0 +1,27 @@
+EpageoApp.directive('activeNav', function() {
+	return {
+	 restrict: 'A',
+	 link: function (scope, element, attrs, ctrl) {
+	   scope.$watch('location.path()', function() {
+	   	console.log(window.location.pathname.split('/pages/')[1].split('/')[0], element[0].href.split('/pages/')[1].split('/')[0])
+	     if(window.location.pathname.split('/pages/')[1].split('/')[0] === element[0].href.split('/pages/')[1].split('/')[0]) {
+	       	element.closest('li').addClass('active');
+	       	var page = window.location.pathname.split('/pages/')[1].split('/')[0];
+			$("#"+page).addClass('in');
+
+			if(page === 'services'){
+				$("#"+page).closest('.container').css({'width': '450px'});
+			}else if(page === 'solutions'){
+				$("#"+page).closest('.container').css({'width': '660px', 'top': '-24px'});
+			}else if(page === 'company'){
+				$("#"+page).closest('.container').css({'width': '490px'});
+			}else if(page === 'contact'){
+				$("#"+page).closest('.container').css({'width': '415px'});
+			}
+	     } else {
+	        element.closest('li').removeClass('active');
+	     }
+	   });
+	 }
+ 	};
+})
