@@ -179,7 +179,7 @@ $(document).ready(function() {
         lastScrollTop = st;
     });
     //to call the function each time whenever a user scrolls the window
-    $(window).scroll(function() {
+    /*$(window).scroll(function() {
 
         // for Navigation comes after scroll
         var secondaryNavigation = $('#secondary-navigation'), windows = $(this);
@@ -288,54 +288,37 @@ $(document).ready(function() {
         $(kids6[3]).removeClass('animation3 table-cell').addClass('hide');
         $(kids6[4]).removeClass('animation4 table-cell').addClass('hide');
       }
-    });
+    });*/
 });
 
 $(document).ready(function(){
     $("#myAffix").affix();
 });
 
-$(window).load(function () {
-    $(window).on("scroll resize", function () {
-        var pos = $('#myAffix').offset();
-        $('.postContent').each(function () {
-            if (pos.top >= $(this).offset().top && pos.top <= $(this).next().next().offset().top) {
-                $('#myAffix').html($(this).find('.inner-circle').html()); //or any other way you want to get the date
-                return; //break the loop
+//Menu component to scroll
+setTimeout(function() {
+      $('#secondary-navigation ul li a').on('click', function(en){
+            //getting value from name property
+            var anchorName = en.currentTarget.name;
+            var windowHeight = $(window).height();
+            var windowQuatrHeight = windowHeight/4;
+            //Will work for every node in Menu - target id and name property of anchor tag should be same.
+            if(anchorName != 'document'){
+                console.log(anchorName);
+                var target = '#' + anchorName;
+                var topDistance = $(target).offset().top;
+                $(document.body).animate({
+                    'scrollTop':  topDistance - windowQuatrHeight
+                }, 1000);
             }
-        });
-    });
-
-    $(document).ready(function () {
-        $(window).trigger('scroll'); // init the value
-    });
-
-})
-
-    //Menu component to scroll
-    setTimeout(function() {
-          $('#secondary-navigation ul li a').on('click', function(en){
-                //getting value from name property
-                var anchorName = en.currentTarget.name;
-                var windowHeight = $(window).height();
-                var windowQuatrHeight = windowHeight/4;
-                //Will work for every node in Menu - target id and name property of anchor tag should be same.
-                if(anchorName != 'document'){
-                    console.log(anchorName);
-                    var target = '#' + anchorName;
-                    var topDistance = $(target).offset().top;                    
-                    $(document.body).animate({
-                        'scrollTop':  topDistance - windowQuatrHeight
-                    }, 1000);
-                } 
-                //Will work only for top
-                if (anchorName == 'document'){
-                    $(document.body).animate({
-                        'scrollTop':  0
-                    }, 1000);
-                }  
-          });
-    }, 1000);
+            //Will work only for top
+            if (anchorName == 'document'){
+                $(document.body).animate({
+                    'scrollTop':  0
+                }, 1000);
+            }
+      });
+}, 1000);
 
 (function fixCircle(){
     var pos = $('#display').offset().top;
@@ -349,13 +332,44 @@ $(window).load(function () {
     });
 })();
 
+
+$.fn.scrollStopped = function(callback) {
+    $(this).scroll(function(){
+        var self = this, $this = $(self);
+        if ($this.data('scrollTimeout')) {
+            clearTimeout($this.data('scrollTimeout'));
+        }
+        $this.data('scrollTimeout', setTimeout(callback,250,self));
+    });
+};
+
 (function contentSwitcher(){
-    $(window).on("scroll resize", function () {
+    $(window).on("scroll", function (e) {
+        e.preventDefault();
         var pos = $('#display').offset();
         $('.getContent').each(function () {
-            if (pos.top >= $(this).offset().top && pos.top <= $(this).next().offset().top) {
-                $('#display').html($(this).children().clone()); //or any other way you want to get the date
-                return; //break the loop
+            if ($(this).next().hasClass('getContent')){
+                if (pos.top >= $(this).offset().top && pos.top <= $(this).next().offset().top) {
+                    //$('#display').html($(this).find('.inner-circle').clone());
+                    $('#display').html($(this).find('.inner-circle').clone());
+                    //$('#display').find('.bounce').children().removeClass('hide');
+                    return;
+                }
+            }
+        });
+    });
+    $(window).scrollStopped(function(){
+        var pos = $('#display').offset();
+        $('.getContent').each(function () {
+            if ($(this).next().hasClass('getContent')){
+                if (pos.top >= $(this).offset().top && pos.top <= $(this).next().offset().top) {
+                    $('#display').append($(this).find('.bounce').clone());
+                    $('#display').find('.bounce').children().removeClass('hide');
+                    return;
+                }else if($('.circleContainer').offset().top >= $(document).scrollTop()){
+                    $('#display').find('.bounce').children().remove();
+                    console.log($('.circleContainer').offset().top +' - '+ $(this).offset().top);
+                }
             }
         });
     });

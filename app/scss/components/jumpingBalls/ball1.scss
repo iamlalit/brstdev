@@ -1,4 +1,4 @@
-div#zero{	
+div#zeroth{
 	div{
 		&.color1{
 			width: $width-circle1;
@@ -14,7 +14,7 @@ div#zero{
 			width: $width-circle2;
 			height: $width-circle2;
 			background: $color-purple;
-			left: -90px;
+			left: -116px;
 			top: 184px;
 			&.animation1{
 				@include animation(moveX1 .7s $ease-out-circ);
@@ -24,7 +24,7 @@ div#zero{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-blue;
-			left: 345px;
+			left: 474px;
 			top: 150px;
 			&.animation2{
 				@include animation(moveX2 .75s ease-out);

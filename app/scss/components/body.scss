@@ -138,13 +138,13 @@ $color-green: #187702;
 	display: table;
 	z-index: 100;
 	border-radius: 100%;
-	position: relative;
-	left: 10px;
+	position: fixed;
 	text-align: center;
 	color: #fff;
 	font-weight: bold;
 	font-size: 22px;
 	padding: 20px;
+    z-index: 10000;
 	span{
 		display: table-cell;
 		vertical-align: middle;
@@ -153,7 +153,22 @@ $color-green: #187702;
 	}
 }
 
-.postContent{
-  visibility: hidden;
-  color: transparent;
+.circleContainer{
+  position: relative;
+  .getContent{
+    color: transparent;
+    height: 1000px;
+    position: relative;
+    z-index: -100;
+
+    & a{
+      color: transparent;
+    }
+
+    .inner-circle{
+      p,h3,span, div{
+        font-size: 0px;
+      }
+    }
+  }
 }
