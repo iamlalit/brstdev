@@ -4,30 +4,30 @@ div#fifth{
 			width: $width-circle2;
 			height: $width-circle2;
 			background: $color-blue;
-			left: -34px;
-			top: 0px;
+            left: -319px;
+            top: -155px;
 			&.animation0{
-				@include animation(moveX6 1.5s ease-out, moveY6 1.5s ease-out);
+              @include animation(topLeftToMid 900ms linear 0s forwards);
 			}
 		}
 		&.color2{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-pink;
-			left: -77px;
-			top: 9px;
+            top: 673px;
+            left: -735px;
 			&.animation1{
-				@include animation(moveX7 .7s linear 0s  alternate, moveY7 1.5s ease-out);
+				@include animation(bottomLeft 1000ms linear 0s forwards);
 			}
 		}
 		&.color3{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-green;
-			left: 345px;
-			top: 150px;
+            top: -85px;
+            right: -372px;
 			&.animation2{
-				@include animation(moveX2 1.5s ease-out, moveY2 1.5s ease-out);
+                @include animation(topRightToMid 950ms linear 0s forwards);
 			}
 		}
 	}

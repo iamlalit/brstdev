@@ -34,20 +34,35 @@ setInterval(function(){
     //createRain();
 },10000);
 
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1);
-        return false;
-      }
+/*$(function() {
+
+    var a = $('a[href*=#]:not([href=#])');
+    a.on('click',function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1);
+                return false;
+            }
+        }
+    });
+
+});*/
+
+function key(){
+    $(document).keydown(function(e) {
+       return e.keyCode;
+    });
+}
+
+$(window).on('scroll', function(){
+    if(key() == 32){
+        console.log('------------------------->'+$(document).scrollTop());
     }
-  });
-});
+})
 
 //to jump bubbles
 $(document).ready(function() {
@@ -92,6 +107,7 @@ $(document).ready(function() {
         //     $('#strategy').addClass('upwards3-strategy');
         // }
         var st = $(this).scrollTop();
+        console.log('st', st);
         if (st > lastScrollTop){
            // downscroll code
            var height = $(window).scrollTop()
@@ -179,8 +195,8 @@ $(document).ready(function() {
         lastScrollTop = st;
     });
     //to call the function each time whenever a user scrolls the window
-    /*$(window).scroll(function() {
 
+    $(window).scroll(function() {
         // for Navigation comes after scroll
         var secondaryNavigation = $('#secondary-navigation'), windows = $(this);
         if(windows.scrollTop() > 160){
@@ -188,107 +204,7 @@ $(document).ready(function() {
         } else {
             secondaryNavigation.addClass('translate-up').removeClass('translate-down');
         }
-
-        
-      //for discovery
-      if($('#showCircle00').isOnScreen() && $('#showCircle01').isOnScreen()){
-        $(kids0[0]).addClass('animation0 table-cell').removeClass('hide');
-        $(kids0[1]).addClass('animation1 table-cell').removeClass('hide');
-        $(kids0[2]).addClass('animation2 table-cell').removeClass('hide');
-        $(kids0[3]).addClass('animation3 table-cell').removeClass('hide');
-      }else{
-        $(kids0[0]).removeClass('animation0 table-cell').addClass('hide');
-        $(kids0[1]).removeClass('animation1 table-cell').addClass('hide');
-        $(kids0[2]).removeClass('animation2 table-cell').addClass('hide');
-        $(kids0[3]).removeClass('animation3 table-cell').addClass('hide');
-      }
-
-      if($('#showCircle10').isOnScreen() && $('#showCircle11').isOnScreen()){
-        $(kids1[0]).addClass('animation0 table-cell').removeClass('hide');
-        $(kids1[1]).addClass('animation1 table-cell').removeClass('hide');
-        $(kids1[2]).addClass('animation2 table-cell').removeClass('hide');
-        $(kids1[3]).addClass('animation3 table-cell').removeClass('hide');
-        $(kids1[4]).addClass('animation4 table-cell').removeClass('hide');
-      }else{
-        $(kids1[0]).removeClass('animation0 table-cell').addClass('hide');
-        $(kids1[1]).removeClass('animation1 table-cell').addClass('hide');
-        $(kids1[2]).removeClass('animation2 table-cell').addClass('hide');
-        $(kids1[3]).removeClass('animation3 table-cell').addClass('hide');
-        $(kids1[4]).removeClass('animation4 table-cell').addClass('hide');
-      }
-
-      if($('#showCircle20').isOnScreen() && $('#showCircle21').isOnScreen()){
-        $(kids2[0]).addClass('animation0 table-cell').removeClass('hide');
-        $(kids2[1]).addClass('animation1 table-cell').removeClass('hide');
-        $(kids2[2]).addClass('animation2 table-cell').removeClass('hide');
-        $(kids2[3]).addClass('animation3 table-cell').removeClass('hide');
-        $(kids2[4]).addClass('animation4 table-cell').removeClass('hide');
-        $(kids2[5]).addClass('animation5 table-cell').removeClass('hide');
-      }else{
-        $(kids2[0]).removeClass('animation0 table-cell').addClass('hide');
-        $(kids2[1]).removeClass('animation1 table-cell').addClass('hide');
-        $(kids2[2]).removeClass('animation2 table-cell').addClass('hide');
-        $(kids2[3]).removeClass('animation3 table-cell').addClass('hide');
-        $(kids2[4]).removeClass('animation4 table-cell').addClass('hide');
-        $(kids2[5]).removeClass('animation5 table-cell').addClass('hide');
-      }
-
-      if($('#showCircle30').isOnScreen() && $('#showCircle31').isOnScreen()){
-        $(kids3[0]).addClass('animation0 table-cell').removeClass('hide');
-        $(kids3[1]).addClass('animation1 table-cell').removeClass('hide');
-        $(kids3[2]).addClass('animation2 table-cell').removeClass('hide');
-        $(kids3[3]).addClass('animation3 table-cell').removeClass('hide');
-        $(kids3[4]).addClass('animation4 table-cell').removeClass('hide');
-        $(kids3[5]).addClass('animation5 table-cell').removeClass('hide');
-      }else{
-        $(kids3[0]).removeClass('animation0 table-cell').addClass('hide');
-        $(kids3[1]).removeClass('animation1 table-cell').addClass('hide');
-        $(kids3[2]).removeClass('animation2 table-cell').addClass('hide');
-        $(kids3[3]).removeClass('animation3 table-cell').addClass('hide');
-        $(kids3[4]).removeClass('animation4 table-cell').addClass('hide');
-        $(kids3[5]).removeClass('animation5 table-cell').addClass('hide');
-      }
-
-      if($('#showCircle40').isOnScreen() && $('#showCircle41').isOnScreen()){
-        $(kids4[0]).addClass('animation0 table-cell').removeClass('hide');
-        $(kids4[1]).addClass('animation1 table-cell').removeClass('hide');
-        $(kids4[2]).addClass('animation2 table-cell').removeClass('hide');
-        $(kids4[3]).addClass('animation3 table-cell').removeClass('hide');
-      }else{
-        $(kids4[0]).removeClass('animation0 table-cell').addClass('hide');
-        $(kids4[1]).removeClass('animation1 table-cell').addClass('hide');
-        $(kids4[2]).removeClass('animation2 table-cell').addClass('hide');
-        $(kids4[3]).removeClass('animation3 table-cell').addClass('hide');
-      }
-
-      if($('#showCircle50').isOnScreen() && $('#showCircle51').isOnScreen()){
-        $(kids5[0]).addClass('animation0 table-cell').removeClass('hide');
-        $(kids5[1]).addClass('animation1 table-cell').removeClass('hide');
-        $(kids5[2]).addClass('animation2 table-cell').removeClass('hide');
-        $(kids5[3]).addClass('animation2 table-cell').removeClass('hide');
-        $(kids5[4]).addClass('animation3 table-cell').removeClass('hide');
-      }else{
-        $(kids5[0]).removeClass('animation0 table-cell').addClass('hide');
-        $(kids5[1]).removeClass('animation1 table-cell').addClass('hide');
-        $(kids5[2]).removeClass('animation2 table-cell').addClass('hide');
-        $(kids5[3]).removeClass('animation2 table-cell').addClass('hide');
-        $(kids5[4]).removeClass('animation3 table-cell').addClass('hide');
-      }
-
-      if($('#showCircle60').isOnScreen() && $('#showCircle61').isOnScreen()){
-        $(kids6[0]).addClass('animation0 table-cell').removeClass('hide');
-        $(kids6[1]).addClass('animation1 table-cell').removeClass('hide');
-        $(kids6[2]).addClass('animation2 table-cell').removeClass('hide');
-        $(kids6[3]).addClass('animation3 table-cell').removeClass('hide');
-        $(kids6[4]).addClass('animation4 table-cell').removeClass('hide');
-      }else{
-        $(kids6[0]).removeClass('animation0 table-cell').addClass('hide');
-        $(kids6[1]).removeClass('animation1 table-cell').addClass('hide');
-        $(kids6[2]).removeClass('animation2 table-cell').addClass('hide');
-        $(kids6[3]).removeClass('animation3 table-cell').addClass('hide');
-        $(kids6[4]).removeClass('animation4 table-cell').addClass('hide');
-      }
-    });*/
+    });
 });
 
 $(document).ready(function(){
@@ -321,7 +237,7 @@ setTimeout(function() {
 }, 1000);
 
 (function fixCircle(){
-    var pos = $('#display').offset().top;
+    var pos = $('.circleContainer').offset().top;
     $(window).on('scroll', function(){
         //console.log(x.offset().top +'-------'+ main.scrollTop());
         if( pos <= $(document).scrollTop()){
@@ -329,6 +245,7 @@ setTimeout(function() {
         }else{
             $('#display').removeClass('affix');
         }
+        console.log(pos +' <= '+ $(document).scrollTop());
     });
 })();
 
@@ -368,7 +285,7 @@ $.fn.scrollStopped = function(callback) {
                     return;
                 }else if($('.circleContainer').offset().top >= $(document).scrollTop()){
                     $('#display').find('.bounce').children().remove();
-                    console.log($('.circleContainer').offset().top +' - '+ $(this).offset().top);
+                    //console.log($('.circleContainer').offset().top +' - '+ $(this).offset().top);
                 }
             }
         });
