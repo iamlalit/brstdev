@@ -9,6 +9,12 @@
             font-size: 3rem;
             line-height:2;
             font-family: $font-family-headings; 
+            &.company{
+                font-size: 3.5rem;
+                color: $white;
+                background-color: #333333;
+                margin-bottom: 20px;
+            }
         }
         p{  
             font-size: 1.7rem;
