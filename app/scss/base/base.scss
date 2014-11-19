@@ -9,7 +9,8 @@ body {
 	-o-background-size:cover;
 	*/
 	&.index{
-		background-image: url('../../.tmp/img/stock-photo-amsterdam.jpg');
+		background: url('../../.tmp/img/stock-photo-amsterdam.jpg') no-repeat left top;
+		background-size: cover;
 	}
 	&.solutions{
 		background-image: url('../../img/bg-41.png');
