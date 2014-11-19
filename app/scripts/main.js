@@ -107,7 +107,7 @@ $(document).ready(function() {
         //     $('#strategy').addClass('upwards3-strategy');
         // }
         var st = $(this).scrollTop();
-        console.log('st', st);
+        //console.log('st', st);
         if (st > lastScrollTop){
            // downscroll code
            var height = $(window).scrollTop()
@@ -235,20 +235,20 @@ setTimeout(function() {
             }
       });
 }, 1000);
-
-(function fixCircle(){
-    var pos = $('.circleContainer').offset().top;
-    $(window).on('scroll', function(){
-        //console.log(x.offset().top +'-------'+ main.scrollTop());
-        if( pos <= $(document).scrollTop()){
-            $('#display').addClass('affix');
-        }else{
-            $('#display').removeClass('affix');
-        }
-        console.log(pos +' <= '+ $(document).scrollTop());
-    });
-})();
-
+if(window.location.pathname == '/pages/services/services.html'){
+    (function fixCircle(){
+        var pos = $('.circleContainer').offset().top;
+        $(window).on('scroll', function(){
+            //console.log(x.offset().top +'-------'+ main.scrollTop());
+            if( pos <= $(document).scrollTop()){
+                $('#display').addClass('affix');
+            }else{
+                $('#display').removeClass('affix');
+            }
+            console.log(pos +' <= '+ $(document).scrollTop());
+        });
+    })();
+}
 
 $.fn.scrollStopped = function(callback) {
     $(this).scroll(function(){
