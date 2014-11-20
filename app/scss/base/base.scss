@@ -2,12 +2,14 @@ body {
 	font-size: $font-size-base;
 	font-family: $font-family-body;
     font-weight: 500;
-	background: url('../../.tmp/img/top-bg.png') no-repeat 0 0, url('../../.tmp/img/bottom-bg.png') no-repeat bottom right, url('../../.tmp/img/bg-1.png') repeat;
 	/*background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
 	*/
+	&.services{
+		background: url('../../.tmp/img/top-bg.png') no-repeat 0 0, url('../../.tmp/img/bottom-bg.png') no-repeat bottom right, url('../../.tmp/img/bg-1.png') repeat;
+	}
 	&.index{
 		background: url('../../.tmp/img/stock-photo-amsterdam2.gif') no-repeat left top;
 		background-size: cover;

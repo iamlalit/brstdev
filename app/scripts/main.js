@@ -236,18 +236,19 @@ setTimeout(function() {
       });
 }, 1000);
 
-(function fixCircle(){
-    var pos = $('.circleContainer').offset().top;
-    $(window).on('scroll', function(){
-        //console.log(x.offset().top +'-------'+ main.scrollTop());
-        if( pos <= $(document).scrollTop()){
-            $('#display').addClass('affix');
-        }else{
-            $('#display').removeClass('affix');
-        }
-    });
-})();
-
+if(window.location.pathname.split('/pages/')[1] == '/services/services.html'){
+    (function fixCircle(){
+        var pos = $('.circleContainer').offset().top;
+        $(window).on('scroll', function(){
+            //console.log(x.offset().top +'-------'+ main.scrollTop());
+            if( pos <= $(document).scrollTop()){
+                $('#display').addClass('affix');
+            }else{
+                $('#display').removeClass('affix');
+            }
+        });
+    })();
+}
 
 $.fn.scrollStopped = function(callback) {
     $(this).scroll(function(){
