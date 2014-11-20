@@ -107,7 +107,7 @@ $(document).ready(function() {
         //     $('#strategy').addClass('upwards3-strategy');
         // }
         var st = $(this).scrollTop();
-        console.log('st', st);
+
         if (st > lastScrollTop){
            // downscroll code
            var height = $(window).scrollTop()
@@ -245,7 +245,6 @@ setTimeout(function() {
         }else{
             $('#display').removeClass('affix');
         }
-        console.log(pos +' <= '+ $(document).scrollTop());
     });
 })();
 
@@ -260,7 +259,7 @@ $.fn.scrollStopped = function(callback) {
     });
 };
 
-(function contentSwitcher(){
+/*(function contentSwitcher(){
     $(window).on("scroll", function (e) {
         e.preventDefault();
         var pos = $('#display').offset();
@@ -293,4 +292,48 @@ $.fn.scrollStopped = function(callback) {
     $(document).ready(function () {
         $(window).trigger('scroll'); // init the value
     });
+})();*/
+
+
+$(window).on("changeContent", function (e) {
+    e.preventDefault();
+    var pos = $('#display').offset().top;
+    $('.getContent').each(function () {
+        if ($(this).next().hasClass('getContent')){
+            if (pos >= $(this).offset().top && pos <= $(this).next().offset().top) {
+                $('#display').html($(this).find('.inner-circle').clone());
+                return;
+            }
+        }
+    });
+});
+
+function findBreakPoint(){
+    var arr = [];
+    $('.getContent').each(function () {
+        arr.push($(this).offset().top);
+    });
+    return arr;
+}
+
+(function evntTrgr(){
+    var a = findBreakPoint();
+    $(window).on('scroll', function(){
+        var pos = $(document).scrollTop();
+        $.each(a, function(){
+            console.log(pos +' ------ '+ $(this)[0] +' || '+ ($(this)[0] + 50));
+            if(pos >= parseInt($(this)[0], 10) && pos <= (parseInt($(this)[0], 10)+50)){
+                $(document).trigger('changeContent');
+                return;
+            }
+        });
+    });
 })();
+
+
+
+
+
+/*$('#zero').find('.continue a').on('click', function(){
+    $(document).scrollTop($(document).find($('#zero').find('.continue a').attr('href')).offset().top)
+});*/
