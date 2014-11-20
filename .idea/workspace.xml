@@ -2,10 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b7722e9-fd60-4df5-a7a9-a4c6d2b55406" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/bg-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/bg-31.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/bg-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/bg-41.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/bg-5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/bg-51.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/stock-photo-amsterdam1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/stock-photo-amsterdam2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/pages/company/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/pages/services/main.js" />
+      <change type="DELETED" beforePath="D:\Personal\Projects\New epageo\epageo-website\app\img\bg-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Personal\Projects\New epageo\epageo-website\app\img\bg-2.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Personal\Projects\New epageo\epageo-website\app\img\glass.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Personal\Projects\New epageo\epageo-website\app\img\stock-photo-amsterdam.jpg" afterPath="" />
       <change type="DELETED" beforePath="D:\Personal\Projects\New epageo\epageo-website\app\index.html.orig" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scss/components/3divAnimation/3divAnimation.scss" afterPath="$PROJECT_DIR$/app/scss/components/3divAnimation/3divAnimation.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/directive/activeNav.js" afterPath="$PROJECT_DIR$/app/scripts/directive/activeNav.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scss/base.scss" afterPath="$PROJECT_DIR$/app/scss/base.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scss/base/base.scss" afterPath="$PROJECT_DIR$/app/scss/base/base.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/main.js" afterPath="$PROJECT_DIR$/app/scripts/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pages/company/company.html" afterPath="$PROJECT_DIR$/app/pages/company/company.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pages/contact/contact.html" afterPath="$PROJECT_DIR$/app/pages/contact/contact.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scss/components/header.scss" afterPath="$PROJECT_DIR$/app/scss/components/header.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/main.js.orig" afterPath="$PROJECT_DIR$/app/scripts/main.js.orig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pages/services/services.html" afterPath="$PROJECT_DIR$/app/pages/services/services.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pages/solutions/solutions.html" afterPath="$PROJECT_DIR$/app/pages/solutions/solutions.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="epageo-website.iws" />
@@ -42,8 +64,8 @@
       <file leaf-file-name="base.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scss/base.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.0" vertical-offset="0" max-vertical-offset="153">
-              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="136">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -52,9 +74,11 @@
       <file leaf-file-name="base.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scss/base/base.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.6666667" vertical-offset="255" max-vertical-offset="1972">
-              <caret line="4" column="122" selection-start-line="4" selection-start-column="122" selection-end-line="4" selection-end-column="122" />
-              <folding />
+            <state vertical-scroll-proportion="3.6666667" vertical-offset="425" max-vertical-offset="2142">
+              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+              <folding>
+                <marker date="1416495785344" expanded="true" signature="637:695" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,8 +96,18 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67250437" vertical-offset="4852" max-vertical-offset="5865">
-              <caret line="308" column="3" selection-start-line="308" selection-start-column="3" selection-end-line="308" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.5359019" vertical-offset="0" max-vertical-offset="5865">
+              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/pages/company/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3101" max-vertical-offset="3672">
+              <caret line="206" column="7" selection-start-line="206" selection-start-column="7" selection-end-line="206" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -82,18 +116,8 @@
       <file leaf-file-name="services.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/pages/services/services.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1931" max-vertical-offset="4148">
-              <caret line="136" column="57" selection-start-line="136" selection-start-column="56" selection-end-line="136" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ball4.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scss/components/jumpingBalls/ball4.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="657" max-vertical-offset="1190">
-              <caret line="59" column="73" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1965" max-vertical-offset="4165">
+              <caret line="138" column="18" selection-start-line="136" selection-start-column="56" selection-end-line="136" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -340,7 +364,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value=".tmp" />
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -358,11 +382,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value=".tmp" />
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
+              <option name="myItemId" value="company" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -640,11 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/img/glass.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/icons/SVG/arrow-up.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="571">
@@ -819,8 +838,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/pages/services/services.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1931" max-vertical-offset="4148">
-          <caret line="136" column="57" selection-start-line="136" selection-start-column="56" selection-end-line="136" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1965" max-vertical-offset="4165">
+          <caret line="138" column="18" selection-start-line="136" selection-start-column="56" selection-end-line="136" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -841,26 +860,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/scss/base/base.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.6666667" vertical-offset="425" max-vertical-offset="2142">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding>
+            <marker date="1416495785344" expanded="true" signature="637:695" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/scss/base.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0" vertical-offset="0" max-vertical-offset="153">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="136">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scss/base/base.scss">
+    <entry file="file://$PROJECT_DIR$/app/pages/company/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.6666667" vertical-offset="255" max-vertical-offset="1972">
-          <caret line="4" column="122" selection-start-line="4" selection-start-column="122" selection-end-line="4" selection-end-column="122" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3101" max-vertical-offset="3672">
+          <caret line="206" column="7" selection-start-line="206" selection-start-column="7" selection-end-line="206" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67250437" vertical-offset="4852" max-vertical-offset="5865">
-          <caret line="308" column="3" selection-start-line="308" selection-start-column="3" selection-end-line="308" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.5359019" vertical-offset="0" max-vertical-offset="5865">
+          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
           <folding />
         </state>
       </provider>

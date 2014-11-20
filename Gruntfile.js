@@ -42,14 +42,14 @@ module.exports = function (grunt) {
         // The actual grunt server settings
         connect: {
             options: {
-                port: 9001,
+                port: 9002,
                 livereload: 35730,
                 // Change this to '0.0.0.0' to access the server from outside
                 hostname: 'localhost'
             },
             livereload: {
                 options: {
-                    open: 'http://localhost:9001/pages/home/index.html',
+                    open: 'http://localhost:9002/pages/home/index.html',
                     base: [
                         '.tmp',
                         '<%= config.app %>'

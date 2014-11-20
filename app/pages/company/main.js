@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var nbDrop = 5;
 
 // function to generate a random number range.
@@ -108,43 +107,43 @@ $(document).ready(function() {
         //     $('#strategy').addClass('upwards3-strategy');
         // }
         var st = $(this).scrollTop();
-
+        //console.log('st', st);
         if (st > lastScrollTop){
            // downscroll code
            var height = $(window).scrollTop()
            var heightOfWindow = $(window).height();
-           //console.log(height, heightOfWindow);
-            if(height > 450){
+            console.log(height, heightOfWindow);
+            if(height > 850){
                 $('#strategy').addClass('upwards0-strategy').removeClass('downwards0-strategy');   
-                if(height > 500){
+                if(height > 890){
                     $('#strategy').addClass('upwards1-strategy').removeClass('upwards0-strategy downwards1-strategy');  
-                    if(height > 550){
+                    if(height > 930){
                         $('#strategy').addClass('upwards2-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
-                        if(height > 600){
+                        if(height > 970){
                             $('#strategy').addClass('upwards3-strategy').removeClass('upwards2-strategy downwards3-strategy');
                         }
                     }
                 }
             }
-            if(height > 580){
+            if(height > 890){
                 $('#platform').addClass('upwards0-strategy').removeClass('downwards0-strategy');   
-                if(height > 630){
+                if(height > 940){
                     $('#platform').addClass('upwards1-strategy').removeClass('upwards0-strategy downwards1-strategy');  
-                    if(height > 680){
+                    if(height > 990){
                         $('#platform').addClass('upwards2-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
-                        if(height > 730){
+                        if(height > 1020){
                             $('#platform').addClass('upwards3-strategy').removeClass('upwards2-strategy downwards3-strategy');
                         }
                     }
                 }
             }
-            if(height > 650){
+            if(height > 960){
                 $('#marketing').addClass('upwards0-strategy').removeClass('downwards0-strategy');   
-                if(height > 700){
+                if(height > 1000){
                     $('#marketing').addClass('upwards1-strategy').removeClass('upwards0-strategy downwards1-strategy');  
-                    if(height > 750){
+                    if(height > 1030){
                         $('#marketing').addClass('upwards2-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
-                        if(height > 800){
+                        if(height > 1060){
                             $('#marketing').addClass('upwards3-strategy').removeClass('upwards2-strategy downwards3-strategy');
                         }
                     }
@@ -154,38 +153,38 @@ $(document).ready(function() {
             //upward scroll
             var height = $(window).scrollTop()
             var heightOfWindow = $(window).height();
-            //console.log(height, heightOfWindow);
-            if(height < 820){
+            console.log(height, heightOfWindow);
+            if(height < 1080){
                 $('#marketing').addClass('downwards3-strategy').removeClass('upwards3-strategy'); 
-                if(height < 770){
+                if(height < 1040){
                     $('#marketing').addClass('downwards2-strategy').removeClass('upwards2-strategy downwards3-strategy'); 
-                    if(height < 720){
+                    if(height < 1000){
                         $('#marketing').addClass('downwards1-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
-                        if(height < 670){
+                        if(height < 960){
                             $('#marketing').addClass('downwards0-strategy').removeClass('upwards0-strategy downwards1-strategy'); 
                         }
                     }
                 }
             }
-            if(height < 710){
+            if(height < 1040){
                 $('#platform').addClass('downwards3-strategy').removeClass('upwards3-strategy'); 
-                if(height < 660){
+                if(height < 1000){
                     $('#platform').addClass('downwards2-strategy').removeClass('upwards2-strategy downwards3-strategy'); 
-                    if(height < 610){
+                    if(height < 970){
                         $('#platform').addClass('downwards1-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
-                        if(height < 560){
+                        if(height < 930){
                             $('#platform').addClass('downwards0-strategy').removeClass('upwards0-strategy downwards1-strategy'); 
                         }
                     }
                 }
             }
-            if(height < 620){
+            if(height < 990){
                 $('#strategy').addClass('downwards3-strategy').removeClass('upwards3-strategy'); 
-                if(height < 580){
+                if(height < 950){
                     $('#strategy').addClass('downwards2-strategy').removeClass('upwards2-strategy downwards3-strategy'); 
-                    if(height < 530){
+                    if(height < 920){
                         $('#strategy').addClass('downwards1-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
-                        if(height < 480){
+                        if(height < 900){
                             $('#strategy').addClass('downwards0-strategy').removeClass('upwards0-strategy downwards1-strategy'); 
                         }
                     }
@@ -208,135 +207,4 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function(){
-    $("#myAffix").affix();
-});
 
-//Menu component to scroll
-setTimeout(function() {
-      $('#secondary-navigation ul li a').on('click', function(en){
-            //getting value from name property
-            var anchorName = en.currentTarget.name;
-            var windowHeight = $(window).height();
-            var windowQuatrHeight = windowHeight/4;
-            //Will work for every node in Menu - target id and name property of anchor tag should be same.
-            if(anchorName != 'document'){
-                console.log(anchorName);
-                var target = '#' + anchorName;
-                var topDistance = $(target).offset().top;
-                $(document.body).animate({
-                    'scrollTop':  topDistance - windowQuatrHeight
-                }, 1000);
-            }
-            //Will work only for top
-            if (anchorName == 'document'){
-                $(document.body).animate({
-                    'scrollTop':  0
-                }, 1000);
-            }
-      });
-}, 1000);
-
-(function fixCircle(){
-    var pos = $('.circleContainer').offset().top;
-    $(window).on('scroll', function(){
-        //console.log(x.offset().top +'-------'+ main.scrollTop());
-        if( pos <= $(document).scrollTop()){
-            $('#display').addClass('affix');
-        }else{
-            $('#display').removeClass('affix');
-        }
-    });
-})();
-
-
-$.fn.scrollStopped = function(callback) {
-    $(this).scroll(function(){
-        var self = this, $this = $(self);
-        if ($this.data('scrollTimeout')) {
-            clearTimeout($this.data('scrollTimeout'));
-        }
-        $this.data('scrollTimeout', setTimeout(callback,250,self));
-    });
-};
-
-/*(function contentSwitcher(){
-    $(window).on("scroll", function (e) {
-        e.preventDefault();
-        var pos = $('#display').offset();
-        $('.getContent').each(function () {
-            if ($(this).next().hasClass('getContent')){
-                if (pos.top >= $(this).offset().top && pos.top <= $(this).next().offset().top) {
-                    //$('#display').html($(this).find('.inner-circle').clone());
-                    $('#display').html($(this).find('.inner-circle').clone());
-                    //$('#display').find('.bounce').children().removeClass('hide');
-                    return;
-                }
-            }
-        });
-    });
-    $(window).scrollStopped(function(){
-        var pos = $('#display').offset();
-        $('.getContent').each(function () {
-            if ($(this).next().hasClass('getContent')){
-                if (pos.top >= $(this).offset().top && pos.top <= $(this).next().offset().top) {
-                    $('#display').append($(this).find('.bounce').clone());
-                    $('#display').find('.bounce').children().removeClass('hide');
-                    return;
-                }else if($('.circleContainer').offset().top >= $(document).scrollTop()){
-                    $('#display').find('.bounce').children().remove();
-                    //console.log($('.circleContainer').offset().top +' - '+ $(this).offset().top);
-                }
-            }
-        });
-    });
-    $(document).ready(function () {
-        $(window).trigger('scroll'); // init the value
-    });
-})();*/
-
-
-$(window).on("changeContent", function (e) {
-    e.preventDefault();
-    var pos = $('#display').offset().top;
-    $('.getContent').each(function () {
-        if ($(this).next().hasClass('getContent')){
-            if (pos >= $(this).offset().top && pos <= $(this).next().offset().top) {
-                $('#display').html($(this).find('.inner-circle').clone());
-                return;
-            }
-        }
-    });
-});
-
-function findBreakPoint(){
-    var arr = [];
-    $('.getContent').each(function () {
-        arr.push($(this).offset().top);
-    });
-    return arr;
-}
-
-(function evntTrgr(){
-    var a = findBreakPoint();
-    $(window).on('scroll', function(){
-        var pos = $(document).scrollTop();
-        $.each(a, function(){
-            console.log(pos +' ------ '+ $(this)[0] +' || '+ ($(this)[0] + 50));
-            if(pos >= parseInt($(this)[0], 10) && pos <= (parseInt($(this)[0], 10)+50)){
-                $(document).trigger('changeContent');
-                return;
-            }
-        });
-    });
-})();
-
-
-
-
-
-/*$('#zero').find('.continue a').on('click', function(){
-    $(document).scrollTop($(document).find($('#zero').find('.continue a').attr('href')).offset().top)
-});*/
-=======
->>>>>>> 3a368c74652ad70399d9ea443b27cae428385a61
