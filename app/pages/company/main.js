@@ -113,13 +113,13 @@ $(document).ready(function() {
            var height = $(window).scrollTop()
            var heightOfWindow = $(window).height();
             console.log(height, heightOfWindow);
-            if(height > 850){
+            if(height > 750){
                 $('#strategy').addClass('upwards0-strategy').removeClass('downwards0-strategy');   
-                if(height > 890){
+                if(height > 790){
                     $('#strategy').addClass('upwards1-strategy').removeClass('upwards0-strategy downwards1-strategy');  
-                    if(height > 930){
+                    if(height > 840){
                         $('#strategy').addClass('upwards2-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
-                        if(height > 970){
+                        if(height > 890){
                             $('#strategy').addClass('upwards3-strategy').removeClass('upwards2-strategy downwards3-strategy');
                         }
                     }
@@ -178,13 +178,13 @@ $(document).ready(function() {
                     }
                 }
             }
-            if(height < 990){
+            if(height < 910){
                 $('#strategy').addClass('downwards3-strategy').removeClass('upwards3-strategy'); 
-                if(height < 950){
+                if(height < 870){
                     $('#strategy').addClass('downwards2-strategy').removeClass('upwards2-strategy downwards3-strategy'); 
-                    if(height < 920){
+                    if(height < 840){
                         $('#strategy').addClass('downwards1-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
-                        if(height < 900){
+                        if(height < 800){
                             $('#strategy').addClass('downwards0-strategy').removeClass('upwards0-strategy downwards1-strategy'); 
                         }
                     }

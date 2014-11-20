@@ -11,9 +11,11 @@ EpageoApp.directive('activeNav', function() {
 
 			if(page === 'services'){
 				$("#"+page).closest('.container').css({'width': '450px'});
+				$("#service-page").removeClass('hide');
 			}else if(page === 'solutions'){
 				$("#"+page).closest('.container').css({'width': '660px', 'top': '-24px'});
 			}else if(page === 'company'){
+				$("#company-page").removeClass('hide');
 				$("#"+page).closest('.container').css({'width': '490px'});
 			}else if(page === 'contact'){
 				$("#"+page).closest('.container').css({'width': '415px'});
