@@ -153,6 +153,7 @@ $(document).ready(function() {
             //upward scroll
             var height = $(window).scrollTop()
             var heightOfWindow = $(window).height();
+            console.log(height);
             console.log(height, heightOfWindow);
             if(height < 1080){
                 $('#marketing').addClass('downwards3-strategy').removeClass('upwards3-strategy'); 
