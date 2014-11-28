@@ -65,12 +65,11 @@ module.exports = function (grunt) {
                     dot: true,
                     src: [
                         '.tmp',
-                        '<%= config.dist %>/*',
-                        '!<%= config.dist %>/.git*'
+                        '<%= config.app %>/.tmp',
                     ]
                 }]
             },
-            server: '.tmp'
+            server: '<%= config.app %>/.tmp'
         },
         //SASS
         sass: {
@@ -99,7 +98,16 @@ module.exports = function (grunt) {
                 }]
             }
         },
-
+        // Copies remaining files to places other tasks can use
+        copy: {
+            font: {
+                expand: true,
+                flatten: true,
+                cwd: '<%= config.app %>',
+                dest: '<%= config.app %>/.tmp/fonts/bootstrap',
+                src: '../lib/bootstrap-sass-official/assets/fonts/bootstrap/*'
+            }
+        },
         imagemin: {
             server: {
                 files: [
@@ -157,6 +165,7 @@ module.exports = function (grunt) {
                 'sass:compile',
                 'concat:bowerJS',
                 'concat:appJS',
+                'copy:font',
                 'imagemin:server'
             ]
         }
@@ -169,6 +178,7 @@ module.exports = function (grunt) {
             'clean:server',
             'concurrent',
             'autoprefixer',
+            'copy:font',
             'connect:livereload',
             'watch'
         ]);
@@ -176,6 +186,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'concurrent',
+        'copy:font',
         'autoprefixer'
     ]);
 
