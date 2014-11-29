@@ -18,6 +18,7 @@ EpageoApp.directive('activeNav', function() {
 				$("#company-page").removeClass('hide');
 				$("#"+page).closest('.container').css({'width': '490px'});
 			}else if(page === 'contact'){
+				$("#contact-page").removeClass('hide');
 				$("#"+page).closest('.container').css({'width': '415px'});
 			}
 	     } else {

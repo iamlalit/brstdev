@@ -211,30 +211,6 @@ $(document).ready(function(){
     $("#myAffix").affix();
 });
 
-//Menu component to scroll
-setTimeout(function() {
-      $('#secondary-navigation ul li a').on('click', function(en){
-            //getting value from name property
-            var anchorName = en.currentTarget.name;
-            var windowHeight = $(window).height();
-            var windowQuatrHeight = windowHeight/4;
-            //Will work for every node in Menu - target id and name property of anchor tag should be same.
-            if(anchorName != 'document'){
-                console.log(anchorName);
-                var target = '#' + anchorName;
-                var topDistance = $(target).offset().top;
-                $(document.body).animate({
-                    'scrollTop':  topDistance - windowQuatrHeight
-                }, 1000);
-            }
-            //Will work only for top
-            if (anchorName == 'document'){
-                $(document.body).animate({
-                    'scrollTop':  0
-                }, 1000);
-            }
-      });
-}, 1000);
 
 (function fixCircle(){
     var pos = $('.circleContainer').offset().top;

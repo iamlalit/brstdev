@@ -80,6 +80,12 @@ header.container{
 	}
 	.navbar-secondary{
 		//position translated upwards so that transition can be effected
+		#company-page{
+			width: 238px;
+		}
+		#contact-page{
+			width: 244px;
+		}
     	@include transform(translate(0, -31px)); 
     	transition:1s all ease;    	
 		position:fixed;

@@ -121,14 +121,13 @@ setTimeout(function() {
             //getting value from name property
             var anchorName = en.currentTarget.name;
             var windowHeight = $(window).height();
-            var windowQuatrHeight = windowHeight/4;
             //Will work for every node in Menu - target id and name property of anchor tag should be same.
             if(anchorName != 'document'){
                 console.log(anchorName);
                 var target = '#' + anchorName;
                 var topDistance = $(target).offset().top;
                 $(document.body).animate({
-                    'scrollTop':  topDistance - windowQuatrHeight
+                    'scrollTop':  topDistance - 150
                 }, 1000);
             }
             //Will work only for top
