@@ -83,6 +83,68 @@
             <p class="bold">support@epageo.com</p>
         </li>
     </ul>
+    <h1 class="mainHeading headFont" id="whatWeDo">Contact</h1>
+
+    <div class="row">
+        <div class="col-lg-12">
+          <div class="col-sm-2"></div>
+            <div class="alert alert-danger col-sm-8" id="errorMsg">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <h2 class="text-center margin-top-0">Please fix the following issues</h2>
+                <ul id="errorList" class="errorList" style="margin-bottom:35px"></ul>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+    <form class="contentCentered" method="post" action="http://www.epageo.com/contact" class="cms_form" enctype="multipart/form-data" id="contactForm">
+      <p class="questions-contact row">Do you have questions about our product or services?</p>
+      <div class="row">
+        <div>
+          <label>Full name</label>
+        </div>
+        <input type='text' ng-model="name" id='name' placeholder='Full name'>
+      </div>
+      <div class="row">
+        <div>
+          <label>Company</label>
+        </div>
+        <input type='text' ng-model="company" id='company' placeholder='Comapny'>
+      </div>
+      <div class="row">
+        <div>
+          <label>Country</label>
+        </div>
+        <input type='text' ng-model="country" id='country' placeholder='Country'>
+      </div>
+      <div class="row">
+        <div>
+          <label>Email</label>
+        </div>
+        <input type='text' ng-model="email" id='email' placeholder='Email'>
+      </div>
+      <div class="row">
+        <div>
+          <label>Subject</label>
+        </div>
+        <input type='text' ng-model="subject" id='subject' placeholder='Subject'>
+      </div>
+      <div class="row">
+        <div>
+          <label>Message</label>
+        </div>
+        <textarea ng-model="message" id='message' placeholder='Message' cols="5"></textarea>
+      </div>
+      <div class="row">
+        <div>
+          <button type="submit" class="btn btn-success">Send</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="row">
+      <br><br>
+    </div>
+
 </div>
 <!-- body container end -->
 

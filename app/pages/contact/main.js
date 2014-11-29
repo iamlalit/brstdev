@@ -199,10 +199,160 @@ $(document).ready(function() {
     });
 });
 
-
+//bootstrap carousel image slider to slide the image
 $(document).ready(function(){
     $('.carousel').carousel({
       interval: false,
-      pause: ''
+      pause: '',
+      keyboard: false
     })
+});
+
+//error validations for contact forms
+$(document).ready(function () {
+    //name is required
+    $('#errorMsg').hide();
+    var errorList = $('#errorList');
+    var name = $("#name"),
+        company = $("#company"),
+        country = $("#country"),
+        email = $("#email"),
+        subject = $("#subject"),
+        message = $("#message");
+
+
+    $('#contactForm').submit(function (e) {
+        e.preventDefault();
+        //full name is required
+        if (name.val() == '' || name.val() == null) {
+            if (errorList.find('.errormessage-name').length == 0) {
+                $('<li />', { html: 'Full name is required !', class: 'col-sm-6 errormessage-name' })
+                .appendTo(errorList)
+                .click(function () {
+                    name.focus();
+                })
+                name.parent().addClass('has-error');
+            }
+        }
+        else {
+            if (name.parent().hasClass('has-error')) {
+                name.parent().removeClass('has-error')
+            };
+            if (errorList.find('.errormessage-name').length > 0) {
+                errorList.find('.errormessage-name').remove();
+            }
+        }
+        //comapny name is required
+        if (company.val() == '' || company.val() == null) {
+            if (errorList.find('.errormessage-company').length == 0) {
+                $('<li />', { html: 'Company name is required !', class: 'col-sm-6 errormessage-company' })
+                .appendTo(errorList)
+                .click(function () {
+                    company.focus();
+                })
+                company.parent().addClass('has-error');
+            }
+        }
+        else {
+            if (company.parent().hasClass('has-error')) {
+                company.parent().removeClass('has-error')
+            };
+            if (errorList.find('.errormessage-company').length > 0) {
+                errorList.find('.errormessage-company').remove();
+            }
+        }
+        //country is required
+        if (country.val() == '' || country.val() == null) {
+            if (errorList.find('.errormessage-country').length == 0) {
+                $('<li />', { html: 'Country name is required !', class: 'col-sm-6 errormessage-country' })
+                .appendTo(errorList)
+                .click(function () {
+                    country.focus();
+                })
+                country.parent().addClass('has-error');
+            }
+        }
+        else {
+            if (country.parent().hasClass('has-error')) {
+                country.parent().removeClass('has-error')
+            };
+            if (errorList.find('.errormessage-country').length > 0) {
+                errorList.find('.errormessage-country').remove();
+            }
+        }
+        //subject is required
+        if (subject.val() == '' || subject.val() == null) {
+            if (errorList.find('.errormessage-subject').length == 0) {
+                $('<li />', { html: 'Subject is required !', class: 'col-sm-6 errormessage-subject' })
+                .appendTo(errorList)
+                .click(function () {
+                    subject.focus();
+                })
+                subject.parent().addClass('has-error');
+            }
+        }
+        else {
+            if (subject.parent().hasClass('has-error')) {
+                subject.parent().removeClass('has-error')
+            };
+            if (errorList.find('.errormessage-subject').length > 0) {
+                errorList.find('.errormessage-subject').remove();
+            }
+        }
+        //message is required
+        if (message.val() == '' || messgae.val() == null) {
+            if (errorList.find('.errormessage-message').length == 0) {
+                $('<li />', { html: 'Message is required !', class: 'col-sm-6 errormessage-message' })
+                .appendTo(errorList)
+                .click(function () {
+                    message.focus();
+                })
+                message.parent().addClass('has-error');
+            }
+        }
+        else {
+            if (message.parent().hasClass('has-error')) {
+                message.parent().removeClass('has-error')
+            };
+            if (errorList.find('.errormessage-message').length > 0) {
+                errorList.find('.errormessage-message').remove();
+            }
+        }
+        //Email is required
+        if (email.val() == '' || email.val() == null) {
+            if (errorList.find('.errormessage-email').length == 0) {
+                var li = $('<li />', { html: 'Email is required !', class: 'col-sm-6 errormessage-email' });
+                li.appendTo(errorList)
+                .click(function () {
+                    email.focus();
+                })
+                email.parent().addClass('has-error');
+            }
+        } else {
+            var re = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
+            if (!re.test(email.val())) {
+                if (errorList.find('.col-sm-6 errormessage-email').length == 0) {
+                    errorList.find('.errormessage-email').text('Enter correct email address');
+                    $('#errorMsg').show();
+                }
+            } else {
+                if (email.parent().hasClass('has-error')) {
+                    email.parent().removeClass('has-error')
+                };
+                if (errorList.find('.errormessage-email').length > 0) {
+                    errorList.find('.errormessage-email').remove();
+                    $('#errorMsg').hide();
+                }
+            }
+        }
+        
+        if (errorList.children('li').length > 0) {
+            $('#errorMsg').show();
+            $('html, body').animate({
+                scrollTop: 1400
+            }, 500);
+        } else {
+            $('#errorMsg').hide();   
+        }
+    });
 });
