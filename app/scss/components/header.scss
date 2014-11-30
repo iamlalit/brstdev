@@ -34,7 +34,7 @@ header.container{
 			&:hover{
 				a{
 					color: #989898;
-					border-bottom: 3px solid #989898;
+					//border-bottom: 3px solid #989898;
 				}
 			}
 		}
@@ -61,6 +61,7 @@ header.container{
 				font-size: 3rem;
 				color: #C5C8C8;
 				padding: 21px 23px 7px 23px;
+				border-bottom: 3px solid transparent;
 			}
 			&.active{
 				a{
@@ -72,7 +73,7 @@ header.container{
 			&:hover{
 				a{
 					color: #989898;
-					border-bottom: 3px solid #989898;
+					//border-bottom: 3px solid #989898;
 				}
 			}
 		}

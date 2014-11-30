@@ -203,9 +203,9 @@ $(document).ready(function() {
 $(document).ready(function(){
     $('.carousel').carousel({
       interval: false,
-      pause: '',
-      keyboard: false
-    })
+      pause: ''
+    });
+    $('.carousel').off('keydown.bs.carousel');
 });
 
 //error validations for contact forms
@@ -349,7 +349,7 @@ $(document).ready(function () {
         if (errorList.children('li').length > 0) {
             $('#errorMsg').show();
             $('html, body').animate({
-                scrollTop: 1400
+                scrollTop: 100
             }, 500);
         } else {
             $('#errorMsg').hide();   

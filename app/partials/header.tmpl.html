@@ -42,9 +42,9 @@
               <li class="active"><a href="#">About us</a></li>
               <li><a href="#">Vision</a></li>
             </ul>
-            <ul class="nav navbar-nav collapse" id="contact">
-              <li class="active"><a href="#">Offices</a></li>
-              <li><a href="#">Support</a></li>
+            <ul class="nav navbar-nav collapse" id="contact" ng-init="$root.contact = true" ng-model="$root.contact">
+              <li ng-class="{'active': $root.contact == true}" ng-click="$root.contact = true"><a href="#">Offices</a></li>
+              <li  ng-class="{'active': $root.contact == false}" ng-click="$root.contact = false"><a href="#">Support</a></li>
             </ul>
           </nav>
         </div>
@@ -62,11 +62,11 @@
           <li class="active"><a href="#" name="aboutUs">ABOUT US</a></li>
           <li><a href="#" name="vision">VISION</a></li>
         </ul>
-        <ul class="navigation hide" id="contact-page">
+        <!-- <ul class="navigation hide" id="contact-page">
           <li><a href="#" name="document">Top</a></li>
           <li class="active"><a href="#" name="offices">OFFICES</a></li>
           <li><a href="#" name="support">SUPPORT</a></li>
-        </ul>
+        </ul> -->
       </div>
       <!-- Menu to show when page scroll down End -->
   </div>

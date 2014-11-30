@@ -15,8 +15,7 @@
 
 <div ng-include src="'../../partials/header.tmpl.html'"></div>
 <!-- body container start -->
-<div class="circle-content">
-  <h1 class="mainHeading headFont" id="offices">OFFICES</h1>
+<div class="circle-content" ng-show="$root.contact == true">
   <div id="contact-slider" class="container-carousel carousel slide" data-ride="carousel">
     
     <div class="carousel-inner"  role="listbox">
@@ -31,25 +30,26 @@
           </div>
         </div>
       </div>
-      <div class="item">
-      	<div class="contact-circle">
-          <div class="circle1 color2">
-            <div class="inner-circle1 color2">
-              <p class="heading">NETHERLANDS OFFICE</p>
-              <p class="address">Nico Jessekade 255 1087 NC Amsterdam Netherlands</p>
-              <p class="tel">Tel: +44 2072 052 454<br>Fax: +44 8721 158 806</p>
-            </div>
-          </div>
-      	</div>
-      </div>
+      
 
       <div class="item">
         <div class="contact-circle">
           <div class="circle1 color3">
             <div class="inner-circle1 color3">
-                <p class="heading">INDIA OFFICE</p>
+                <p class="heading">INDIA</p>
                 <p class="address">V-114 Sector 12, Noida, U.P. 201301 India</p>
                 <p class="tel">Tel: +44 2072 052 454<br>Fax: +44 8721 158 806</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="contact-circle">
+          <div class="circle1 color2">
+            <div class="inner-circle1 color2">
+              <p class="heading">NETHERLANDS</p>
+              <p class="address">Nico Jessekade 255 1087 NC Amsterdam Netherlands</p>
+              <p class="tel">Tel: +44 2072 052 454<br>Fax: +44 8721 158 806</p>
             </div>
           </div>
         </div>
@@ -68,24 +68,24 @@
   </div>
 
 </div>
-<div class="container">    
-    
+<div class="container" ng-show="$root.contact == true">    
+
     <ul class="row divs3 email">
-        <li class="col-sm-4" id="strategy">
+        <li class="col-sm-4">
             <div class="heading company">General Inquiries</div>
             <p class="bold">info@epageo.com</p>
         </li>
-        <li class="col-sm-4" id="platform">
+        <li class="col-sm-4">
             <div class="heading company">Accounting Department</div>
             <p class="bold">accounting@epageo.com</p>
         </li>
-        <li class="col-sm-4" id="marketing">
+        <li class="col-sm-4">
             <div class="heading company">Client Support</div>
             <p class="bold">support@epageo.com</p>
         </li>
     </ul>
-    <h1 class="mainHeading headFont" id="support">CONTACT</h1>
-
+</div>
+<div class="container" ng-show="$root.contact == false">    
     <div class="row">
         <div class="col-lg-12">
           <div class="col-sm-2"></div>
@@ -141,14 +141,11 @@
         </div>
       </div>
     </form>
-
     <div class="row">
       <br><br>
     </div>
-
 </div>
 <!-- body container end -->
-<div ng-include src="'../../partials/footer.tmpl.html'"></div>
 <script src="../../.tmp/scripts/bower.js"></script>
 <script src="../../.tmp/scripts/core.js"></script>
 <script src="main.js"></script>
