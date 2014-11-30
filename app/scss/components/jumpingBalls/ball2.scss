@@ -4,7 +4,7 @@ div#first{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-pink;
-            left: -532px;
+            left: -82px;
             top: 195px;
 			&.animation0{
               @include animation(fromLeft 1000ms linear 0s forwards);
@@ -14,7 +14,7 @@ div#first{
 			width: $width-circle2;
 			height: $width-circle2;
 			background: $color-orange;
-            left: -714px;
+            left: -319px;
             top: 739px;
 			&.animation1{
               @include animation(bottomLeft 800ms linear 0s forwards);
@@ -24,7 +24,7 @@ div#first{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-purple;
-            left: 1154px;
+            right: -375px;
             top: 672px;
 			&.animation2{
               @include animation(bottomRight 1050ms linear 0s forwards);
@@ -34,7 +34,7 @@ div#first{
 			width: $width-circle3;
 			height: $width-circle3;
 			background: $color-blue;
-            left: 939px;
+            right: -123px;
             top: 200px;
 			&.animation3{
               @include animation(fromRight 1200ms linear 0s forwards);
@@ -44,8 +44,8 @@ div#first{
 			width: $width-circle3;
 			height: $width-circle3;
 			background: $color-grey;
-            left: 637px;
-            top: -304px;
+            right: 152px;
+            top: -227px;
 			&.animation4{
               @include animation(topRightToMid 950ms linear 0s forwards);
 			}

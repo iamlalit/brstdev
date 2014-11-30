@@ -7,5 +7,19 @@ var EpageoApp = angular.module('EpageoApp', [])
             $("html, body").animate({ scrollTop: 0 }, "slow");
             return false;
         }
+        $scope.callMe = function(){
+        	alert('here');
+        }
     }]
 );
+
+EpageoApp.directive('scrollOnClick', function() {
+  return {
+    restrict: 'A',
+    link: function(scope, $elm) {
+      $elm.on('click', function() {
+        $("body").animate({scrollTop: $elm.offset().top}, "slow");
+      });
+    }
+  }
+});

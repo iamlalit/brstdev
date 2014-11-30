@@ -4,8 +4,8 @@ div#zeroth{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-orange;
-            left: -325px;
-            top: -115px;
+      left: 140px;
+      top: -115px;
 			&.animation0{
               @include animation(topLeftToMid 900ms linear 0s forwards);
 			}
@@ -14,8 +14,8 @@ div#zeroth{
 			width: $width-circle2;
 			height: $width-circle2;
 			background: $color-purple;
-            left: -743px;
-            top: 684px;
+      left: -336px;
+      top: 684px;
 			&.animation1{
               @include animation(bottomLeft 1000ms linear 0s forwards);
 			}
@@ -24,8 +24,8 @@ div#zeroth{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-blue;
-            left: 1165px;
-            top: 650px;
+      right: -376px;
+      top: 650px;
 			&.animation2{
               @include animation(bottomRight 1050ms linear 0s forwards);
 			}
@@ -34,8 +34,8 @@ div#zeroth{
 			width: $width-circle3;
 			height: $width-circle3;
 			background: $color-pink;
-            left: 720px;
-            top: -212px;
+      left: 1085px;
+      top: -212px;
 			&.animation3{
               @include animation(topRightToMid 800ms linear 0s forwards);
 			}

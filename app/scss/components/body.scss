@@ -51,7 +51,7 @@
 	margin: 65px auto;
 	position: relative;
     &.affix{
-      top: 50px;
+      top: 65px;
       position: fixed;
       @include transform(translate3d(320px, -56px, 0));
     }
@@ -68,24 +68,44 @@
 	    margin: -225px 0px 0px -225px;
 	    text-align:center;
 	    color: $white;
+	    -moz-user-select: text;
+		-khtml-user-select: text;
+		-webkit-user-select: text;
+		-ms-user-select: text;
+		user-select: text;
 	    .number{
 	    	display: inherit;
 			margin-top: 20px;
 			line-height: 1;
 			font-size: 7rem;
 			font-family: $font-family-headings;
+			-moz-user-select: text;
+			-khtml-user-select: text;
+			-webkit-user-select: text;
+			-ms-user-select: text;
+			user-select: text;
 	    }
 	    h3{
 	    	font-size: 7rem;
 	    	font-family: $font-family-headings;	
 	    	text-transform: uppercase;
 	    	letter-spacing: 2px;
+	    	-moz-user-select: text;
+			-khtml-user-select: text;
+			-webkit-user-select: text;
+			-ms-user-select: text;
+			user-select: text;
 	    }
 	    p{
 	    	padding: 0 28px;
 	    	line-height: 1.25;
 	    	font-size: 14px;
 	    	height: 165px;
+	    	-moz-user-select: text;
+			-khtml-user-select: text;
+			-webkit-user-select: text;
+			-ms-user-select: text;
+			user-select: text;
 	    }
 	    span.continue{
 	    	//padding-top: 20px;
@@ -96,6 +116,11 @@
 		    	font-family: $font-family-headings;	
 		    	text-transform: uppercase;
 		    	line-height: 1;
+		    	-moz-user-select: text;
+				-khtml-user-select: text;
+				-webkit-user-select: text;
+				-ms-user-select: text;
+				user-select: text;
 		    	&:hover{
 		    		text-decoration: none;
 		    		cursor: pointer;
@@ -112,7 +137,7 @@
 					display: inline-block;
 					border-radius: 100%;
 					position: relative;
-					top:23px;
+					top:24px;
 	    		}
 	    }
 	}
@@ -136,7 +161,6 @@ $color-green: #187702;
 
 .info-circle{
 	display: table;
-	z-index: 100;
 	border-radius: 100%;
 	position: fixed;
 	text-align: center;
@@ -144,7 +168,7 @@ $color-green: #187702;
 	font-weight: bold;
 	font-size: 22px;
 	padding: 20px;
-    z-index: 10000;
+    
 	span{
 		display: table-cell;
 		vertical-align: middle;
@@ -156,10 +180,10 @@ $color-green: #187702;
 .circleContainer{
   position: relative;
   .getContent{
-    color: transparent;
+    //color: transparent;
     height: 600px;
-    position: relative;
-    z-index: -100;
+    //position: relative;
+    //z-index: 100;
 
     & a{
       color: transparent;

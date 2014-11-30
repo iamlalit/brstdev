@@ -139,29 +139,29 @@ setTimeout(function() {
       });
 }, 1000);
 
-if(window.location.pathname.split('/pages/')[1] == '/services/services.html'){
-    (function fixCircle(){
-        var pos = $('.circleContainer').offset().top;
-        $(window).on('scroll', function(){
-            //console.log(x.offset().top +'-------'+ main.scrollTop());
-            if( pos <= $(document).scrollTop()){
-                $('#display').addClass('affix');
-            }else{
-                $('#display').removeClass('affix');
-            }
-        });
-    })();
-}
+// if(window.location.pathname.split('/pages/')[1] == '/services/services.html'){
+//     (function fixCircle(){
+//         var pos = $('.circleContainer').offset().top;
+//         $(window).on('scroll', function(){
+//             //console.log(x.offset().top +'-------'+ main.scrollTop());
+//             if( pos <= $(document).scrollTop()){
+//                 $('#display').addClass('affix');
+//             }else{
+//                 $('#display').removeClass('affix');
+//             }
+//         });
+//     })();
+// }
 
-$.fn.scrollStopped = function(callback) {
-    $(this).scroll(function(){
-        var self = this, $this = $(self);
-        if ($this.data('scrollTimeout')) {
-            clearTimeout($this.data('scrollTimeout'));
-        }
-        $this.data('scrollTimeout', setTimeout(callback,250,self));
-    });
-};
+// $.fn.scrollStopped = function(callback) {
+//     $(this).scroll(function(){
+//         var self = this, $this = $(self);
+//         if ($this.data('scrollTimeout')) {
+//             clearTimeout($this.data('scrollTimeout'));
+//         }
+//         $this.data('scrollTimeout', setTimeout(callback,250,self));
+//     });
+// };
 
 /*(function contentSwitcher(){
     $(window).on("scroll", function (e) {
@@ -199,40 +199,40 @@ $.fn.scrollStopped = function(callback) {
 })();*/
 
 
-$(window).on("changeContent", function (e) {
-    e.preventDefault();
-    var pos = $('#display').offset().top;
-    $('.getContent').each(function () {
-        if ($(this).next().hasClass('getContent')){
-            if (pos >= $(this).offset().top && pos <= $(this).next().offset().top) {
-                $('#display').html($(this).find('.inner-circle').clone());
-                return;
-            }
-        }
-    });
-});
+// $(window).on("changeContent", function (e) {
+//     e.preventDefault();
+//     var pos = $('#display').offset().top;
+//     $('.getContent').each(function () {
+//         if ($(this).next().hasClass('getContent')){
+//             if (pos >= $(this).offset().top && pos <= $(this).next().offset().top) {
+//                 $('#display').html($(this).find('.inner-circle').clone());
+//                 return;
+//             }
+//         }
+//     });
+// });
 
-function findBreakPoint(){
-    var arr = [];
-    $('.getContent').each(function () {
-        arr.push($(this).offset().top);
-    });
-    return arr;
-}
+// function findBreakPoint(){
+//     var arr = [];
+//     $('.getContent').each(function () {
+//         arr.push($(this).offset().top);
+//     });
+//     return arr;
+// }
 
-(function evntTrgr(){
-    var a = findBreakPoint();
-    $(window).on('scroll', function(){
-        var pos = $(document).scrollTop();
-        $.each(a, function(){
-            console.log(pos +' ------ '+ $(this)[0] +' || '+ ($(this)[0] + 50));
-            if(pos >= parseInt($(this)[0], 10) && pos <= (parseInt($(this)[0], 10)+50)){
-                $(document).trigger('changeContent');
-                return;
-            }
-        });
-    });
-})();
+// (function evntTrgr(){
+//     var a = findBreakPoint();
+//     $(window).on('scroll', function(){
+//         var pos = $(document).scrollTop();
+//         $.each(a, function(){
+//             console.log(pos +' ------ '+ $(this)[0] +' || '+ ($(this)[0] + 50));
+//             if(pos >= parseInt($(this)[0], 10) && pos <= (parseInt($(this)[0], 10)+50)){
+//                 $(document).trigger('changeContent');
+//                 return;
+//             }
+//         });
+//     });
+// })();
 
 
 

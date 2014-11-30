@@ -4,8 +4,8 @@ div#fourth{
 			width: $width-circle2;
 			height: $width-circle2;
 			background: $color-orange;
-            left: -317px;
-            top: -158px;
+            left: 166px;
+			top: -158px;
 			&.animation0{
 				@include animation(topLeftToMid 900ms linear 0s forwards);
 			}
@@ -14,8 +14,8 @@ div#fourth{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-green;
-            left: -736px;
-            top: 675px;
+            left: -328px;
+			top: 675px;
 			&.animation1{
 				@include animation(bottomLeft 1000ms linear 0s forwards);
 			}
@@ -24,8 +24,8 @@ div#fourth{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-pink;
-            left: 1181px;
-            top: 543px;
+            right: -368px;
+			top: 543px;
 			&.animation2{
 				@include animation(bottomRight 1050ms linear 0s forwards);
 			}
@@ -34,8 +34,8 @@ div#fourth{
 			width: $width-circle3;
 			height: $width-circle3;
 			background: $color-blue;
-            left: 667px;
-            top: -280px;
+            right: 254px;
+			top: -276px;
 			&.animation3{
 				@include animation(topRightToMid 800ms linear 0s forwards);
 			}

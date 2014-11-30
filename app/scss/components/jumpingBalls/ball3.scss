@@ -4,8 +4,8 @@ div#second{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-blue;
-            left: -260px;
-            top: -217px;
+            left: 181px;
+			top: -160px;
 			&.animation0{
               @include animation(topLeftToMid 900ms linear 0s forwards);
 			}
@@ -14,8 +14,8 @@ div#second{
 			width: $width-circle2;
 			height: $width-circle2;
 			background: $color-pink;
-            left: -546px;
-            top: 221px;
+            left: -104px;
+			top: 221px;
 			&.animation1{
               @include animation(fromLeft 1000ms linear 0s forwards);
 			}
@@ -24,8 +24,8 @@ div#second{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-orange;
-            left: -680px;
-            top: 765px;
+            left: -305px;
+			top: 765px;
 			&.animation2{
               @include animation(bottomLeft 800ms linear 0s forwards);
 			}
@@ -34,8 +34,8 @@ div#second{
 			width: $width-circle3;
 			height: $width-circle3;
 			background: $color-purple;
-            left: 1162px;
-            top: 667px;
+            right: -390px;
+			top: 667px;
 			&.animation3{
               @include animation(bottomRight 1050ms linear 0s forwards);
 			}
@@ -44,8 +44,8 @@ div#second{
 			width: $width-circle3;
 			height: $width-circle3;
 			background: $color-green;
-            left: 940px;
-            top: 217px;
+            right: -130px;
+			top: 217px;
 			&.animation4{
               @include animation(fromRight 1200ms linear 0s forwards);
 			}
@@ -54,8 +54,8 @@ div#second{
 			width: $width-circle4;
 			height: $width-circle4;
 			background: $color-grey;
-            left: 616px;
-            top: -307px;
+            right: 201px;
+			top: -235px;
 			&.animation5{
               @include animation(topRightToMid 950ms linear 0s forwards);
 			}

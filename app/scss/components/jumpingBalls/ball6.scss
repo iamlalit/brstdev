@@ -4,7 +4,7 @@ div#fifth{
 			width: $width-circle2;
 			height: $width-circle2;
 			background: $color-blue;
-            left: -319px;
+            left: 160px;
             top: -155px;
 			&.animation0{
               @include animation(topLeftToMid 900ms linear 0s forwards);
@@ -15,7 +15,7 @@ div#fifth{
 			height: $width-circle1;
 			background: $color-pink;
             top: 673px;
-            left: -735px;
+            left: -326px;
 			&.animation1{
 				@include animation(bottomLeft 1000ms linear 0s forwards);
 			}
@@ -25,7 +25,7 @@ div#fifth{
 			height: $width-circle1;
 			background: $color-green;
             top: -85px;
-            right: -372px;
+            right: 65px;
 			&.animation2{
                 @include animation(topRightToMid 950ms linear 0s forwards);
 			}
