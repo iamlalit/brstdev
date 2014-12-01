@@ -38,13 +38,13 @@
               <li><a href="#">Banner management</a></li>
               <li><a href="#">Content workflow</a></li>
             </ul>
-             <ul class="nav navbar-nav collapse" id="company">
-              <li class="active"><a href="#">About us</a></li>
-              <li><a href="#">Vision</a></li>
+             <ul class="nav navbar-nav collapse" id="company"  ng-init="$root.company = true" ng-model="$root.company">
+              <li ng-class="{'active': $root.company == true}" ng-click="$root.company = true"><a href="#">About us</a></li>
+              <li ng-class="{'active': $root.company == false}" ng-click="$root.company = false"><a href="#">Vision</a></li>
             </ul>
-            <ul class="nav navbar-nav collapse" id="contact" ng-init="$root.contact = true" ng-model="$root.contact">
-              <li ng-class="{'active': $root.contact == true}" ng-click="$root.contact = true"><a href="#">Offices</a></li>
-              <li  ng-class="{'active': $root.contact == false}" ng-click="$root.contact = false"><a href="#">Support</a></li>
+            <ul class="nav navbar-nav collapse" id="contact" ng-init="$root.contacts = true" ng-model="$root.contacts">
+              <li ng-class="{'active': $root.contacts == true}" ng-click="$root.contacts = true"><a href="#">Offices</a></li>
+              <li  ng-class="{'active': $root.contacts == false}" ng-click="$root.contacts = false"><a href="#">Support</a></li>
             </ul>
           </nav>
         </div>
@@ -57,11 +57,11 @@
           <li class="active"><a href="#" name="whatWeDo">WHAT WE DO</a></li>
           <li><a href="#" name="ourApproach">OUR APPROACH</a></li>
         </ul>
-        <ul class="navigation hide" id="company-page">
+        <!-- <ul class="navigation hide" id="company-page">
           <li><a href="#" name="document">Top</a></li>
           <li class="active"><a href="#" name="aboutUs">ABOUT US</a></li>
           <li><a href="#" name="vision">VISION</a></li>
-        </ul>
+        </ul> -->
         <!-- <ul class="navigation hide" id="contact-page">
           <li><a href="#" name="document">Top</a></li>
           <li class="active"><a href="#" name="offices">OFFICES</a></li>
