@@ -113,37 +113,37 @@ $(document).ready(function() {
            var height = $(window).scrollTop()
            var heightOfWindow = $(window).height();
             console.log(height, heightOfWindow);
-            if(height > 750){
+            if(height > 380){
                 $('#strategy').addClass('upwards0-strategy').removeClass('downwards0-strategy');   
-                if(height > 790){
+                if(height > 420){
                     $('#strategy').addClass('upwards1-strategy').removeClass('upwards0-strategy downwards1-strategy');  
-                    if(height > 840){
+                    if(height > 460){
                         $('#strategy').addClass('upwards2-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
-                        if(height > 890){
+                        if(height > 500){
                             $('#strategy').addClass('upwards3-strategy').removeClass('upwards2-strategy downwards3-strategy');
                         }
                     }
                 }
             }
-            if(height > 890){
+            if(height > 440){
                 $('#platform').addClass('upwards0-strategy').removeClass('downwards0-strategy');   
-                if(height > 940){
+                if(height > 480){
                     $('#platform').addClass('upwards1-strategy').removeClass('upwards0-strategy downwards1-strategy');  
-                    if(height > 990){
+                    if(height > 520){
                         $('#platform').addClass('upwards2-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
-                        if(height > 1020){
+                        if(height > 540){
                             $('#platform').addClass('upwards3-strategy').removeClass('upwards2-strategy downwards3-strategy');
                         }
                     }
                 }
             }
-            if(height > 960){
+            if(height > 500){
                 $('#marketing').addClass('upwards0-strategy').removeClass('downwards0-strategy');   
-                if(height > 1000){
+                if(height > 540){
                     $('#marketing').addClass('upwards1-strategy').removeClass('upwards0-strategy downwards1-strategy');  
-                    if(height > 1030){
+                    if(height > 580){
                         $('#marketing').addClass('upwards2-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
-                        if(height > 1060){
+                        if(height > 620){
                             $('#marketing').addClass('upwards3-strategy').removeClass('upwards2-strategy downwards3-strategy');
                         }
                     }
@@ -155,37 +155,37 @@ $(document).ready(function() {
             var heightOfWindow = $(window).height();
             console.log(height);
             console.log(height, heightOfWindow);
-            if(height < 1080){
+            if(height < 640){
                 $('#marketing').addClass('downwards3-strategy').removeClass('upwards3-strategy'); 
-                if(height < 1040){
+                if(height < 600){
                     $('#marketing').addClass('downwards2-strategy').removeClass('upwards2-strategy downwards3-strategy'); 
-                    if(height < 1000){
+                    if(height < 560){
                         $('#marketing').addClass('downwards1-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
-                        if(height < 960){
+                        if(height < 520){
                             $('#marketing').addClass('downwards0-strategy').removeClass('upwards0-strategy downwards1-strategy'); 
                         }
                     }
                 }
             }
-            if(height < 1040){
+            if(height < 580){
                 $('#platform').addClass('downwards3-strategy').removeClass('upwards3-strategy'); 
-                if(height < 1000){
+                if(height < 540){
                     $('#platform').addClass('downwards2-strategy').removeClass('upwards2-strategy downwards3-strategy'); 
-                    if(height < 970){
+                    if(height < 530){
                         $('#platform').addClass('downwards1-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
-                        if(height < 930){
+                        if(height < 500){
                             $('#platform').addClass('downwards0-strategy').removeClass('upwards0-strategy downwards1-strategy'); 
                         }
                     }
                 }
             }
-            if(height < 910){
+            if(height < 520){
                 $('#strategy').addClass('downwards3-strategy').removeClass('upwards3-strategy'); 
-                if(height < 870){
+                if(height < 480){
                     $('#strategy').addClass('downwards2-strategy').removeClass('upwards2-strategy downwards3-strategy'); 
-                    if(height < 840){
+                    if(height < 440){
                         $('#strategy').addClass('downwards1-strategy').removeClass('upwards1-strategy downwards2-strategy'); 
-                        if(height < 800){
+                        if(height < 420){
                             $('#strategy').addClass('downwards0-strategy').removeClass('upwards0-strategy downwards1-strategy'); 
                         }
                     }

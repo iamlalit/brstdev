@@ -15,11 +15,11 @@
 
 <div ng-include src="'../../partials/header.tmpl.html'"></div>
 <!-- body container start -->
-<div class="container" ng-show="$root.company == true">
+<div class="container">
     <br>
     <br>
     <br>
-    <p class="contentCentered">
+    <p class="contentCentered" id="aboutUs">
         The Internet changes with ever-increasing speed each day, and companies need strong tech partnerships to help them adapt. ePageo is there to help you grow your Web presence by unlocking the full power of the Internet. Our team has the knowledge and the agility to help your company develop the best strategies, using our industry-leading toolsets to manage online organization and inevitable complex changes.
     </p>
     <br>
@@ -38,25 +38,25 @@
     <br>
     <br>
 </div>
-<div class="container" ng-show="$root.company == false">
+<div class="container">
     <span class="services"></span>
-    <ul class="row divs3">
-        <li class="col-sm-4">
+    <ul class="row divs3" id="vision">
+        <li class="col-sm-4" id="strategy">
             <div class="heading company">Be present</div>
             <p class="bold">In an ever-changing business environment a strong presence in the market is a key attribute for any company. </p>
         </li>
-        <li class="col-sm-4">
+        <li class="col-sm-4" id="platform">
             <div class="heading company">Be connected</div>
             <p class="bold">The must-have asset in the digital realm is the ability to connect to your customers. Add value to your business through an automated internal link structure based on relevancy.</p>
         </li>
-        <li class="col-sm-4">
+        <li class="col-sm-4" id="marketing">
             <div class="heading company">Be relevant</div>
             <p class="bold">Stay relevant anytime and everywhere through a sophisticated content production and distribution workflow.</p>
         </li>
     </ul>
 </div>
 <!-- body container end -->
-
+<div ng-include src="'../../partials/footer.tmpl.html'"></div>
 
 <script src="../../.tmp/scripts/bower.js"></script>
 <script src="../../.tmp/scripts/core.js"></script>
