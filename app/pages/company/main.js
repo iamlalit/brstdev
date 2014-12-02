@@ -112,7 +112,8 @@ $(document).ready(function() {
            // downscroll code
            var height = $(window).scrollTop()
            var heightOfWindow = $(window).height();
-            console.log(height, heightOfWindow);
+           var pos = $('#vision').offset().top;
+            console.log(height, pos);
             if(height > 380){
                 $('#strategy').addClass('upwards0-strategy').removeClass('downwards0-strategy');   
                 if(height > 420){
@@ -153,8 +154,6 @@ $(document).ready(function() {
             //upward scroll
             var height = $(window).scrollTop()
             var heightOfWindow = $(window).height();
-            console.log(height);
-            console.log(height, heightOfWindow);
             if(height < 640){
                 $('#marketing').addClass('downwards3-strategy').removeClass('upwards3-strategy'); 
                 if(height < 600){
