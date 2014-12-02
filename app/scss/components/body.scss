@@ -50,10 +50,13 @@
 	border-radius: 100%;
 	margin: 65px auto;
 	position: relative;
+	display: none;
     &.affix{
       top: 65px;
       position: fixed;
+      display: block;
       @include transform(translate3d(320px, -56px, 0));
+
     }
 
 	.inner-circle{

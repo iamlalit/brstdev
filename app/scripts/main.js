@@ -121,12 +121,12 @@ setTimeout(function() {
             //getting value from name property
             var anchorName = en.currentTarget.name;
             var windowHeight = $(window).height();
+            
             //Will work for every node in Menu - target id and name property of anchor tag should be same.
             if(anchorName != 'document'){
-                console.log(anchorName);
                 var target = '#' + anchorName;
                 var topDistance = $(target).offset().top;
-                $(document.body).animate({
+                $('body,html').animate({
                     'scrollTop':  topDistance - 150
                 }, 1000);
             }
@@ -233,11 +233,3 @@ setTimeout(function() {
 //         });
 //     });
 // })();
-
-
-
-
-
-/*$('#zero').find('.continue a').on('click', function(){
-    $(document).scrollTop($(document).find($('#zero').find('.continue a').attr('href')).offset().top)
-});*/

@@ -209,14 +209,14 @@ $(document).ready(function() {
     $(window).scroll(function() {
       //for discovery
       var height = $(window).scrollTop()
-      if(height < 1896){
+      if(height < 1800){
             $(kids0[0]).removeClass('animation0 table-cell').addClass('hide');
             $(kids0[1]).removeClass('animation1 table-cell').addClass('hide');
             $(kids0[2]).removeClass('animation2 table-cell').addClass('hide');
             $(kids0[3]).removeClass('animation3 table-cell').addClass('hide');
       }
       //for circle 1
-      if(height > 1896 && height < 2430){
+      if(height > 1800 && height < 2430){
             $(kids0[0]).addClass('animation0 table-cell').removeClass('hide');
             $(kids0[1]).addClass('animation1 table-cell').removeClass('hide');
             $(kids0[2]).addClass('animation2 table-cell').removeClass('hide');
@@ -331,9 +331,12 @@ $(document).ready(function(){
 
 
 (function fixCircle(){
-    var pos = $('.circleContainer').offset().top;
+    var pos = $('.circleContainer').offset().top + 70;
     $(window).on('scroll', function(){
         //console.log(x.offset().top +'-------'+ main.scrollTop());
+        
+        var height = $(window).scrollTop();
+    
         if( pos <= $(document).scrollTop()){
             $('#display').addClass('affix');
         }else{
@@ -341,7 +344,6 @@ $(document).ready(function(){
         }
     });
 })();
-
 
 $.fn.scrollStopped = function(callback) {
     $(this).scroll(function(){
@@ -403,9 +405,29 @@ $(document).ready(function(){
         var height = $(window).scrollTop()
         
         if(event.keyCode == 40){
-            $(window).scrollTop(height + 80)
+            $(window).scrollTop(height + 73)
         }else if(event.keyCode == 38){
-            $(window).scrollTop(height - 80)
+            $(window).scrollTop(height - 73)
         }
     })
 });
+
+// var pos = $('#ourApproach').offset().top;
+// var lastScrolled = 0;
+// $(window).on('scroll', function(){
+//     var st = $(this).scrollTop();
+//     if (st > lastScrolled){
+//        // downscroll code
+//        var height = $(window).scrollTop()
+//        if(height > 1500 && height < 1600){
+//             $(window).scrollTop(height + 320)       
+//        }
+//     } else {
+//         //upward scroll
+//         var height = $(window).scrollTop()
+//         if(height > 1700 && height < 1800){
+//             $(window).scrollTop(height - 320)       
+//        }
+//     }
+//     lastScrolled = st;
+// });
