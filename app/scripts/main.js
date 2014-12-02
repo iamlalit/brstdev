@@ -132,7 +132,7 @@ setTimeout(function() {
             }
             //Will work only for top
             if (anchorName == 'document'){
-                $(document.body).animate({
+                $('body,html').animate({
                     'scrollTop':  0
                 }, 1000);
             }
