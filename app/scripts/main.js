@@ -117,7 +117,7 @@ $(document).ready(function(){
 
 //Menu component to scroll
 setTimeout(function() {
-      $('#secondary-navigation ul li a').on('click', function(en){
+      $('#secondary-navigation ul li a, ul#services li a, ul#company li a').on('click', function(en){
             //getting value from name property
             var anchorName = en.currentTarget.name;
             var windowHeight = $(window).height();
