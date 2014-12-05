@@ -233,3 +233,7 @@ setTimeout(function() {
 //         });
 //     });
 // })();
+
+$(document).ready(function(){
+    $(".amazingslider-box-1:nth-child(2)").remove();
+});

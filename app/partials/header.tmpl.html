@@ -32,11 +32,11 @@
               <li class="active"><a href="#">What we do</a></li>
               <li><a href="#" name="ourApproach">How we do it</a></li>
             </ul>
-            <ul class="nav navbar-nav collapse" id="solutions">
-              <li class="active"><a href="#">Page management</a></li>
-              <li><a href="#">Linking algorithm</a></li>
-              <li><a href="#">Banner management</a></li>
-              <li><a href="#">Content workflow</a></li>
+            <ul class="nav navbar-nav collapse" id="solutions" ng-init="$root.solutions = 1" ng-model="$root.solutions">
+              <li ng-class="{'active': $root.solutions == 1}" ng-click="$root.solutions = 1"><a href="#">Page management</a></li>
+              <li ng-class="{'active': $root.solutions == 2}" ng-click="$root.solutions = 2"><a href="#">Linking algorithm</a></li>
+              <li ng-class="{'active': $root.solutions == 3}" ng-click="$root.solutions = 3"><a href="#">Banner management</a></li>
+              <li ng-class="{'active': $root.solutions == 4}" ng-click="$root.solutions = 4"><a href="#">Content workflow</a></li>
             </ul>
              <ul class="nav navbar-nav collapse" id="company">
               <li class="active"><a href="#">About us</a></li>

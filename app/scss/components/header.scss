@@ -52,6 +52,9 @@ header.container{
 		position: relative;
 		margin: 15px 15px 0 0;
 		padding-top: 30px;	
+		a{
+			outline:none;
+		}
 	}
 	ul.navbar-nav{
 		border-bottom: none;
@@ -62,12 +65,14 @@ header.container{
 				color: #C5C8C8;
 				padding: 21px 23px 7px 23px;
 				border-bottom: 3px solid transparent;
+				outline:none;
 			}
 			&.active{
 				a{
 					background: inherit;
 					color: #989898;
 					border-bottom: 3px solid #989898;
+					outline:none;
 				}
 			}
 			&:hover{
@@ -132,6 +137,7 @@ header.container{
 					font-family:sans-serif;
 					font-weight:600;
 					transition:1s all ease;  
+					outline:none;
 				}
 				&:last-child a{
 					border-right:0;
