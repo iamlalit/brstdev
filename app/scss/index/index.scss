@@ -69,7 +69,7 @@
 			box-shadow: inset 0px 0px 2px 1px rgba(133,128,133,0.78);
 			&.left,
 			&.right{
-				right: 20%;
+				right: 320px;
 				background-image: none;
 				.glyphicon-chevron-left,
 				.glyphicon-chevron-right{
@@ -82,8 +82,89 @@
 				}
 			}
 			&.left{
-				left: 20%;	
+				left: 320px;	
 			}
 		}
 	}	
+}
+
+$min-width : 1360px;
+$max-width : 1370px; 
+$width : 10px;
+$index-container-height: 492px;
+$circle-width: 480px;
+$circle-height: 480px;
+$margin-top: 240px;
+$margin-left: 240px;
+$font-size-heading: 9rem;
+$font-size-address: 2.8rem;
+$font-size-tel: 1.8rem;
+$top-carousel: 228px;
+$left-carousel: 320px;
+$right-carousel: 320px;
+$padding-tel: 60px;
+@for $i from 1 through 129 {  
+  @media (min-width: $min-width) and (max-width: $max-width) {
+  	.circle-content-index{
+		.container-carousel{  
+  	  		.item{
+				.contact-circle{
+					height: $index-container-height;
+					.circle1{
+						width: $circle-width;
+						height: $circle-height;
+						border-radius: 100%;
+					    margin-top: -$margin-top;
+					    margin-left: -$margin-left;
+					    margin-right: 0;
+					    margin-bottom: 0;
+						p{
+							&.heading{
+								padding: 40px 90px 0 90px;
+								font-size: $font-size-heading;
+								line-height: $font-size-heading - 1;
+								font-family: $font-family-headings;
+							}
+							&.address{
+								font-size: $font-size-address;
+								padding: 30px 50px;
+								line-height: $font-size-address;
+							}
+							&.tel{
+								font-size: $font-size-tel;
+								padding: 0 $padding-tel;	
+								line-height: $font-size-tel + 0.5;
+							}
+						}
+					}
+				}
+			}
+			.carousel-control{
+				top: $top-carousel;
+				&.left,
+				&.right{
+					right: $right-carousel;
+				}
+				&.left{
+					left: $left-carousel;	
+				}
+			}
+		}
+	}
+
+  }
+  $min-width : $min-width + $width;
+  $max-width : $max-width + $width;
+  $index-container-height : $index-container-height + 2;
+  $circle-width : $circle-width + 2;
+  $circle-height : $circle-height + 2;
+  $margin-top : $margin-top + 1;
+  $margin-left : $margin-left + 1; 
+  $font-size-heading : $font-size-heading + 0.08;
+  $top-carousel : $top-carousel + 1;
+  $left-carousel : $left-carousel + 3;
+  $right-carousel : $right-carousel + 3;
+  $font-size-address : $font-size-address + 0.02;
+  $padding-tel : $padding-tel + 1;
+  $font-size-tel : $font-size-tel + 0.01;
 }
