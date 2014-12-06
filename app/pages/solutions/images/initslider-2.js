@@ -3,11 +3,11 @@ jQuery(document).ready(function(){
     var jsFolder = "";
     for (var i= 0; i< scripts.length; i++)
     {
-        if( scripts[i].src && scripts[i].src.match(/initslider-1\.js/i))
+        if( scripts[i].src && scripts[i].src.match(/initslider-2\.js/i))
             jsFolder = scripts[i].src.substr(0, scripts[i].src.lastIndexOf("/") + 1);
     }
-    jQuery("#amazingslider-1").amazingslider({
-        sliderid:1,
+    jQuery("#amazingslider-2").amazingslider({
+        sliderid:2,
         jsfolder:jsFolder,
         width:900,
         height:360,
@@ -36,7 +36,7 @@ jQuery(document).ready(function(){
         shownumbering:false,
         skin:"Gallery",
         addgooglefonts:true,
-        navshowplaypause:false,
+        navshowplaypause:true,
         navshowplayvideo:true,
         navshowplaypausestandalonemarginx:8,
         navshowplaypausestandalonemarginy:8,
@@ -125,7 +125,7 @@ jQuery(document).ready(function(){
         navshowplaypausestandaloneautohide:true,
         texteffectduration2:600,
         navbuttoncolor:"",
-        navshowarrow:true,
+        navshowarrow:false,
         texteffectslidedirection:"left",
         navshowfeaturedarrow:true,
         lightboxbarheight:64,
@@ -183,18 +183,15 @@ jQuery(document).ready(function(){
         lightboxthumbbottommargin:8,
         textpositionmarginbottom:24,
         lightboxshowtitle:true,
-        slide: {
-            duration:1000,
-            easing:"easeOutCubic",
+        slice: {
             checked:true,
-            effectdirection:0
+            effectdirection:0,
+            effects:"up,down,updown",
+            slicecount:10,
+            duration:1500,
+            easing:"easeOutCubic"
         },
-        fade: {
-            duration:1000,
-            easing:"easeOutCubic",
-            checked:true
-        },
-        transition:"slide,fade",
+        transition:"slice",
         scalemode:"fill",
         isfullscreen:false,
         textformat: {
