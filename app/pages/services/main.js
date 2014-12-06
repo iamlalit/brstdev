@@ -272,7 +272,7 @@ $(document).ready(function() {
 
       //for discovery
       var height = $(window).scrollTop()
-      if(height < 1840){
+      if(height < 1880){
             removeBalls0();
             removeBalls1();
             removeBalls2();
@@ -281,7 +281,7 @@ $(document).ready(function() {
             removeBalls5();
       }
       //for circle 1
-      if(height > 1840 && height < 2430){
+      if(height > 1880 && height < 2430){
             addBalls0();
             removeBalls1();
             removeBalls2();
@@ -374,19 +374,19 @@ $.fn.scrollStopped = function(callback) {
         e.preventDefault();
         var pos = $('#display').offset();
         $('.getContent').each(function () {
-            console.log(this.id);
             if ($(this).next().hasClass('getContent')){
-                if(this.id == "zero"){
+                if(this.id === "zero"){
                     $('#display').html($(this).find('.inner-circle').clone());
                 }
-                if(this.id !== "zero"){
+                else if(this.id !== "zero"){
                     if (pos.top >= $(this).offset().top && pos.top <= $(this).next().offset().top) {
                         $('#display').html($(this).find('.inner-circle').clone());
                         //$('#display').find('.bounce').children().removeClass('hide');
                         //return;
-
+                    }else if(pos.top > $(this).next().offset().top){
+                        $('#display').html($(this).find('.inner-circle').clone());
                     }
-                }                    
+                }           
             }
         });
     });

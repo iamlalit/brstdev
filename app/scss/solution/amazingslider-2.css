@@ -741,3 +741,7 @@
 .as-btn-navy-small:focus {
   	outline: 0;
 }
+.amazingslider-arrow-right-2,
+.amazingslider-arrow-right-3{
+  right: 20px !important;
+}

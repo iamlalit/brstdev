@@ -27,4 +27,18 @@ EpageoApp.directive('activeNav', function() {
 	   });
 	 }
  	};
-})
+});
+EpageoApp.directive('activeSubNav', function() {
+	return {
+	 restrict: 'A',
+	 link: function (scope, element, attrs, ctrl) {
+	   scope.$watch('location.path()', function() {
+	     if(window.location.pathname.split('/pages/')[1].split('/')[1].split('.')[0] === element[0].href.split('/pages/')[1].split('/')[1].split('.')[0]) {
+	       	element.closest('li').addClass('active');
+	     } else {
+	        element.closest('li').removeClass('active');
+	     }
+	   });
+	 }
+ 	};
+});

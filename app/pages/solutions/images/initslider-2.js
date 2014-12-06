@@ -183,15 +183,13 @@ jQuery(document).ready(function(){
         lightboxthumbbottommargin:8,
         textpositionmarginbottom:24,
         lightboxshowtitle:true,
-        slice: {
+        slide: {
+            duration:1000,
+            easing:"easeOutCubic",
             checked:true,
-            effectdirection:0,
-            effects:"up,down,updown",
-            slicecount:10,
-            duration:1500,
-            easing:"easeOutCubic"
+            effectdirection:0
         },
-        transition:"slice",
+        transition:"slide",
         scalemode:"fill",
         isfullscreen:false,
         textformat: {

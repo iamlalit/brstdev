@@ -152,7 +152,8 @@ module.exports = function (grunt) {
               '<%= config.app %>/scripts/app.js',
               '<%= config.app %>/scripts/main.js',
               '<%= config.app %>/scripts/directive/hoverLogo.js',
-              '<%= config.app %>/scripts/directive/activeNav.js'              
+              '<%= config.app %>/scripts/directive/activeNav.js',
+              '<%= config.app %>/scripts/directive/solutionSlider.js'              
                     ],
               dest: '<%= config.app %>/.tmp/scripts/core.js',
             }
