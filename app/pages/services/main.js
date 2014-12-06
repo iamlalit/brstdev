@@ -292,6 +292,7 @@ $(document).ready(function() {
 
       }//for circle 2
       else if(height >= 2430 && height < 3026){
+            $(".outer-circler#display").addClass('affix');
             removeBalls0();
             addBalls1();
             removeBalls2();
@@ -373,13 +374,19 @@ $.fn.scrollStopped = function(callback) {
         e.preventDefault();
         var pos = $('#display').offset();
         $('.getContent').each(function () {
+            console.log(this.id);
             if ($(this).next().hasClass('getContent')){
-                if (pos.top >= $(this).offset().top && pos.top <= $(this).next().offset().top) {
+                if(this.id == "zero"){
                     $('#display').html($(this).find('.inner-circle').clone());
-                    //$('#display').find('.bounce').children().removeClass('hide');
-                    //return;
-
                 }
+                if(this.id !== "zero"){
+                    if (pos.top >= $(this).offset().top && pos.top <= $(this).next().offset().top) {
+                        $('#display').html($(this).find('.inner-circle').clone());
+                        //$('#display').find('.bounce').children().removeClass('hide');
+                        //return;
+
+                    }
+                }                    
             }
         });
     });
@@ -431,13 +438,13 @@ $(document).ready(function(){
 //     if (st > lastScrolled){
 //        // downscroll code
 //        var height = $(window).scrollTop()
-//        if(height > 1500 && height < 1600){
+//        if(height > 1500 && height < 1700){
 //             $(window).scrollTop(height + 320)       
 //        }
 //     } else {
 //         //upward scroll
 //         var height = $(window).scrollTop()
-//         if(height > 1700 && height < 1800){
+//         if(height > 1700 && height < 1900){
 //             $(window).scrollTop(height - 320)       
 //        }
 //     }
