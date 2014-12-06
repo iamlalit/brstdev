@@ -134,3 +134,33 @@ form.contentCentered{
 	}
 
 }
+
+$min-width : 1360px;
+$max-width : 1370px; 
+$top-carousel: 330px;
+$left-carousel: 290px;
+$right-carousel: 290px;
+@for $i from 1 through 129 {  
+  @media (min-width: $min-width) and (max-width: $max-width) {
+  	.circle-content{
+		.container-carousel{  
+  	  		.item{
+			}
+			.carousel-control{
+				top: $top-carousel;
+				&.left,
+				&.right{
+					right: $right-carousel;
+				}
+				&.left{
+					left: $left-carousel;	
+				}
+			}
+		}
+	}
+  }
+  $right-carousel : $right-carousel + 4;
+  $left-carousel : $left-carousel + 4;
+  $min-width : $min-width + 10;
+  $max-width : $max-width + 10;
+}
