@@ -30,13 +30,13 @@
 						background-color: #001e4d;
 					}
 					&.color3{
-						background-color: #ae00ff;
+						background-color: #6d11b0;
 					}
 					p{
 						color: #ffffff;
 						z-index: 100;
 						&.heading{
-							padding: 40px 90px 0 90px;
+							padding: 40px 58px 0 58px;
 							font-size: 9rem;
 							line-height: 8rem;
 							font-family: $font-family-headings;
@@ -50,6 +50,141 @@
 							font-size: 1.8rem;
 							padding: 0 60px;	
 							line-height: 2.3rem;
+						}
+					}
+					.user-validation{
+						p{
+							&.top{
+								font-style: italic;
+								font-size: 2.5rem;
+								padding: 24px 0 0 0;
+								font-weight: bold;
+								line-height: 2.2rem;
+							}
+							&.heading{
+								font-size: 7.5rem;
+								line-height: 6.5rem;
+								padding: 0px 58px;
+							}
+							&.address{
+								font-size: 1.4rem;
+								font-weight: bold;
+								line-height: 1.0rem;
+								padding: 10px;
+							}
+							&.tel{
+								padding: 10px 50px;
+								font-size: 1.2rem;
+								line-height: 1.3rem;
+							}
+							&.more{
+								font-size: 1.4rem;
+								line-height: 1.4rem;
+								font-style: italic;
+								font-weight: bold;
+								padding-bottom:5px;
+								a{
+									color: #0895a7;	
+								}
+							}
+						}	
+						img{
+							&.science{
+								width: 166px;
+								height: 113px;	
+								padding-top: 5px;
+							}
+						}
+						span.contacts{
+							padding: 0 5px;
+							background: #0895a7;
+							border-radius: 100%;
+							-webkit-box-shadow: inset -2px 0px 3px 0px rgba(6,85,95,1);
+							-moz-box-shadow: inset -2px 0px 3px 0px rgba(6,85,95,1);
+							box-shadow: inset -2px 0px 3px 0px rgba(6,85,95,1);
+							a{
+								i.icon{
+									color: white;
+									position: relative;
+									top: 5px;
+									font-size: 3.4rem;
+								}
+								&:hover,
+								&:active,
+								&:visited{
+									text-decoration: none;	
+								}
+							}
+						}
+						//for first balloon
+						.magic-icons{
+							div{
+								width: 28%;
+								display: inline-block;
+								vertical-align: top;
+							    text-align: center;
+								color: #fff;
+								i{
+									color: white;
+									font-size: 8rem;
+									padding: 20px;
+									line-height: 8rem;
+									&.icon-tools{
+										color: #edc213;
+										&+span{
+											color: #edc213;
+										}
+									}
+									&.icon-search{
+										color: #bb9066;
+										&+span{
+											color: #bb9066;
+										}
+									}
+									&.icon-cog{
+										color: #1384ed;
+										&+span{
+											color: #1384ed;
+										}
+									}
+									&.icon-location{
+										color: #81c975;
+										&+span{
+											color: #81c975;
+										}
+									}
+									&.icon-bucket{
+										color: #1384ed;
+										&+span{
+											color: #1384ed;
+										}
+									}
+									&.icon-setting-alt{
+										color: #edc213;
+										&+span{
+											color: #edc213;
+										}
+									}
+									&.icon-click{
+										color: #81c975;
+										&+span{
+											color: #81c975;
+										}
+									}
+									&.icon-discovery{
+										color: #ed5113;
+										&+span{
+											color: #ed5113;
+										}
+									}
+								}
+								span{
+									display: block;
+									font-size: 1.5rem;
+									line-height: 1.5rem;
+									font-weight: bold;
+								}
+							}							
 						}
 					}
 				}
@@ -103,6 +238,15 @@ $top-carousel: 228px;
 $left-carousel: 320px;
 $right-carousel: 320px;
 $padding-tel: 60px;
+
+//for user validations
+$user-validation-top-font-size: 2.5rem;
+$user-validation-top-padding: 24px;
+$user-validation-header-font-size: 7.5rem;
+$user-validation-address-font-size: 1.4rem;
+$user-validation-tel-font-size: 1.2rem;
+$user-validation-tel-padding: 50px;
+$var-padding-top: 0;
 @for $i from 1 through 129 {  
   @media (min-width: $min-width) and (max-width: $max-width) {
   	.circle-content-index{
@@ -120,7 +264,7 @@ $padding-tel: 60px;
 					    margin-bottom: 0;
 						p{
 							&.heading{
-								padding: 40px 90px 0 90px;
+								padding: 40px 58px 0 58px;
 								font-size: $font-size-heading;
 								line-height: $font-size-heading - 1;
 								font-family: $font-family-headings;
@@ -134,6 +278,68 @@ $padding-tel: 60px;
 								font-size: $font-size-tel;
 								padding: 0 $padding-tel;	
 								line-height: $font-size-tel + 0.5;
+							}
+						}
+						.user-validation{
+							p{
+								&.top{
+									font-size: $user-validation-top-font-size;
+									padding: $user-validation-top-padding 0 0 0;
+									line-height: $user-validation-top-font-size - 0.3;
+								}
+								&.heading{
+									font-size: $user-validation-header-font-size;
+									line-height: $user-validation-header-font-size - 1;
+									padding: 0px 58px;
+								}
+								&.address{
+									font-size: $user-validation-address-font-size;
+									font-weight: bold;
+									line-height: $user-validation-address-font-size - 0.4;
+									padding: 10px;
+								}
+								&.tel{
+									padding: 10px $user-validation-tel-padding 5px;
+									font-size: $user-validation-tel-font-size;
+									line-height: $user-validation-tel-font-size;
+								}
+								&.more{
+									font-size: $user-validation-address-font-size;
+									line-height: $user-validation-address-font-size;
+									padding-bottom:5px;
+									a{
+										color: #0895a7;	
+									}
+								}
+							}	
+							img{
+								&.science{
+									width: 166px;
+									height: 113px;	
+									padding-top: 5px;
+								}
+							}
+							span.contacts{
+								padding: 0 5px;
+								background: #0895a7;
+								border-radius: 100%;
+								width: 44px;
+								height: 44px;
+								display: block;
+								margin: 5px auto;
+								a{
+									i.icon{
+										color: white;
+										position: relative;
+										top: -1px;
+										font-size: 3.4rem;
+									}
+									&:hover,
+									&:active,
+									&:visited{
+										text-decoration: none;	
+									}
+								}
 							}
 						}
 					}
@@ -167,4 +373,13 @@ $padding-tel: 60px;
   $font-size-address : $font-size-address + 0.02;
   $padding-tel : $padding-tel + 1;
   $font-size-tel : $font-size-tel + 0.01;
+
+
+  $user-validation-top-font-size: $user-validation-top-font-size + 0.025;
+  $user-validation-top-padding : $user-validation-top-padding + 0.1;
+  $user-validation-header-font-size : $user-validation-header-font-size + 0.032;
+  $user-validation-address-font-size : $user-validation-address-font-size + 0.006;
+  $user-validation-tel-font-size : $user-validation-tel-font-size + 0.004;
+  $user-validation-tel-padding : $user-validation-tel-padding + 1;
 }
+

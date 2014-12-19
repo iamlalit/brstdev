@@ -16,10 +16,10 @@ EpageoApp.directive('activeNav', function() {
 				$("#"+page).closest('.container').css({'width': '660px', 'top': '-24px'});
 			}else if(page === 'company'){
 				$("#company-page").removeClass('hide');
-				$("#"+page).closest('.container').css({'width': '490px'});
+				$("#"+page).closest('.container').css({'width': '390px'});
 			}else if(page === 'contact'){
 				$("#contact-page").removeClass('hide');
-				$("#"+page).closest('.container').css({'width': '415px'});
+				$("#"+page).closest('.container').css({'width': '403px'});
 			}
 	     } else {
 	        element.closest('li').removeClass('active');
