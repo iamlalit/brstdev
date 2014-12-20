@@ -59,4 +59,38 @@ $(document).ready(function(){
 	animateIcons();
 	animateIcons1();
 	animateIcons2();
+
+	//ballon3
+	var kidds = $(".ballon3 .magic-icons").children();
+	function animateIcons3(){
+		$(kidds[0]).delay(3000).fadeOut(1000, function() { 
+			$(kidds[1]).css('display', 'inline-block');
+			$(kidds[1]).delay(3000).fadeOut(1000, function() {
+				$(kidds[0]).css('display', 'inline-block');
+				animateIcons3();
+			})
+		});	
+	}
+	function animateIcons4(){
+		$(kidds[2]).delay(4000).fadeOut(1000, function() { 
+			$(kidds[3]).css('display', 'inline-block');
+			$(kidds[3]).delay(4000).fadeOut(1000, function() {
+				$(kidds[2]).css('display', 'inline-block');
+				animateIcons4();
+			})
+		});	
+	}
+	function animateIcons5(){
+		$(kidds[4]).delay(5000).fadeOut(1000, function() { 
+			$(kidds[5]).css('display', 'inline-block');
+			$(kidds[5]).delay(5000).fadeOut(1000, function() {
+				$(kidds[4]).css('display', 'inline-block');
+				animateIcons5();
+			})
+		});	
+	}
+
+	animateIcons3();
+	animateIcons4();
+	animateIcons5();
 });

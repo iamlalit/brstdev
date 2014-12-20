@@ -38,90 +38,93 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow:before {
+.icon-tools:before {
   content: "a";
 }
-.icon-tools:before {
+.icon-timer:before {
   content: "b";
 }
-.icon-timer:before {
+.icon-shopping-cart:before {
   content: "c";
 }
-.icon-strings:before {
+.icon-discovery:before {
   content: "d";
 }
-.icon-badge:before {
+.icon-dollar:before {
   content: "e";
 }
-.icon-beaker:before {
+.icon-strings:before {
   content: "f";
 }
-.icon-briefcase:before {
+.icon-drawing:before {
   content: "g";
 }
-.icon-bucket:before {
+.icon-globe:before {
   content: "h";
 }
-.icon-bulb:before {
+.icon-graph:before {
   content: "i";
 }
-.icon-cart:before {
+.icon-bucket:before {
   content: "j";
 }
-.icon-chat:before {
+.icon-briefcase:before {
   content: "k";
 }
-.icon-click:before {
+.icon-beaker:before {
   content: "l";
 }
-.icon-cog:before {
+.icon-badge:before {
   content: "m";
 }
-.icon-contact:before {
+.icon-arrow:before {
   content: "n";
 }
-.icon-direction:before {
+.icon-bulb:before {
   content: "o";
 }
-.icon-discovery:before {
+.icon-monitormob:before {
   content: "p";
 }
-.icon-shopping-cart:before {
+.icon-chat:before {
   content: "q";
 }
-.icon-setting-alt:before {
+.icon-cart:before {
   content: "r";
 }
-.icon-search:before {
+.icon-lock:before {
   content: "s";
 }
-.icon-point-blank:before {
+.icon-location:before {
   content: "t";
 }
-.icon-play:before {
+.icon-network:before {
   content: "u";
 }
-.icon-network:before {
+.icon-click:before {
   content: "v";
 }
-.icon-monitormob:before {
+.icon-cog:before {
   content: "w";
 }
-.icon-lock:before {
+.icon-play:before {
   content: "x";
 }
-.icon-location:before {
+.icon-point-blank:before {
   content: "y";
 }
-.icon-graph:before {
+.icon-contact:before {
   content: "z";
 }
-.icon-globe:before {
+.icon-crawler:before {
   content: "A";
 }
-.icon-drawing:before {
+.icon-search:before {
   content: "B";
 }
-.icon-dollar:before {
+.icon-setting-alt:before {
   content: "C";
+}
+.icon-direction:before {
+  content: "D";
 }

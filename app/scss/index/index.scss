@@ -124,6 +124,18 @@
 								vertical-align: top;
 							    text-align: center;
 								color: #fff;
+								&:nth-child(1),
+								&:nth-child(3),
+								&:nth-child(6){
+									padding-bottom: 15px;
+								}
+								img.strategy{
+									width: 8rem;
+									padding-bottom: 14px;
+									&+span{
+										color: #000000;
+									}
+								}
 								i{
 									color: white;
 									font-size: 8rem;
@@ -186,6 +198,25 @@
 								}
 							}							
 						}
+						//for ballon 3
+						&.ballon3{
+							p{
+								&.heading{
+									font-size: 5.2rem;
+									line-height: 5.0rem;
+									padding: 0px 58px;
+								}
+							}
+							.magic-icons{
+								div{
+									&:nth-child(1),
+									&:nth-child(3),
+									&:nth-child(6){
+										padding-bottom: 0px;
+									}
+								}
+							}
+						}
 					}
 				}
 			}
@@ -247,6 +278,9 @@ $user-validation-address-font-size: 1.4rem;
 $user-validation-tel-font-size: 1.2rem;
 $user-validation-tel-padding: 50px;
 $var-padding-top: 0;
+
+//for ballon 1
+$ballon1-icon-font-size: 8rem;
 @for $i from 1 through 129 {  
   @media (min-width: $min-width) and (max-width: $max-width) {
   	.circle-content-index{
@@ -312,17 +346,7 @@ $var-padding-top: 0;
 									}
 								}
 							}	
-							img{
-								&.science{
-									width: 166px;
-									height: 113px;	
-									padding-top: 5px;
-								}
-							}
 							span.contacts{
-								padding: 0 5px;
-								background: #0895a7;
-								border-radius: 100%;
 								width: 44px;
 								height: 44px;
 								display: block;
@@ -334,12 +358,33 @@ $var-padding-top: 0;
 										top: -1px;
 										font-size: 3.4rem;
 									}
-									&:hover,
-									&:active,
-									&:visited{
-										text-decoration: none;	
-									}
 								}
+							}
+							//for first balloon
+							.magic-icons{
+								div{
+
+									&:nth-child(1),
+									&:nth-child(3),
+									&:nth-child(6){
+										padding-bottom: 15px;
+									}
+									i{
+										font-size: $ballon1-icon-font-size;
+										padding: 20px;
+										line-height: $ballon1-icon-font-size;
+									}
+									img.strategy{
+										width: $ballon1-icon-font-size;
+										padding-bottom: 15px;
+									}
+									span{
+										display: block;
+										font-size: 1.5rem;
+										line-height: 1.5rem;
+										font-weight: bold;
+									}
+								}							
 							}
 						}
 					}
@@ -373,13 +418,14 @@ $var-padding-top: 0;
   $font-size-address : $font-size-address + 0.02;
   $padding-tel : $padding-tel + 1;
   $font-size-tel : $font-size-tel + 0.01;
-
-
+  //ballon 2
   $user-validation-top-font-size: $user-validation-top-font-size + 0.025;
   $user-validation-top-padding : $user-validation-top-padding + 0.1;
   $user-validation-header-font-size : $user-validation-header-font-size + 0.032;
   $user-validation-address-font-size : $user-validation-address-font-size + 0.006;
   $user-validation-tel-font-size : $user-validation-tel-font-size + 0.004;
   $user-validation-tel-padding : $user-validation-tel-padding + 1;
+  //ballon 1
+  $ballon1-icon-font-size : $ballon1-icon-font-size + 0.035;
 }
 
