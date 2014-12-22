@@ -56,9 +56,9 @@ $(document).ready(function(){
 		});	
 	}
 	
-	animateIcons();
-	animateIcons1();
-	animateIcons2();
+	// animateIcons();
+	// animateIcons1();
+	// animateIcons2();
 
 	//ballon3
 	var kidds = $(".ballon3 .magic-icons").children();
@@ -90,7 +90,7 @@ $(document).ready(function(){
 		});	
 	}
 
-	animateIcons3();
-	animateIcons4();
-	animateIcons5();
+	// animateIcons3();
+	// animateIcons4();
+	// animateIcons5();
 });
