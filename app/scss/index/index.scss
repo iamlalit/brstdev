@@ -125,25 +125,13 @@
 								vertical-align: top;
 							    text-align: center;
 								color: #fff;
-								img.strategy{
-									width: 8rem;
-									padding-bottom: 14px;
-									&+span{
-										color: #000000;
-									}
-								}
-								img.brain{
-									width: 8rem;
-									padding-bottom: 14px;
-									&+span{
-										color: #d45eba;
-									}
-								}
+								padding-top: 18px;
+								z-index: -165;
 								i{
 									color: #8385b9;
-									font-size: 8rem;
+									font-size: 7rem;
 									padding: 20px;
-									line-height: 8rem;
+									line-height: 7rem;
 									&+span{
 										font-family: Arial, sans-serif;
 										color: #a6a7c3;
@@ -165,34 +153,6 @@
 									font-size: 5.2rem;
 									line-height: 5.0rem;
 									padding: 0px 58px;
-								}
-							}
-							.magic-icons{
-								div{
-									.icon-network{
-										color: #edc213;
-										&+span{
-											color: #edc213;
-										}
-									}
-									.icon-crawler{
-										color: #ed5113;
-										&+span{
-											color: #ed5113;
-										}
-									}
-									.icon-beaker{
-										color: #d45eba;
-										&+span{
-											color: #d45eba;
-										}
-									}
-									.icon-algorithm{
-										color: #81c975;
-										&+span{
-											color: #81c975;
-										}
-									}
 								}
 							}
 						}
@@ -245,8 +205,8 @@ $font-size-heading: 9rem;
 $font-size-address: 2.8rem;
 $font-size-tel: 1.8rem;
 $top-carousel: 228px;
-$left-carousel: 320px;
-$right-carousel: 320px;
+$left-carousel: 353px;
+$right-carousel: 353px;
 $padding-tel: 60px;
 
 //for user validations
@@ -255,15 +215,21 @@ $user-validation-top-padding: 24px;
 $user-validation-header-font-size: 7.5rem;
 $user-validation-address-font-size: 1.4375rem;
 $user-validation-tel-font-size: 1.2rem;
-$user-validation-tel-padding: 84px;
+$user-validation-tel-padding-left-right: 66px;
+$user-validation-tel-padding-top: 10px;
 $var-padding-top: 0;
 $height-image-science-tech : 12rem;
 //for ballon 1
-$ballon1-icon-font-size: 8rem;
+$ballon1-icon-font-size: 6rem;
+$ballon1-icon-font-size-active : 9rem;
 $label-icon-font-size: 1.5rem;
 $height-icon-box: 13.42rem;
+//ballon2
+$ballon2-padding-tel-left-right: 79px;
 //for ballon 3
-$ballon3-font-size-heading : 5.2rem;
+$ballon3-font-size-heading : 4.8rem;
+$ballon3-user-validation-top-padding : 30px;
+$ballon3-padding-tel-left-right : 66px;
 @for $i from 1 through 129 {  
   @media (min-width: $min-width) and (max-width: $max-width) {
   	.circle-content-index{
@@ -316,11 +282,11 @@ $ballon3-font-size-heading : 5.2rem;
 									padding: 10px;
 								}
 								&.tel{
-									padding: 10px $user-validation-tel-padding 5px;
+									padding: $user-validation-tel-padding-top $user-validation-tel-padding-left-right $user-validation-tel-padding-top/2;
 									font-size: $user-validation-tel-font-size;
 									line-height: $user-validation-tel-font-size;
 									&+.tel{
-										padding: 0 $user-validation-tel-padding 5px;
+										padding: 0 $user-validation-tel-padding-left-right 5px;
 									}
 								}
 
@@ -358,10 +324,18 @@ $ballon3-font-size-heading : 5.2rem;
 							.magic-icons{
 								height: $height-icon-box;
 								div{
+									position: relative;
+									padding-top: 21px;
+									z-index: -165;
 									i{
 										font-size: $ballon1-icon-font-size;
 										padding: 20px;
 										line-height: $ballon1-icon-font-size;
+										&+span{
+											font-family: $font-family-arial-black;
+											position: relative;
+											top: -10px;
+										}
 									}
 									img.strategy{
 										width: $ballon1-icon-font-size;
@@ -375,7 +349,19 @@ $ballon3-font-size-heading : 5.2rem;
 										display: block;
 										font-size: $label-icon-font-size;
 										line-height: $label-icon-font-size;
-										font-weight: bold;
+										font-weight: $font-weight-bold;
+										font-family: $font-family-arial-black;
+									}
+									&.active{
+										padding-top: 0;
+										z-index: 1;
+										i{
+											font-size: $ballon1-icon-font-size-active;
+											color: #b9d835;
+											&+span{
+												color: #b9d835;
+											}
+										}
 									}
 								}							
 							}
@@ -385,7 +371,27 @@ $ballon3-font-size-heading : 5.2rem;
 									&.heading{
 										font-size: $ballon3-font-size-heading;
 										line-height: $ballon3-font-size-heading - 0.2;
-										padding: 0px 58px;
+										padding: 2px 58px;
+									}
+									&.top{
+										padding-top: $ballon3-user-validation-top-padding;
+									}
+									&.tel{
+										padding: $user-validation-tel-padding-top $ballon3-padding-tel-left-right $user-validation-tel-padding-top/2;
+										&+.tel{
+											padding: 0 $ballon3-padding-tel-left-right 5px;
+										}
+									}
+								}
+							}
+							//for ballon2
+							&.ballon2{
+								p{
+									&.tel{
+										padding: $user-validation-tel-padding-top $ballon2-padding-tel-left-right $user-validation-tel-padding-top/2;
+										&+.tel{
+											padding: 0 $ballon2-padding-tel-left-right 5px;
+										}
 									}
 								}
 							}
@@ -426,15 +432,20 @@ $ballon3-font-size-heading : 5.2rem;
   $user-validation-top-padding : $user-validation-top-padding + 0.1;
   $user-validation-header-font-size : $user-validation-header-font-size + 0.032;
   $user-validation-address-font-size : $user-validation-address-font-size + 0.006;
-  $user-validation-tel-font-size : $user-validation-tel-font-size + 0.004;
-  $user-validation-tel-padding : $user-validation-tel-padding + 1;
+  $user-validation-tel-font-size : $user-validation-tel-font-size + 0.002;
+  $user-validation-tel-padding-left-right : $user-validation-tel-padding-left-right + 0.5;
   $height-image-science-tech : $height-image-science-tech + 0.025;
   //ballon 1
   $ballon1-icon-font-size : $ballon1-icon-font-size + 0.035;
+  $ballon1-icon-font-size-active : $ballon1-icon-font-size-active + 0.045;
   $label-icon-font-size : $label-icon-font-size + 0.01;
   $height-icon-box : $height-icon-box + 0.045;
+  $user-validation-tel-padding-top : $user-validation-tel-padding-top + 0.28;
+  //ballon2
+  $ballon2-padding-tel-left-right : $ballon2-padding-tel-left-right + 0.5;
   //ballon 3
-  $ballon3-font-size-heading : $ballon3-font-size-heading + 0.03; 
-
+  $ballon3-font-size-heading : $ballon3-font-size-heading + 0.023; 
+  $ballon3-user-validation-top-padding : $ballon3-user-validation-top-padding + 0.178; 
+  $ballon3-padding-tel-left-right : $ballon3-padding-tel-left-right + 0.5535;
 }
 
