@@ -39,7 +39,7 @@
 							padding: 40px 58px 0 58px;
 							font-size: 9rem;
 							line-height: 8rem;
-							font-family: $font-family-headings;
+							font-family: $font-family-impact-regular;
 						}
 						&.address{
 							font-size: 2.8rem;
@@ -227,7 +227,7 @@ $height-icon-box: 13.42rem;
 //ballon2
 $ballon2-padding-tel-left-right: 79px;
 //for ballon 3
-$ballon3-font-size-heading : 4.8rem;
+$ballon3-font-size-heading : 4.2rem;
 $ballon3-user-validation-top-padding : 30px;
 $ballon3-padding-tel-left-right : 66px;
 @for $i from 1 through 129 {  
@@ -250,7 +250,7 @@ $ballon3-padding-tel-left-right : 66px;
 								padding: 40px 58px 0 58px;
 								font-size: $font-size-heading;
 								line-height: $font-size-heading - 1;
-								font-family: $font-family-headings;
+								font-family: $font-family-impact-regular;
 							}
 							&.address{
 								font-size: $font-size-address;
@@ -273,7 +273,7 @@ $ballon3-padding-tel-left-right : 66px;
 								&.heading{
 									font-size: $user-validation-header-font-size;
 									line-height: $user-validation-header-font-size - 1;
-									padding: 0px 58px;
+									padding: 4px 58px;
 								}
 								&.address{
 									font-size: $user-validation-address-font-size;
@@ -371,10 +371,10 @@ $ballon3-padding-tel-left-right : 66px;
 									&.heading{
 										font-size: $ballon3-font-size-heading;
 										line-height: $ballon3-font-size-heading - 0.2;
-										padding: 2px 58px;
+										padding: 4px 58px;
 									}
 									&.top{
-										padding-top: $ballon3-user-validation-top-padding;
+										padding-top: $ballon3-user-validation-top-padding+2;
 									}
 									&.tel{
 										padding: $user-validation-tel-padding-top $ballon3-padding-tel-left-right $user-validation-tel-padding-top/2;

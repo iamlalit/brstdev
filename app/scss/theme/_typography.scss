@@ -22,6 +22,13 @@
   url('../../fonts/Arial-Black.svg') format('svg');
 }
 @font-face {
+  font-family: 'ImpactRegular';
+  src: url('../../fonts/Impact.eot');
+  src: local('☺'), url('../../fonts/Impact.woff') format('woff'), 
+  url('../../fonts/Impact.ttf') format('truetype'), 
+  url('../../fonts/Impact.svg') format('svg');
+}
+@font-face {
   font-family: 'Gotham';
   src: url('../../fonts/gothamnarrow-book.eot');
   src: url('../../fonts/gothamnarrow-book.eot') format('embedded-opentype'),
@@ -36,5 +43,6 @@ $font-size-base: 16px;
 $font-family-headings: 'Header','HeaderFont', 'helvetica', Arial, sans-serif;
 $font-family-body: 'Gotham', 'helvetica', Arial, sans-serif;
 $font-family-arial-black: 'ArialBlack', Arial, sans-serif;
+$font-family-impact-regular : 'ImpactRegular', Arial, sans-serif;
 $font-weight-bold: 700;
 $font-weight-normal: 400;
