@@ -10,7 +10,7 @@ EpageoApp.directive('activeNav', function() {
 			$("#"+page).addClass('in');
 
 			if(page === 'services'){
-				$("#"+page).closest('.container').css({'width': '450px'});
+				$("#"+page).closest('.container').css({'width': '575px'});//450px
 				$("#service-page").removeClass('hide');
 			}else if(page === 'solutions'){
 				$("#"+page).closest('.container').css({'width': '660px', 'top': '-24px'});
@@ -19,7 +19,7 @@ EpageoApp.directive('activeNav', function() {
 				$("#"+page).closest('.container').css({'width': '390px'});
 			}else if(page === 'contact'){
 				$("#contact-page").removeClass('hide');
-				$("#"+page).closest('.container').css({'width': '403px'});
+				$("#"+page).closest('.container').css({'width': '530px'});//403px
 			}
 	     } else {
 	        element.closest('li').removeClass('active');

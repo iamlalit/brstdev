@@ -14,8 +14,8 @@ div#fourth{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-green;
-            left: -328px;
-			top: 675px;
+            left: -352px;
+			top: 661px;
 			&.animation1{
 				@include animation(bottomLeft 1000ms linear 0s forwards);
 			}
@@ -24,8 +24,8 @@ div#fourth{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-pink;
-            right: -368px;
-			top: 543px;
+            right: -451px;
+			top: 600px;
 			&.animation2{
 				@include animation(bottomRight 1050ms linear 0s forwards);
 			}
@@ -34,8 +34,8 @@ div#fourth{
 			width: $width-circle3;
 			height: $width-circle3;
 			background: $color-blue;
-            right: 254px;
-			top: -276px;
+            right: 110px;
+			top: -189px;
 			&.animation3{
 				@include animation(topRightToMid 800ms linear 0s forwards);
 			}
@@ -47,9 +47,9 @@ div#fourth{
 $width : 10;
 $left : 5px;
 $color1-left : 166px;
-$color2-left: -328px;
-$color3-left: -368px;
-$color4-left: 254px;
+$color2-left: -352px;
+$color3-left: -451px;
+$color4-left: 110px;
 $min-width : 1360px;
 $max-width : 1370px; 
 @for $i from 1 through 129 {
@@ -63,15 +63,15 @@ $max-width : 1370px;
         }
         &.color2{
           left: $color2-left;
-          top: 675px;
+          top: 661px;
         }
         &.color3{
           right: $color3-left;
-          top: 543px;
+          top: 600px;
         }
         &.color4{
           right: $color4-left;
-          top: -276px;
+          top: -189px;
         }
       }
     }  

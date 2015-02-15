@@ -1,21 +1,21 @@
 div#second{
 	div{
 		&.color1{
-			width: $width-circle1;
-			height: $width-circle1;
+			width: $width-circle2;
+			height: $width-circle2;
 			background: $color-blue;
-            left: 181px;
+            left: 171px;
 			top: -160px;
 			&.animation0{
               @include animation(topLeftToMid 900ms linear 0s forwards);
 			}
 		}
 		&.color2{
-			width: $width-circle2;
-			height: $width-circle2;
+			width: $width-circle1;
+			height: $width-circle1;
 			background: $color-pink;
-            left: -104px;
-			top: 221px;
+            left: -129px;
+			top: 246px;
 			&.animation1{
               @include animation(fromLeft 1000ms linear 0s forwards);
 			}
@@ -24,37 +24,37 @@ div#second{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-orange;
-            left: -305px;
-			top: 765px;
+            left: -318px;
+			top: 793px;
 			&.animation2{
               @include animation(bottomLeft 800ms linear 0s forwards);
 			}
 		}
 		&.color4{
-			width: $width-circle3;
-			height: $width-circle3;
+			width: $width-circle7;
+			height: $width-circle7;
 			background: $color-purple;
-            right: -390px;
-			top: 667px;
+            right: -447px;
+			top: 769px;
 			&.animation3{
               @include animation(bottomRight 1050ms linear 0s forwards);
 			}
 		}
 		&.color5{
-			width: $width-circle3;
-			height: $width-circle3;
+			width: $width-circle5;
+			height: $width-circle5;
 			background: $color-green;
-            right: -130px;
-			top: 217px;
+            right: -230px;
+			top: 269px;
 			&.animation4{
               @include animation(fromRight 1200ms linear 0s forwards);
 			}
 		}
 		&.color6{
-			width: $width-circle4;
-			height: $width-circle4;
+			width: $width-circle1;
+			height: $width-circle1;
 			background: $color-grey;
-            right: 201px;
+            right: 77px;
 			top: -235px;
 			&.animation5{
               @include animation(topRightToMid 950ms linear 0s forwards);
@@ -65,12 +65,12 @@ div#second{
 //media query
 $width : 10;
 $left : 5px;
-$color1-left : 181px;
-$color2-left: -104px;
-$color3-left: -305px;
-$color4-left: -390px;
-$color5-left: -130px;
-$color6-left: 201px;
+$color1-left : 171px;
+$color2-left: -129px;
+$color3-left: -318px;
+$color4-left: -447px;
+$color5-left: -230px;
+$color6-left: 77px;
 $min-width : 1360px;
 $max-width : 1370px; 
 @for $i from 1 through 129 {
@@ -84,23 +84,23 @@ $max-width : 1370px;
         }
         &.color2{
           left: $color2-left;
-          top: 221px;
+          top: 246px;
         }
         &.color3{
           left: $color3-left;
-          top: 765px;
+          top: 793px;
         }
         &.color4{
           right: $color4-left;
-          top: 667px;
+          top: 769px;
         }
         &.color5{
           right: $color5-left;
-          top: 217px;
+          top: 269px;
         }
         &.color6{
           right: $color6-left;
-          top: -235px;
+          top: -225px;
         }
       }
     }  

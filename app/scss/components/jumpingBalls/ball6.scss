@@ -1,11 +1,11 @@
 div#fifth{
 	div{
 		&.color1{
-			width: $width-circle2;
-			height: $width-circle2;
+			width: $width-circle5;
+			height: $width-circle5;
 			background: $color-blue;
-            left: 160px;
-            top: -155px;
+      left: 132px;
+      top: -157px;
 			&.animation0{
               @include animation(topLeftToMid 900ms linear 0s forwards);
 			}
@@ -14,18 +14,18 @@ div#fifth{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-pink;
-            top: 673px;
-            left: -326px;
-			&.animation1{
+      left: -349px;
+			top: 699px;
+      &.animation1{
 				@include animation(bottomLeft 1000ms linear 0s forwards);
 			}
 		}
 		&.color3{
-			width: $width-circle1;
-			height: $width-circle1;
+			width: $width-circle7;
+			height: $width-circle7;
 			background: $color-green;
-            top: -85px;
-            right: 65px;
+      right: -43px;
+      top: -85px;
 			&.animation2{
                 @include animation(topRightToMid 950ms linear 0s forwards);
 			}
@@ -35,9 +35,9 @@ div#fifth{
 //media query
 $width : 10;
 $left : 5px;
-$color1-left : 160px;
-$color2-left: -326px;
-$color3-left: 65px;
+$color1-left : 132px;
+$color2-left: -349px;
+$color3-left: -43px;
 $min-width : 1360px;
 $max-width : 1370px; 
 @for $i from 1 through 129 {
@@ -47,11 +47,11 @@ $max-width : 1370px;
       div{
         &.color1{
           left: $color1-left;
-          top: -155px;
+          top: -157px;
         }
         &.color2{
           left: $color2-left;
-          top: 673px;
+          top: 699px;
         }
         &.color3{
           right: $color3-left;

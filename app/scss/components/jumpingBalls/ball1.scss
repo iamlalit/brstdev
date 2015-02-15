@@ -4,37 +4,37 @@ div#zeroth{
 			width: $width-circle1;
 			height: $width-circle1;
 			background: $color-orange;
-      left: 140px;
+      left: 112px;
       top: -115px;
 			&.animation0{
               @include animation(topLeftToMid 900ms linear 0s forwards);
 			}
 		}
 		&.color2{
-			width: $width-circle2;
-			height: $width-circle2;
+			width: $width-circle6;
+			height: $width-circle6;
 			background: $color-purple;
-      left: -336px;
+      left: -339px;
       top: 684px;
 			&.animation1{
               @include animation(bottomLeft 1000ms linear 0s forwards);
 			}
 		}
 		&.color3{
-			width: $width-circle1;
-			height: $width-circle1;
+			width: $width-circle5;
+			height: $width-circle5;
 			background: $color-blue;
-      right: -376px;
+      right: -474px;
       top: 650px;
 			&.animation2{
               @include animation(bottomRight 1050ms linear 0s forwards);
 			}
 		}
 		&.color4{
-			width: $width-circle3;
-			height: $width-circle3;
+			width: $width-circle1;
+			height: $width-circle1;
 			background: $color-pink;
-      left: 1085px;
+      left: 1113px;
       top: -212px;
 			&.animation3{
               @include animation(topRightToMid 800ms linear 0s forwards);
@@ -68,10 +68,10 @@ div#zeroth{
 }
 $width : 10;
 $left : 5px;
-$color1-left : 140px;
-$color2-left: 336px;
-$color3-left: 376px;
-$color4-left: 1085px;
+$color1-left : 112px;
+$color2-left: 339px;
+$color3-left: 474px;
+$color4-left: 1113px;
 $min-width : 1360px;
 $max-width : 1370px; 
 @for $i from 1 through 129 {
