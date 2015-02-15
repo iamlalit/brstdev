@@ -21,20 +21,20 @@ div#third{
 			}
 		}
 		&.color3{
-			width: $width-circle8;
-			height: $width-circle8;
+			width: $width-circle2;
+			height: $width-circle2;
 			background: $color-pink;
-      left: -319px;
+      left: -309px;
       top: 778px;
 			&.animation2{
                 @include animation(bottomLeft 800ms linear 0s forwards);
 			}
 		}
 		&.color4{
-			width: $width-circle8;
-			height: $width-circle8;
+			width: $width-circle4;
+			height: $width-circle4;
 			background: $color-orange;
-      right: -404px;
+      right: -326px;
       top: 761px;
 			&.animation3{
                 @include animation(bottomRight 1050ms linear 0s forwards);
@@ -68,8 +68,8 @@ $width : 10;
 $left : 5px;
 $color1-left : 157px;
 $color2-left: -118px;
-$color3-left: -319px;
-$color4-left: -404px;
+$color3-left: -309px;
+$color4-left: -326px;
 $color5-left: -189px;
 $color6-left: 75px;
 $min-width : 1360px;

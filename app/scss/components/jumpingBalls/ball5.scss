@@ -1,10 +1,10 @@
 div#fourth{
 	div{
 		&.color1{
-			width: $width-circle2;
-			height: $width-circle2;
+			width: $width-circle3;
+			height: $width-circle3;
 			background: $color-orange;
-            left: 166px;
+            left: 175px;
 			top: -158px;
 			&.animation0{
 				@include animation(topLeftToMid 900ms linear 0s forwards);
@@ -21,10 +21,10 @@ div#fourth{
 			}
 		}
 		&.color3{
-			width: $width-circle1;
-			height: $width-circle1;
+			width: $width-circle2;
+			height: $width-circle2;
 			background: $color-pink;
-            right: -451px;
+            right: -407px;
 			top: 600px;
 			&.animation2{
 				@include animation(bottomRight 1050ms linear 0s forwards);
@@ -46,9 +46,9 @@ div#fourth{
 //media query
 $width : 10;
 $left : 5px;
-$color1-left : 166px;
+$color1-left : 175px;
 $color2-left: -352px;
-$color3-left: -451px;
+$color3-left: -407px;
 $color4-left: 110px;
 $min-width : 1360px;
 $max-width : 1370px; 

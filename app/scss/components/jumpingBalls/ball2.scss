@@ -1,10 +1,10 @@
 div#first{
 	div{
 		&.color1{
-			width: $width-circle1;
-			height: $width-circle1;
+			width: $width-circle6;
+			height: $width-circle6;
 			background: $color-pink;
-      left: -107px;
+      left: -98px;
       top: 195px;
 			&.animation0{
               @include animation(fromLeft 1000ms linear 0s forwards);
@@ -55,7 +55,7 @@ div#first{
 //media query
 $width : 10;
 $left : 5px;
-$color1-left : -107px;
+$color1-left : -98px;
 $color2-left: -353px;
 $color3-left: -473px;
 $color4-left: -192px;

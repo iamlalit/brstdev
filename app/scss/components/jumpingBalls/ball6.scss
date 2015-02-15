@@ -11,10 +11,10 @@ div#fifth{
 			}
 		}
 		&.color2{
-			width: $width-circle1;
-			height: $width-circle1;
+			width: $width-circle6;
+			height: $width-circle6;
 			background: $color-pink;
-      left: -349px;
+      left: -338px;
 			top: 699px;
       &.animation1{
 				@include animation(bottomLeft 1000ms linear 0s forwards);
@@ -36,7 +36,7 @@ div#fifth{
 $width : 10;
 $left : 5px;
 $color1-left : 132px;
-$color2-left: -349px;
+$color2-left: -338px;
 $color3-left: -43px;
 $min-width : 1360px;
 $max-width : 1370px; 
