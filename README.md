@@ -1,4 +1,4 @@
-epageo-website
+staging-brstdev
 ==============
 
 ### Set up of the project in your system
@@ -6,7 +6,7 @@ epageo-website
 <b>First clone the project by the command given below:</b>
 
 <code>
-    git clone https://github.com/iamlalit/epageo-website.git
+    git clone https://github.com/iamlalit/brstdev.git
 </code>
 
 <b>After cloning</b>
